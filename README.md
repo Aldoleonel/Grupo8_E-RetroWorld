@@ -18,12 +18,21 @@
 <ul>
     <li>
         <a href ="https://www.gameplanet.com.ar/pagina-inicial.htm" > Gameplanet</a> </li>
-        <li> <a href = " https://www.tableroarcademx.com/"> TablaeroArcademx </a></li>
+        <li> <a href = " https://www.tableroarcademx.com/"> TableroArcademx </a></li>
         <p>Elegimos estas páginas porque los productos  que ofrece se relacionan con los productos de nuestro proyecto.</p>
 </ul>
 
 <h5> Sitios que apuntan a clientes de nuestro proyecto:</h5>
 <ul>
-<li><a href="https://www.gameplanet.com.ar/pagina-inicial.htm"> GamePlante</a></li>
+<li><a href="https://www.gameplanet.com.ar/pagina-inicial.htm"> GamePlanet</a></li>
 <p>Elegimos esta pagina por el facil acceso a cada producto o categoria </p>
 </ul>
+
+<h5> Inspiración de sitios por su estética:</h5>
+<ul>
+    <li>
+        <a href ="https://www.hardgamers.com.ar/"> Hardgamers</a> </li>
+        <p>Elegimos esta pagina por los baner de los costados
+        <li>
+        <a href ="https://www.mixregalox.com/">mixregalox</a> </li>
+        <p>Elegimos esta página por la paleta de colores que resaltan y hace alusión al mundo gamer. </p>
