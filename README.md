@@ -13,3 +13,17 @@
 <li>Sebastian Tapia</li>
 <li>Axel Michel</li>
 </ul>
+
+<h5> Inspiración de sitios por sus productos: </h5>
+<ul>
+    <li>
+        <a href ="https://www.gameplanet.com.ar/pagina-inicial.htm" > Gameplanet</a> </li>
+        <li> <a href = " https://www.tableroarcademx.com/"> TablaeroArcademx </a></li>
+        <p>Elegimos estas páginas porque los productos  que ofrece se relacionan con los productos de nuestro proyecto.</p>
+</ul>
+
+<h5> Sitios que apuntan a clientes de nuestro proyecto:</h5>
+<ul>
+<li><a href="https://www.gameplanet.com.ar/pagina-inicial.htm"> GamePlante</a></li>
+<p>Elegimos esta pagina por el facil acceso a cada producto o categoria </p>
+</ul>
