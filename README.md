@@ -18,7 +18,7 @@
 <ul>
     <li>
         <a href ="https://www.gameplanet.com.ar/pagina-inicial.htm" > Gameplanet</a> </li>
-        <li> <a href = " https://www.tableroarcademx.com/"> TableroArcademx </a></li>
+        <li> <a href = "https://www.tableroarcademx.com/"> TableroArcademx </a></li>
         <p>Elegimos estas páginas porque los productos  que ofrece se relacionan con los productos de nuestro proyecto.</p>
 </ul>
 
