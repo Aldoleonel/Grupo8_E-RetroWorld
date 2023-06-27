@@ -8,11 +8,13 @@
 <p><strong>Nuestro staff esta formado por:</strong></p>
 
 <ul>
-<li>Aldo Leonel Chalup</li>
-<li>Andony Sánchez</li>
-<li>Sebastian Tapia</li>
-<li>Axel Michel</li>
+<li>Aldo Leonel Chalup, edad: 33, Ciudad: San Salvador de Jujuy</li>
+<li>Andony Sánchez, edad: 24, Ciudad: Bs As</li>
+<li>Sebastián Tapia, edad: 26, Ciudad: Bs As</li>
+<li>Axel Michel, edad: 26, Ciudad: Rosario</li>
 </ul>
+<a href ="https://trello.com/invite/b/R5Vyq2yT/ATTId08e721c4251dfa985a0a9fb5b6f8107EAC7E329/proyecto-integrador">Nuestro Trello</a>
+
 
 <h5> Inspiración de sitios por sus productos: </h5>
 <ul>
@@ -31,6 +33,7 @@
 <h5> Inspiración de sitios por su estética:</h5>
 <ul>
     <li>
+    
         <a href ="https://www.hardgamers.com.ar/"> Hardgamers</a> </li>
         <p>Elegimos esta pagina por los baner de los costados.
         <li>
