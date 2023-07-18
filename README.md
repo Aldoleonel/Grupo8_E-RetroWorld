@@ -32,13 +32,13 @@
 
 <h5> Inspiración de sitios por su estética:</h5>
 <ul>
-    <li>
-    
+    <li>    
         <a href ="https://www.hardgamers.com.ar/"> Hardgamers</a> </li>
         <p>Elegimos esta pagina por los baner de los costados.
         <li>
         <a href ="https://www.mixregalox.com/">mixregalox</a> </li>
         <p>Elegimos esta página por la paleta de colores que resaltan y hace alusión al mundo gamer. </p>
+        
 </ul>        
 
 <h5> Inspiración de sitios por sus funcionalidades implementadas</h5>
