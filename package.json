@@ -1,0 +1,16 @@
+{
+  "name": "grupo8_e-retroworld",
+  "version": "1.0.0",
+  "description": "<h1 id=\"titulo\"> E-RetroWorld </h1>\r <h3>Tu pasado, tu presente y tu futuro</h3>",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
