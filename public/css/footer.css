@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/*FOOTER */
+footer {
+    background: linear-gradient(to bottom,#4d4a8c, #8130f2);
+    color: #fff;
+    padding: 20px;
+}
+
+.logo {
+    background: linear-gradient(to margin-top, #8130f2, #4d4a8c);
+    max-width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img {
+    width: 100%;
+    
+    
+}
+
+.footer__iconos {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 30px;
+}
+
+.footer__iconos a {
+    display: inline-block;
+    margin: 0 5px;
+    color: #fff;
+    font-size: 30px;
+    
+}
+
+.footer__secciones {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.footer__secciones a{    
+    text-decoration: none;
+    color: #fff;        
+}
+
+.columna {
+    flex: 1 0 50%;
+    padding: 10px;
+    
+}
+
+.columna h3 {
+    margin-bottom: 10px;
+}
+
+.columna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.columna ul li {
+    margin-bottom: 5px;
+}
+
+.columna input[type="email"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.columna button {
+    background-color: #3d1673;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.footer__iconos-de-pago  {
+    display: flex;
+    max-width: 200px;
+    flex-direction: norow;
+    align-items: center;
+}
+
+.footer__iconos-de-pago img {
+    display: flex;
+    
+    margin-right: 5px;
+    width: 40px;
+}
+
+.footer__ultimo {
+    background-color: #333333;
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer__ultimo .links {
+    margin-bottom: 10px;
+}
+
+.footer__ultimo .links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer__ultimo .links span {
+    margin: 0 5px;
+}
+
