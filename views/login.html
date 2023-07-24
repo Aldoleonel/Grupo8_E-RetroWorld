@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    <p>Bienvenido a la página de Login</p>
+    
+    <main>
+        <div class="Mi-cuenta">
+            <p>Mi Cuenta</p>
+        </div>
+        <div class="login-box">
+            <form action="/login" method="POST">
+                <p class="ingresar">ingresar</p>
+                <p class="correo-box">
+                    <label>Correo electronico: *</label>
+                    <input type="email" name="email">
+                </p>
+                <p class="contraseña-box">
+                    <label>Contraseña: *</label>
+                    <input type="password" name="password">
+                </p>
+                <p class="olvido-contraseña">
+                    <a href="#">¿Ha olvidado su contraseña?</a>
+                </p>
+                <p class="registra-entrar">
+                    <button type="submit" class="button">Registra una cuenta</button>
+                    <button type="submit" class="button">Entrar</button>
+                </p>
+
+
+            </form>
+
+        </div>
+    </main>
+
+
+
 </body>
+
 </html>
