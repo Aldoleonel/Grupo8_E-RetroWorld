@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.home--categorias-consolas {
+    width: 100%;
+    margin: 30px 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.home--categorias-consolas-logo {
+    height: 100%;
+    width: 55px;
+    margin: 0 20px;
+}
+
+.home--categorias-consolas-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.home__productos-producto {
+    width: 100%;
+}
+
+.home__productos article {
+    margin: 30px auto;
+    width: 380px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    background: #f6f6f6;
+}
+
+.home__productos article:hover {
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.home__productos img {
+    width: 100%;
+}
+
+.home__productos-producto :first-child {
+    padding: 20px;
+}
+
+.home__productos-producto :last-child {
+    padding-bottom: 20px;
+}
+
+.home__productos-producto {
+    text-align: center;
+
+    margin: -1px;
+}
+
+.home__boton--verMas{
+    text-align: center;
+    margin: 30px 25%;
+    
+    
+}
+.home__boton--verMas input{
+    width: 50%;
+}
+
+
+@media (min-width:481px) {
+
+
+
+
+
+    .home__productos {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    .home__productos article {
+
+        margin: 0;
+        width: 45vw;
+        height: 100%;
+        margin: 20px 0;
+    }
+
+}
+
+@media (min-width:800px) {
+
+    .home__productos {
+
+        display: flex;
+
+        justify-content: space-around;
+
+    }
+
+    .home__productos article {
+
+
+        width: 23vw;
+        height: 100%;
+        margin: 20px 0;
+    }
+}

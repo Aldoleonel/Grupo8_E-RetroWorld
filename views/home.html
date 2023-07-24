@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    <p>Bienvenido al Home de E-RetroWorld</p>
-</body>
-</html>
+    <main>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"> <img src="/img/home/banner.jpg" alt=""> </div>
+                <div class="swiper-slide"> <img src="/img/home/banner1.jpg" alt=""> </div>
+                <div class="swiper-slide"> <img src="/img/home/banner2.jpg" alt=""> </div>
+                <div class="swiper-slide"> <img src="/img/home/banner3.jpg" alt=""> </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+        <div class="home--categorias-consolas">
+            <div class="home--categorias-consolas-logo">
+                <img src="/img/playstation.svg" alt="playstation">
+            </div>
+
+            <div class="home--categorias-consolas-logo">
+                <img src="/img/xbox.svg" alt="xbox">
+            </div>
+
+            <div class="home--categorias-consolas-logo">
+                <img src="/img/nintendo-switch.svg" alt="nintedo">
+            </div>
+
+            <div class="home--categorias-consolas-logo">
+                <img src="/img/joystick.svg" alt="arcade">
+            </div>
+
+        </div>
+
+        <!-- !NUEVOS INGRESOS  -->
+
+        <div class="home__productos">
+            <article>
+                <img src="/img/play-4.png" alt="producto">
+                <div class="home__productos-producto">
+                    <p>playstation 4</p>
+                    <p>10000.00$</p>
+                    <p>Agregar al carrito</p>
+                </div>
+            </article>
+            <article>
+                <img src="/img/play-4.png" alt="producto">
+                <div class="home__productos-producto">
+                    <p>playstation 4</p>
+                    <p>10000.00$</p>
+                    <p>Agregar al carrito</p>
+                </div>
+            </article>
+            <article>
+                <img src="/img/play-4.png" alt="producto">
+                <div class="home__productos-producto">
+                    <p>playstation 4</p>
+                    <p>10000.00$</p>
+                    <p>Agregar al carrito</p>
+                </div>
+            </article>
+            <article>
+                <img class="home__productos-producto" src="/img/play-4.png" alt="producto">
+                <div class="home__productos-producto">
+                    <p>playstation 4</p>
+                    <p>10000.00$</p>
+                    <p>Agregar al carrito</p>
+                </div>
+            </article>
+
+
+        </div>
+        <div class="home__boton--verMas">
+            <input type="button" value="Ver Mas Productos">
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="/js/carusel.js"></script>
