@@ -13,6 +13,8 @@ footer {
     background: linear-gradient(to bottom,#4d4a8c, #8130f2);
     color: #fff;
     padding: 20px;
+    font-size: 14px;
+    
 }
 
 .logo {
@@ -98,7 +100,7 @@ footer {
     display: flex;
     
     margin-right: 5px;
-    width: 40px;
+    width: 15px;
 }
 
 .footer__ultimo {

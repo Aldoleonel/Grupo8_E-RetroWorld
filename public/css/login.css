@@ -1,0 +1,147 @@
+/* style.css */
+
+main {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    max-width: 1920px;
+}
+
+.Mi-cuenta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 300px;
+    width: 100%;
+    max-width: 300px;
+    margin: 30px;
+    border-bottom: 1px solid grey;
+
+
+}
+
+.ingresar {
+    width: 70%;
+    margin: 20px;
+    padding: 0;
+    border-bottom: 1px solid grey;
+    color: #fff;
+    font-weight: bold
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #4d4a8c, #8130f2);
+    border: 2px solid blue;
+    border-radius: 10px;
+    max-width: 300px;
+    padding: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.login-box label {
+    color: #fff;
+}
+
+.correo-box,
+.contraseña-box,
+.olvido-contraseña,
+.registra-entrar {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.correo-box input,
+.contraseña-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.correo-box label,
+.contraseña-box label {
+    color: #fff;
+    font-weight: bold;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 3px 2px;
+    ;
+    align-items: center;
+    justify-content: center;
+}
+
+.button[type="submit"] {
+    background-color: #28a745;
+    margin-right: 10px;
+
+    width: 100%;
+}
+
+@media (min-width:481px) {
+
+    .login-box {
+        max-width: 768px;
+        width: 100%;
+        margin-left: 30px;
+    }
+    .Mi-cuenta {                      
+        max-width: 768px;   
+    }
+}
+
+@media (min-width:769px) {
+    .login-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(to bottom, #4d4a8c, #8130f2);
+        border: 2px solid blue;
+        border-radius: 10px;
+        max-width: 300px;
+        padding: 20px;
+        margin-right: 30px;
+        margin-left: 30px;
+        margin-bottom: 50px;
+    }
+    .Mi-cuenta {
+                      
+        max-width: 1920px;
+        width: 70%; 
+        color: grey;
+        font-weight: bold;       
+        
+                  
+  }
+
+}
