@@ -3,10 +3,6 @@
     box-sizing: border-box;
 }
 
-.form__main {
-    flex: 1;
-}
-
 .form__registro {
     display: flex;
     justify-content: center;
