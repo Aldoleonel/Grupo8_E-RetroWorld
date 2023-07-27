@@ -5,32 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <script src="https://kit.fontawesome.com/94269268ef.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+    <header class="header">
+        <div class="header__top">
+          <div class="header__top-box">
+               <div class="header__top--line"> 
+               <i class="fa-solid fa-bars"></i>
+               <img src="/img/Logo.png" alt="logo-retroWorld">
+             <div class="header__top-login-shop">  
+                <i class="fa-regular fa-user"></i><a href="#">Login</a>
+                <i class="fa-solid fa-cart-shopping"></i><a href="#">Mi Carrito</a> 
+             </div> 
+           </div> 
+          </div>  
+             <div class="header__bar-search">
+               <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+               <input type="text" placeholder="Buscar producto...">
+             </div>
+          </div>
+ 
+         <div class="header__links">
+           <p><a href="#">Inicio</a></p>
+           <p><a href="#">Productos</a></p>
+           <p><a href="#">Consolas</a></p>
+           <p><a href="#">Evendrive</a></p>
+           <p><a href="#">Repuestos y accesorios</a></p>
+         </div>
+       </header>
     
-    <main>
-        <div class="Mi-cuenta">
+    <main class="login__main">
+        <div class="login__mi-cuenta">
             <p>Mi Cuenta</p>
         </div>
         <div class="login-box">
             <form action="/login" method="POST">
-                <p class="ingresar">ingresar</p>
-                <p class="correo-box">
+                <p class="login__ingresar">ingresar</p>
+                <p class="login-correo-box">
                     <label>Correo electronico: *</label>
                     <input type="email" name="email">
                 </p>
-                <p class="contraseña-box">
+                <p class="login-contraseña-box">
                     <label>Contraseña: *</label>
                     <input type="password" name="password">
                 </p>
-                <p class="olvido-contraseña">
+                <p class="login-olvido-contraseña">
                     <a href="#">¿Ha olvidado su contraseña?</a>
                 </p>
-                <p class="registra-entrar">
-                    <button type="submit" class="button">Registra una cuenta</button>
-                    <button type="submit" class="button">Entrar</button>
+                <p class="login-registra-entrar">
+                    <button type="submit" class="login-button">Registra una cuenta</button>
+                    <button type="submit" class="login-button">Entrar</button>
                 </p>
 
 
@@ -38,6 +65,61 @@
 
         </div>
     </main>
+    <footer>
+        <div class="footer-logo">
+            <a href="#"> <img src="img/Logo.png" alt="logo"></a>
+        </div>
+        <div class="footer__iconos">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="footer__secciones">
+            <div class="footer-columna">
+                <h3>SECCIONES</h3>
+                <ul>
+                    <li><a href="#"> Favoritos </a></li>
+                    <li><a href="#">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h3>NEWSLETTER</h3>
+                <p>Suscríbase a nuestro boletín para recibir las últimas noticias en su bandeja de entrada.</p>
+                <input type="email" placeholder="Ingrese su correo electrónico">
+                <button>Enviar</button>
+            </div>
+            <div class="footer-columna">
+                <h3>ACERCA DE</h3>
+                <ul>
+                    <li><a href="#">Informacion</a></li>
+                    <li><a href="#">Pareguntas frecientes</a></li>
+                    <li><a href="#">consultas@e-retroworld.com</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h3>MEDIOS DE PAGO</h3>
+                <div class="footer__box-iconos-de-pago">
+                <div class="footer__iconos-de-pago">
+                    <a href=""><img src="/img/americanexpress.png" alt="american-express"></a>
+                    <a href=""><img src="/img/mastercard.png" alt="mastercard"></a>
+                    <a href=""><img src="/img/mercadopago.png" alt="mercadopago"></a>
+                    <a href=""><img src="/img/pagofacil.png" alt="pagofacil"></a>
+                    <a href=""><img src="/img/visa.png" alt="visa"></a>
+                    <a href=""><img src="/img/rapipago.png" alt="rapipago"></a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="footer__ultimo">
+            <div class="links">
+                <a href="#">Términos y condiciones</a>
+                <span>|</span>
+                <a href="#">Política de privacidad</a>
+            </div>
+            <p>&copy; 2023 - E-retroworld - Todos los derechos reservados</p>
+        </div>
+    </footer>
 
 
 

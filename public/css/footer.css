@@ -12,12 +12,12 @@ body {
 footer {
     background: linear-gradient(to bottom,#4d4a8c, #8130f2);
     color: #fff;
-    padding: 20px;
+    
     font-size: 14px;
     
 }
 
-.logo {
+.footer-logo {
     background: linear-gradient(to margin-top, #8130f2, #4d4a8c);
     max-width: 200px;
     margin: 0 auto;
@@ -25,8 +25,9 @@ footer {
     justify-content: center;
     align-items: center;
 }
-.logo img {
+.footer-logo img {
     width: 100%;
+
     
     
 }
@@ -56,32 +57,32 @@ footer {
     color: #fff;        
 }
 
-.columna {
+.footer-columna {
     flex: 1 0 50%;
     padding: 10px;
     
 }
 
-.columna h3 {
+.footer-columna h3 {
     margin-bottom: 10px;
 }
 
-.columna ul {
+.footer-columna ul {
     list-style: none;
     padding: 0;
 }
 
-.columna ul li {
+.footer-columna ul li {
     margin-bottom: 5px;
 }
 
-.columna input[type="email"] {
+.footer-columna input[type="email"] {
     width: 100%;
     padding: 5px;
     margin-bottom: 5px;
 }
 
-.columna button {
+.footer-columna button {
     background-color: #3d1673;
     color: #fff;
     border: none;

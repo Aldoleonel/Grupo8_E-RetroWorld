@@ -1,6 +1,6 @@
 /* style.css */
 
-main {
+.login__main {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -10,9 +10,10 @@ main {
     min-height: 100vh;
     flex-direction: column;
     max-width: 1920px;
+    background: linear-gradient(to bottom,#4d4a8c, #8130f2);
 }
 
-.Mi-cuenta {
+.login__mi-cuenta {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -21,11 +22,11 @@ main {
     max-width: 300px;
     margin: 30px;
     border-bottom: 1px solid grey;
-
+    margin-bottom: 150px;
 
 }
 
-.ingresar {
+.login__ingresar {
     width: 70%;
     margin: 20px;
     padding: 0;
@@ -60,35 +61,24 @@ main {
     color: #fff;
 }
 
-.correo-box,
-.contraseña-box,
-.olvido-contraseña,
-.registra-entrar {
+.login-correo-box,
+.login-contraseña-box,
+.login-olvido-contraseña,
+.login-registra-entrar {
     width: 100%;
     margin-bottom: 10px;
 }
 
-.correo-box input,
-.contraseña-box input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
 
-.correo-box label,
-.contraseña-box label {
-    color: #fff;
-    font-weight: bold;
-}
+
+
 
 a {
     color: #fff;
     text-decoration: none;
 }
 
-.button {
+.login-button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -101,7 +91,7 @@ a {
     justify-content: center;
 }
 
-.button[type="submit"] {
+.login-button[type="submit"] {
     background-color: #28a745;
     margin-right: 10px;
 
@@ -112,11 +102,13 @@ a {
 
     .login-box {
         max-width: 768px;
-        width: 100%;
+        
         margin-left: 30px;
     }
-    .Mi-cuenta {                      
-        max-width: 768px;   
+    .login__mi-cuenta {                      
+        max-width: 400px; 
+        width: 100%;
+          
     }
 }
 
@@ -134,7 +126,7 @@ a {
         margin-left: 30px;
         margin-bottom: 50px;
     }
-    .Mi-cuenta {
+    .login__mi-cuenta {
                       
         max-width: 1920px;
         width: 70%; 

@@ -1,0 +1,118 @@
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.form__main {
+    flex: 1;
+}
+
+.form__registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0088ff, #a300ff); 
+}
+
+.form-box {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-box form {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form-box .form-input {
+    flex-basis: 48%; 
+    margin-bottom: 15px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.form-box label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="password"],
+.form-box input[type="date"],
+.form-box select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%; 
+}
+
+.form-box .form-checkbox {
+    flex-basis: 100%; 
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.form-box .form-checkbox input {
+    margin-right: 10px;
+}
+
+.form-box .form-submit-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+   
+}
+
+.form-box button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-box .form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+.form__link {
+    color: #333;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+@media (min-width: 769px) {
+    .form-box form {
+        display: flex;
+        flex-direction: row;
+    }
+    .form-box .form-submit-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        position: relative;
+        left: 40%;
+    }
+}
