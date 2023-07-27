@@ -58,7 +58,7 @@ footer {
 }
 
 .footer-columna {
-    flex: 1 0 50%;
+    flex: 1 50%;
     padding: 10px;
     
 }
