@@ -8,7 +8,7 @@
 
 .home--categorias-consolas {
     width: 100%;
-    margin: 30px 10px;
+    margin: 30px 0 ;
     display: flex;
     justify-content: center;
 
@@ -34,7 +34,7 @@
 
 .home__productos article {
     margin: 30px auto;
-    width: 380px;
+    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     background: #f6f6f6;
