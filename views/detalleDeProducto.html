@@ -8,12 +8,40 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="detalleProducto">
+    <header class="header">
+        <div class="header__top">
+          <div class="header__top-box">
+            <div class="header__top--line"> 
+              <i class="fa-solid fa-bars"></i>
+              <img src="/img/Logo.png" alt="logo-retroWorld">
+              <div class="header__top-login-shop">  
+                <i class="fa-regular fa-user"></i><a href="#">Login</a>
+                <i class="fa-solid fa-cart-shopping"></i><a href="#">Mi Carrito</a> 
+              </div> 
+            </div> 
+          </div>  
+          <div class="header__bar-search">
+            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            <input type="text" placeholder="Buscar producto...">
+          </div>
+        </div>
+
+        <div class="header__links">
+          <p><a href="#">Inicio</a></p>
+          <p><a href="#">Productos</a></p>
+          <p><a href="#">Consolas</a></p>
+          <p><a href="#">Evendrive</a></p>
+          <p><a href="#">Repuestos y accesorios</a></p>
+        </div>
+      </header>
+
+
     <main class="main__detalleProducto">
         <div class="main__detalleProducto__container">
             <div class="detalleProducto__container--box-nav">
                 <a href="/">Inicio</a>
                 <i class="fa-solid fa-angle-right"></i>
-                <a href="#">Xbox</a>
+                <a href="/detalleProducto">Xbox</a>
                 <div class="nav-line"></div>
             </div>
             <div class="detalleProducto__container--box-product">
@@ -50,7 +78,7 @@
                     </table>
                 </div>
                 <div class="box-detail-add">
-                    <input type="number" id="cantador" placeholder="1">
+                    <input type="number" id="cantador" placeholder="">
                     <div class="box-detail-angle">
                         <a href="#"><i class="fa-solid fa-angle-up"></i></a>
                         <a href="#"><i class="fa-solid fa-angle-down"></i></a>
@@ -85,11 +113,13 @@
                 <h4>Compartí este producto en:</h4>
                 <!-- <div class="box-link-icon">
                 </div> -->
-                <a href="#"><img src="/img/facebook-icon.png" alt=""></a>
-                <a href="#"><img src="/img/whatsapp-icon.png" alt=""></a>
+                <div>
+                    <a href="#"><img src="/img/facebook-icon.png" alt=""></a>
+                    <a href="#"><img src="/img/whatsapp-icon.png" alt=""></a>
+                </div>
             </div>
             <div class="detalleProducto__container--box-description">
-                <h3>Descripción del Producto</h3>
+                <h4>Descripción del Producto</h4>
                 <p>
                     Se considera que esta consola es de las mejores dentro del mercado, dado que representa una resolución de hasta 4k.
                     Microsoft Xbox One S ofrece impresionantes gráficos, sonido de primer nivel e incluso la posibilidad de guardar todas sus partidas en la nube.
@@ -98,5 +128,59 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footer-logo">
+            <a href="#"> <img src="img/Logo.png" alt="logo"></a>
+        </div>
+        <div class="footer__iconos">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="footer__secciones">
+            <div class="footer-columna">
+                <h3>SECCIONES</h3>
+                <ul>
+                    <li><a href="#"> Favoritos </a></li>
+                    <li><a href="#">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h3>NEWSLETTER</h3>
+                <p>Suscríbase a nuestro boletín para recibir las últimas noticias en su bandeja de entrada.</p>
+                <input type="email" placeholder="Ingrese su correo electrónico">
+                <button>Enviar</button>
+            </div>
+            <div class="footer-columna">
+                <h3>ACERCA DE</h3>
+                <ul>
+                    <li><a href="#">Informacion</a></li>
+                    <li><a href="#">Pareguntas frecientes</a></li>
+                    <li><a href="#">consultas@e-retroworld.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h3>MEDIOS DE PAGO</h3>
+                <div class="footer__box-iconos-de-pago">
+                <div class="footer__iconos-de-pago">
+                    <a href=""><img src="/img/americanexpress.png" alt="american-express"></a>
+                    <a href=""><img src="/img/mastercard.png" alt="mastercard"></a>
+                    <a href=""><img src="/img/mercadopago.png" alt="mercadopago"></a>
+                    <a href=""><img src="/img/pagofacil.png" alt="pagofacil"></a>
+                    <a href=""><img src="/img/visa.png" alt="visa"></a>
+                    <a href=""><img src="/img/rapipago.png" alt="rapipago"></a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="footer__ultimo">
+            <div class="links">
+                <a href="#">Términos y condiciones</a>
+                <span>|</span>
+                <a href="#">Política de privacidad</a>
+            </div>
+            <p>&copy; 2023 - E-retroworld - Todos los derechos reservados</p>
+        </div>
+    </footer>
 </body>
 </html>
