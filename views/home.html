@@ -2,12 +2,14 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
 
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/b1afb57af7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
 </head>
 
 <body>
@@ -26,41 +28,52 @@
         </div>
 
 
- <div class="home--categorias-consolas">
+        <div class="home--categorias-consolas">
             <div class="home--categorias-consolas-logo">
-                <img src="/img/playstation.svg" alt="playstation">
+                <div class="home__categorias__consolas__logo--play">
+                    <i class="fa-brands fa-playstation "></i>
+                </div>
             </div>
 
             <div class="home--categorias-consolas-logo">
-                <img src="/img/xbox.svg" alt="xbox">
+                <div class="home__categorias__consolas__logo--xbox">
+                    <i class="fa-brands fa-xbox "></i>
+                </div><!-- <img src="/img/xbox.svg" alt="xbox"> -->
             </div>
 
             <div class="home--categorias-consolas-logo">
-                <img src="/img/nintendo-switch.svg" alt="nintedo">
+                <div class="home__categorias__consola__logo--nintedo">
+                    <i class="bi bi-nintendo-switch"></i>
+                </div>
+
+
             </div>
 
             <div class="home--categorias-consolas-logo">
-                <img src="/img/joystick.svg" alt="arcade">
+                <div class="home__categorias__consolas__logo--joystick">
+                    <i class="bi bi-joystick"></i>
+                </div>
             </div>
 
-        </div> 
- 
-        <!-- !NUEVOS INGRESOS  -->
+        </div>
+
 
         <div class="home__productos">
             <article>
                 <img src="/img/play-4.png" alt="producto">
                 <div class="home__productos-producto">
-                    <p>playstation 4</p>
-                    <p>10000.00$</p>
-                    <p>Agregar al carrito</p>
+                    <p class="descripcion">playstation 4</p>
+                    <p class="precio">10000.00$</p>
+
+                    <input type="button" value="Agregar al carrito">
+
                 </div>
             </article>
             <article>
                 <img src="/img/play-4.png" alt="producto">
                 <div class="home__productos-producto">
                     <p>playstation 4</p>
-                    <p>10000.00$</p>
+                    <p class="precio">10000.00$</p>
                     <p>Agregar al carrito</p>
                 </div>
             </article>
@@ -91,5 +104,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/js/carusel.js"></script>
+
+
+
 
 </html>
