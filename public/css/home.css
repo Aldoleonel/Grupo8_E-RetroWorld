@@ -125,12 +125,14 @@ body {
 .home__boton--verMas {
     text-align: center;
     margin: 30px 25%;
-
+   
 
 }
 
-.home__boton--verMas input {
+.home__boton--verMas input{
     width: 50%;
+    background-color: #5b21a5;
+    border-radius: 4px;
 }
 
 
