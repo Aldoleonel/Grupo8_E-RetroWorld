@@ -63,8 +63,7 @@
 
 .login-correo-box,
 .login-contraseña-box,
-.login-olvido-contraseña,
-.login-registra-entrar {
+.login-olvido-contraseña {
     width: 100%;
     margin-bottom: 10px;
 }
@@ -80,19 +79,6 @@ a {
 
 .login-button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 3px 2px;
-    ;
-    align-items: center;
-    justify-content: center;
-}
-
-.login-button[type="submit"] {
-    padding: 10px 20px;
     background-color: transparent;
     color: blueviolet;
     border: none;
@@ -102,15 +88,18 @@ a {
     max-width: 300px;
     width: 100%;
     transition: all 1s ease;
+    justify-content: center;
+    margin-bottom: 15px;
 }
-
-
-.login-button[type="submit"]:hover  {
+.login-button:hover  {
     
     background-color: blueviolet;
     color: white;     
         
 }
+
+
+    
 
 
 
@@ -126,6 +115,9 @@ a {
         max-width: 400px; 
         width: 100%;
           
+    }
+    .login-button {
+        max-width: 400px;
     }
 }
 
