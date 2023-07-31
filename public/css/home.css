@@ -9,6 +9,23 @@ body {
     background-color: #202324;
 }
 
+.home--ofertas{
+    text-align: center;
+    padding: 20px 0;
+    color:rgb(229, 229, 229);
+}
+.home--productosEnOferta{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.home__productosEnOferta-producto{
+    width: 30%;
+}
+.home__productosEnOferta-producto img{
+    width: 100%;
+}
+
 .home--categorias-consolas {
     width: 100%;
     margin: 30px 0;
@@ -86,7 +103,10 @@ body {
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    border: 1px solid #ddd;
+    
+}
+.home__productos-producto{
+    border-radius: 4px;
 }
 
 .home__productos article:hover {
@@ -113,12 +133,12 @@ body {
     margin: -1px;
 }
 
-.home__productos-producto .precio {
+.home__productos-producto .precio ,.home__productosEnOferta-producto .precio {
     color: rgb(17 125 16);
     ;
 }
 
-.home__productos-producto .descripcion {
+.home__productos-producto .descripcion ,.home__productosEnOferta-producto .descripcion {
     color: #c1bcb4;
 }
 
