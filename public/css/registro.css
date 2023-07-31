@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #202324;
+    background : radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%);
 }
 
 .form-box {
@@ -20,7 +20,7 @@
     border-radius: 10px;
     padding: 20px;
     max-width: 800px;
-    box-shadow:inset 0px 0px 10px  ,inset 0px 0px 20px #1812ba,0px 0px 10px #fff;
+    box-shadow: inset 0px 0px 3px #fff, inset 0px 0px 20px #3D1673, 0px 0px 3px #fff;
     
 }
 
@@ -84,14 +84,23 @@
 
 .form-box button {
     padding: 10px 20px;
-    background-color: #5b21a5;
-    color: #fff;
+    background-color: transparent;
+    color: blueviolet;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    border: 1px solid blueviolet;
     max-width: 300px;
     width: 100%;
+    transition: all 1s ease;
+
    
+}
+.form-box button:hover {
+    
+    background-color: blueviolet;
+    color: white;     
+        
 }
 
 
