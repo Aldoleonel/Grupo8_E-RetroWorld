@@ -48,7 +48,7 @@ position:relative;
 
 .header__top--line{
     width:100%;
-    height:50%;
+    /* height:50%; */
     display:flex;
     flex-direction:row;
     justify-content:space-around;
@@ -81,8 +81,7 @@ input::placeholder{
 
 @media (min-width:481px){
     
-.header{
-    
+.header{    
     background: linear-gradient(190deg, rgba(23,18,166,1) 0%, rgba(148,48,191,1) 50%, rgb(242,126,202,1) 100%);
 
     }
@@ -92,8 +91,8 @@ input::placeholder{
     }
 
     .header__top--line img{
-    width:18vw;
-    padding:20px 0;
+    width:13vw;
+    /* padding:20px 0; */
     display:flex;
     position:relative;
     right:19%;
