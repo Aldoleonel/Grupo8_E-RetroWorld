@@ -144,8 +144,8 @@ main.main__detalleProducto{
         top: 0;
         border: none;
         border-radius: 6px;
-        background-color: transparent;
-        color: blueviolet;
+        background-color: blueviolet;
+        color: #fff;
         font-weight: 600;
         font-size: 15px;
         text-transform: uppercase;
@@ -156,8 +156,8 @@ main.main__detalleProducto{
 .box-detail-add button:hover{
         /* box-shadow: 0 0 8px #fff, 0 0 8px #fff, 0 0 8px #fff; */
         /* background-color: violet; */
-        background-color: blueviolet;
-        color: #fff;
+        background-color: transparent;
+        color: blueviolet;
 }
 /* -------------------------------------------------- */
 .detalleProducto__container--box-delivery{
