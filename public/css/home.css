@@ -4,50 +4,39 @@
     box-sizing: border-box;
 
 }
+:root{
+    --colorTitulos_Iconos:rgb(229, 229, 229);
+    --colorFondoProducto:rgb(252, 252, 252);
+    --colorFondoTitulo:#262729;
+}
 
 body {
     background-color: #202324;
 }
-.home-botonwhatsap{
-    display: inline-block;
-    color: green;
-    position: fixed;
-  
-    line-height: 55px;
-    bottom: 10px;
-    right: 4px;
-    font-size: 30px;
-}
 
-.home--ofertas , .home--productos{
-    text-align: center;
-    padding: 20px 0;
-    color:rgb(229, 229, 229);
-    margin: 25px 0;
-    background-color: #262729;
-}
-.home--productosEnOferta{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-.home__productosEnOferta-producto{
-    width: 40%;
-}
-.home__productosEnOferta-producto img{
-    width: 100%;
-}
 
+/* !ICONOS DE CONSOLAS */
 .home--categorias-consolas {
     width: 100%;
     margin: 30px 0;
     display: flex;
     justify-content: space-evenly;
 }
+.home--categorias-consolas-logo {
+    height: 100%;
+    width: 55px;
+    margin: 0 10px;
+}
+
+.home--categorias-consolas-logo img {
+    width: 100%;
+    height: 100%;
+
+}
 
 .home--categorias-consolas-logo i {
     font-size: 4rem;
-    color:rgb(229, 229, 229);
+    color:var(--colorTitulos_Iconos);
 }
 
 .home__categorias__consolas__logo--play:hover {
@@ -74,19 +63,31 @@ body {
 }
 
 
-.home--categorias-consolas-logo {
-    height: 100%;
-    width: 55px;
-    margin: 0 10px;
-}
 
-.home--categorias-consolas-logo img {
+
+
+/* !SECCION OFERTAS */
+.home--ofertasTitulo, .home--productosTitulo{
+    text-align: center;
+    padding: 20px 0;
+    color:var(--colorTitulos_Iconos);
+    margin: 25px 0;
+    background-color:var(--colorFondoTitulo);
+}
+.home--productosEnOferta{
     width: 100%;
-    height: 100%;
-
+    display: flex;
+    justify-content: space-around;
+}
+.home__productosEnOferta-producto{
+    width: 40%;
+}
+.home__productosEnOferta-producto img{
+    width: 100%;
 }
 
 
+/* !HOME PRODUCTOS */
 
 .home__producto {
     width: 100%;
@@ -95,55 +96,37 @@ body {
 .home__productos-producto {
     width: 100%;
 }
-
+.home__productos--article{
+    margin: 30px auto;
+    background-color: rgb(252, 252, 252);
+    border-radius: 10px;
+}
+.home__productos-producto , .home__productosEnOferta-producto {
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(252, 252, 252);;
+}
+.home__productos img {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(252, 252, 252); */
+   border-bottom: solid 1px grey;
+}
 
 .home__productos-producto input,.home__productosEnOferta-producto input{
     padding: 15px 0 15px 0;
     width: 90%;
     border-radius: 4px;
     background-color: #5b21a5;
-    
     border-style: none;
     margin: 10px 0;
     color: white;
-  
-
 }
 
-.home__productos article {
-    margin: 30px auto;
-
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    
-}
-.home__productos-producto ,.home__productosEnOferta-producto{
-    border-radius: 4px;
-}
-
-.home__productos article:hover {
-    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
-}
-
-.home__productos img {
-    width: 100%;
-    background-color: rgb(252, 252, 252);
-    border-radius: 5px;
-}
-
-
-
-
-
-.home__productos-producto , .home__productosEnOferta-producto {
-    text-align: center;
-    background-color: white;
-    margin: -1px;
-}
 
 .home__productos-producto .precio ,.home__productosEnOferta-producto .precio {
     color: rgb(17 125 16);
-    ;
+   
 }
 
 .home__productos-producto .descripcion ,.home__productosEnOferta-producto .descripcion {
@@ -153,8 +136,6 @@ body {
 .home__boton--verMas {
     text-align: center;
     margin: 30px 25%;
-   
-
 }
 
 .home__boton--verMas input{
@@ -166,45 +147,37 @@ body {
     padding: 10px;
     border-style: none;
 }
-
-
+.home-botonwhatsap{
+    display: inline-block;
+    color: rgb(37,211,102);
+    position: fixed;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    font-size: 40px;
+}
 @media (min-width:481px) {
-
-
-
-
-
     .home__productos {
 
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-
     }
-
-    .home__productos article {
+    .home__productos--article {
 
         margin: 0;
         width: 45vw;
         height: 100%;
         margin: 20px 0;
     }
-
 }
-
 @media (min-width:800px) {
-
     .home__productos {
-
         display: flex;
-
         justify-content: space-around;
-
     }
 
-    .home__productos article {
-
-
+    .home__productos--article {
         width: 23vw;
         height: 100%;
         margin: 20px 0;

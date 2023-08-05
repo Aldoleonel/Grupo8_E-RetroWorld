@@ -14,12 +14,13 @@
 
 <body>
     <main>
+        <!-- !CARRUSEL -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"> <img src="/img/home/banner.jpg" alt=""> </div>
                 <div class="swiper-slide"> <img src="/img/home/banner1.jpg" alt=""> </div>
                 <div class="swiper-slide"> <img src="/img/home/banner2.jpg" alt=""> </div>
-                <div class="swiper-slide"> <img src="/img/home/banner3.jpg" alt=""> </div>
+
 
             </div>
             <div class="swiper-button-next"></div>
@@ -27,7 +28,7 @@
             <div class="swiper-pagination"></div>
         </div>
 
-
+        <!-- !LOGOS DE CONSOLA -->
         <div class="home--categorias-consolas">
             <div class="home--categorias-consolas-logo">
                 <div class="home__categorias__consolas__logo--play">
@@ -56,8 +57,8 @@
             </div>
 
         </div>
-
-        <div class="home--ofertas">
+        <!-- !OFERTAS DESTADAS -->
+        <div class="home--ofertasTitulo">
             <h2 c>OFERTAS DESTACADAS</h2>
         </div>
         <div class="home--productosEnOferta">
@@ -79,41 +80,50 @@
                 </div>
             </div>
         </div>
-        <div class="home--productos">
+
+        <!-- !PRODUCTOS DEl HOME  -->
+        <div class="home--productosTitulo">
             <h2 c>Productos</h2>
         </div>
         <div class="home__productos">
-            <article>
+            
+                <article class="home__productos--article" >
+                    <img src="/img/play-4.png" alt="producto">
+                    <div class="home__productos-producto">
+                        <p class="descripcion">playstation 4</p>
+                        <p class="precio">$10000.00</p>
+
+                        <input type="button" value="Agregar al carrito">
+
+                    </div>
+                </article>
+          
+            <article class="home__productos--article">
+
+
+                <img src="/img/play-4.png" alt="producto">
+
+                <div class="home__productos-producto">
+
+                    <p class="descripcion">playstation 4</p>
+                    <p class="precio">$10000.00</p>
+                    <input type="button" value="Agregar al carrito">
+                </div>
+
+            </article>
+            <article class="home__productos--article">
                 <img src="/img/play-4.png" alt="producto">
                 <div class="home__productos-producto">
                     <p class="descripcion">playstation 4</p>
-                    <p class="precio">10000.00$</p>
-
-                    <input type="button" value="Agregar al carrito">
-
-                </div>
-            </article>
-            <article>
-                <img src="/img/play-4.png" alt="producto">
-                <div class="home__productos-producto">
-                    <p>playstation 4</p>
-                    <p class="precio">10000.00$</p>
+                    <p class="precio">$ 10000.00</p>
                     <input type="button" value="Agregar al carrito">
                 </div>
             </article>
-            <article>
-                <img src="/img/play-4.png" alt="producto">
-                <div class="home__productos-producto">
-                    <p>playstation 4</p>
-                    <p class="precio"> 10000.00$</p>
-                    <input type="button" value="Agregar al carrito">
-                </div>
-            </article>
-            <article>
+            <article class="home__productos--article">
                 <img class="home__productos-producto" src="/img/play-4.png" alt="producto">
                 <div class="home__productos-producto">
-                    <p>playstation 4</p>
-                    <p class="precio">10000.00$</p>
+                    <p class="descripcion">playstation 4</p>
+                    <p class="precio">$10000.00</p>
                     <input type="button" value="Agregar al carrito">
                 </div>
             </article>
@@ -125,7 +135,7 @@
         </div>
     </main>
     <div class="home-botonwhatsap">
-        <i  class="fa-brands fa-whatsapp fa-2xl"></i>
+        <i class="fa-brands fa-whatsapp fa-2xl"></i>
     </div>
 </body>
 
