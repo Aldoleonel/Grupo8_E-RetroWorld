@@ -8,6 +8,7 @@
     --colorTitulos_Iconos:rgb(229, 229, 229);
     --colorFondoProducto:rgb(252, 252, 252);
     --colorFondoTitulo:#262729;
+
 }
 
 body {
@@ -172,6 +173,8 @@ body {
     }
 }
 @media (min-width:800px) {
+
+    /* !Home */
     .home__productos {
         display: flex;
         justify-content: space-around;
