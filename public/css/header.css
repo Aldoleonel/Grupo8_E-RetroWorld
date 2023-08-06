@@ -14,8 +14,13 @@
 .header__links{
         display:none;
     }
-.header__top-login-shop a{
+.header__top-login-shop span{
     display:none;
+}
+.header__top-login-shop i{
+    display:flex;
+    font-size:15px;
+    gap:10px;
 }
 
 .header{
@@ -31,12 +36,12 @@ position:relative;
 
 .header__top-login-shop{
     display:flex;
-    gap:15px;
+    gap:12px;
     align-self:center;
 
 }
 
-.header__top--line img{
+.header__top--line a img{
     width:40vw;
     display:flex;
     margin: 5px 0;
@@ -90,12 +95,12 @@ input::placeholder{
         display:none;
     }
 
-    .header__top--line img{
-    width:13vw;
-    /* padding:20px 0; */
+    .header__top--line a img{
+    width:130px;
+    padding:10px 0;
     display:flex;
     position:relative;
-    right:19%;
+    right:56%;
    
     }
 
@@ -111,7 +116,7 @@ input::placeholder{
     height:30%;
     border-radius:2px;
     position:absolute;
-    right:28%;
+    right:24%;
     top:25%;
         
 
@@ -120,7 +125,7 @@ input::placeholder{
     .header__bar-search i{
     font-size:70%;
     position:absolute;
-    left:67%;
+    left:72%;
     top:40%;
 }
   
@@ -146,11 +151,25 @@ input::placeholder{
         position:relative;
         left:50px;
         top:10px;
+        gap:30px;
     }
     
 }
 
 @media (min-width:768px){
+     .header__top--line a img{
+    width:16vw;
+    display:flex;
+    position:relative;
+    right:74%;
+    } 
+    
+    .header__bar-search i{
+    font-size:70%;
+    position:absolute;
+    left:67%;
+    top:40%;
+}
 
     .header__top-login-shop a{
         display:flex;
@@ -158,17 +177,16 @@ input::placeholder{
         right:10px;
         top:5px;        
         font-size:70%;
-        
-    }
-    .header__top-login-shop i{
-        font-size:90%;
-    }
-
+        gap:10px;
+   }
+    .header__top-login-shop span{
+    display:flex;
+}
     .header__top-login-shop{
         font-size:120%;
         display:flex;
         left:10%;
-        gap:20px;
+        gap:30px;
         top:10px;
     }
 
