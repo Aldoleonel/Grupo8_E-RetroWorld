@@ -17,9 +17,14 @@ body {
 
 
 /* !ICONOS DE CONSOLAS */
+
+.swiper{
+    display: none;
+}
+
 .home--categorias-consolas {
     width: 100%;
-    margin: 30px 0;
+    margin: 40px 0;
     display: flex;
     justify-content: space-evenly;
 }
@@ -158,6 +163,10 @@ body {
     font-size: 40px;
 }
 @media (min-width:481px) {
+    .swiper{
+        display: block;
+    }
+    
     .home__productos {
 
         display: flex;
