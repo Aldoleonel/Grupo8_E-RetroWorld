@@ -1,4 +1,4 @@
-<a href ="https://github.com/Aldoleonel/Grupo8_E-RetroWorld/blob/develop/retro/retro.jpeg" > Retrospectiva</a>
+<a href ="https://github.com/Aldoleonel/Grupo8_E-RetroWorld/blob/develop/retro/retro.jpeg" ><h2> Retrospectiva</h2></a>
 <h1 id="titulo"> E-RetroWorld </h1>
 <h3>Tu pasado, tu presente y tu futuro</h3>
 
