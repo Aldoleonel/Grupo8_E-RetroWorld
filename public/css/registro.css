@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+
 .form__registro {
     
     display: flex;
@@ -10,6 +11,7 @@
     align-items: center;
     min-height: 100vh;
     background : radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%);
+    
 }
 
 .form-box {
@@ -19,10 +21,11 @@
     background-color: rgba(255, 255, 255, 0.0);
     border-radius: 10px;
     padding: 20px;
-    max-width: 800px;
+    width: 100%;
     box-shadow: inset 0px 0px 3px #fff, inset 0px 0px 20px #3D1673, 0px 0px 3px #fff;
     
 }
+
 
 .form-box h2 {
     text-align: center;
@@ -55,12 +58,21 @@
 .form-box input[type="email"],
 .form-box input[type="password"],
 .form-box input[type="date"],
+
 .form-box select {
     padding: 10px;
     border: none;
     border-radius: 5px;
     background-color: #f9f9f9;
     width: 100%; 
+}
+
+.form-box input[type="number"]{
+    height: 45px;
+    border-radius: 5px;
+}
+.form-box input::placeholder { 
+    color: black; 
 }
 
 .form-box .form-checkbox {
@@ -80,6 +92,33 @@
     justify-content: center;
     margin-top: 20px;
    
+}
+#fichero {
+    display: none;
+}
+.form-boton-foto {
+    display: inline-block;
+    background-color: blueviolet;
+    width: 100%;
+    cursor: pointer;
+    height: 38px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+        
+}
+.form-foto {
+    display: flex;
+    width: 97%;
+    margin-top: 18px;
+}
+.form-input-textArea {
+    width: 97%; 
+    margin-bottom: 15px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-box button {
@@ -115,6 +154,20 @@
 }
 
 
+@media (min-width: 481px) {
+    .form-box {
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.0);
+        border-radius: 10px;
+        padding: 20px;
+        
+        box-shadow: inset 0px 0px 3px #fff, inset 0px 0px 20px #3D1673, 0px 0px 3px #fff;
+        
+    }
+}
+
 @media (min-width: 769px) {
     .form-box form {
         display: flex;
@@ -128,5 +181,16 @@
         left: 30%;
         max-width: 300px;
         width: 100%;
+    }
+    .form-box {
+        
+        max-width: 800px;
+        
+        
+    }
+    .form-foto {
+        display: flex;
+        width: 48%;
+        margin-top: 18px;
     }
 }

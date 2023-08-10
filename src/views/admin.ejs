@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle producto</title>
     <script src="https://kit.fontawesome.com/94269268ef.js" crossorigin="anonymous"></script>
-    <title>Carrito de cómpras</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
-<body class="body__carrito">
+<body class="detalleProducto">
     <header class="header">
         <div class="header__top">
           <div class="header__top-box">
@@ -36,69 +34,35 @@
             <p><a href="#">Repuestos y accesorios</a></p>
           </div>
       </header>
-    <div class="carrito__box-complete">
-        <div class="carrito__title">
-            <h1>Mi carrito</h1>
+
+      <main class="login__main">
+        <div class="login__mi-cuenta">
+            <p>Mi Cuenta</p>
         </div>
+        <div class="login-box">
+            <form action="/login" method="POST">
+                <p class="login__ingresar">ingresar</p>
+                <p class="login-correo-box">
+                    <label>Correo electronico: *</label>
+                    <input type="email" name="email">
+                </p>
+                <p class="login-contraseña-box">
+                    <label>Contraseña: *</label>
+                    <input type="password" name="password">
+                </p>
+                <p class="login-olvido-contraseña">
+                    <a href="#">¿Ha olvidado su contraseña?</a>
+                </p>
+                <p class="login-registra-entrar">
+                    <a href="/users/register"><button type="button" class="login-button">Registra una cuenta</button></a>
+                    <button type="submit" class="login-button">Entrar</button>
+                </p>
 
-        <main class="carrito__main">
-            <section class="carrito__articles">
-                <div class="carrito__box-articles">
-                    <article class="carrito__articles-details">
-                        <img src="/img/play-4.png" alt="foto ps4" width="200" height="200">
-                        <h5>Sony PlayStation 4 Slim Standard</h5>
-                    </article>
-                    <div class="num__products">
-                        <button type="button"><i class="fa-solid fa-minus"></i></button>
-                        <h2>1</h2>
-                        <button type="button"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                    <div class="carrito__products-precio">
-                        <h4>$240.000</h4>
-                        <div>
-                            <button type="button"><i class="fa-solid fa-xmark"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="carrito__box-articles">
-                    <article class="carrito__articles-details">
-                        <img src="/img/atari-8.png" alt="foto ps4" width="200" height="200">
-                        <h5>Consola Atari Flashback 8</h5>
-                    </article>
-                    <div class="num__products">
-                        <button type="button"><i class="fa-solid fa-minus"></i></button>
-                        <h2>1</h2>
-                        <button type="button"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                    <div class="carrito__products-precio">
-                        <h4>$240.000</h4>
-                        <div>
-                            <button type="button"><i class="fa-solid fa-xmark"></i></button>
-                        </div>
-                    </div>
-                </div>
 
-            </section>
+            </form>
+
+        </div>
         </main>
-        <aside class="carrito__options">
-
-
-            <div class="carrito__options--total-precio">
-                <h3>Total</h3>
-                <h3>$000.00</h3>
-            </div>
-
-            <div class="carrito__options-buttons">
-                <div class="button__final">
-                    <a href="#">Finalizar Compra</a>
-                </div>
-                <div class="button__continuar">
-                    <a href="#">Continuar Comprando</a>
-                </div>
-            </div>
-        </aside>
-
-    </div>
     <footer>
         <div class="footer-logo">
             <a href="/"> <img src="/img/Logo.png" alt="logo"></a>
@@ -128,21 +92,20 @@
                     <li><a href="#">Informacion</a></li>
                     <li><a href="#">Pareguntas frecientes</a></li>
                     <li><a href="#">consultas@e-retroworld.com</a></li>
-
                 </ul>
             </div>
             <div class="footer-columna">
                 <h3>MEDIOS DE PAGO</h3>
                 <div class="footer__box-iconos-de-pago">
-                    <div class="footer__iconos-de-pago">
-                        <a href=""><img src="/img/americanexpress.png" alt="american-express"></a>
-                        <a href=""><img src="/img/mastercard.png" alt="mastercard"></a>
-                        <a href=""><img src="/img/mercadopago.png" alt="mercadopago"></a>
-                        <a href=""><img src="/img/pagofacil.png" alt="pagofacil"></a>
-                        <a href=""><img src="/img/visa.png" alt="visa"></a>
-                        <a href=""><img src="/img/rapipago.png" alt="rapipago"></a>
-                    </div>
+                <div class="footer__iconos-de-pago">
+                    <a href=""><img src="/img/americanexpress.png" alt="american-express"></a>
+                    <a href=""><img src="/img/mastercard.png" alt="mastercard"></a>
+                    <a href=""><img src="/img/mercadopago.png" alt="mercadopago"></a>
+                    <a href=""><img src="/img/pagofacil.png" alt="pagofacil"></a>
+                    <a href=""><img src="/img/visa.png" alt="visa"></a>
+                    <a href=""><img src="/img/rapipago.png" alt="rapipago"></a>
                 </div>
+            </div>
             </div>
         </div>
         <div class="footer__ultimo">
@@ -155,5 +118,4 @@
         </div>
     </footer>
 </body>
-
 </html>
