@@ -1,5 +1,5 @@
-<h1><a href = ""> RETROSPECTIVA </a> </h1>
-<h2 id="titulo"> E-RetroWorld </h2>
+<a href ="https://github.com/Aldoleonel/Grupo8_E-RetroWorld/blob/develop/retro/retro.jpeg" ><h2> Retrospectiva</h2></a>
+<h1 id="titulo"> E-RetroWorld </h1>
 <h3>Tu pasado, tu presente y tu futuro</h3>
 
 <p><em>El sitio E-RetroWorld le ofrece al cliente todo tipo de consolas de videojuegos, ya sea retro, actuales o incluso tableros hecho a base de tecnologia actual con juegos retro.</em></p>
