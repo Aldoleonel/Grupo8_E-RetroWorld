@@ -10,5 +10,8 @@ module.exports = {
     },
     add : (req,res)=> {
         return res.render('productAdd');
+    },
+    edit:(req,res)=>{
+        return res.render('productEdit')
     }
 }
