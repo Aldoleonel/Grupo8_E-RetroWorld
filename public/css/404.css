@@ -157,7 +157,7 @@ body:focus {
   outline: 0;
 }
 
-body {
+body.error {
   margin: 0;
   padding: 0;
   height: auto;
