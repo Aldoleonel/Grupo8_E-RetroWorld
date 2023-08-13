@@ -1,44 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-
-    <meta charset="UTF-8">
-    <script src="https://kit.fontawesome.com/b1afb57af7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
-</head>
-
+<%- include('partials/head',{
+    title: 'Home'
+}) %>
 <body>
-    <header class="header">
-        <div class="header__top">
-          <div class="header__top-box">
-            <div class="header__top--line"> 
-              <i class="fa-solid fa-bars"></i>
-              <a href="/"><img src="/img/Logo.png" alt="logo-retroWorld"></a>
-              <div class="header__top-login-shop">  
-                <a href="/users/login"><i class="fa-regular fa-user"></i><span>Login</span></a>
-                <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i><span>Mi Carrito</span></a> 
-              </div> 
-            </div> 
-          </div>  
-          <div class="header__bar-search">
-            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-            <input type="text" placeholder="Buscar producto...">
-          </div>
-        </div>
-    
-        <div class="header__links">
-            <p><a href="/">Inicio</a></p>
-            <p><a href="#">Productos</a></p>      
-            <p><a href="#">Consolas</a></p>
-            <p><a href="/admin">Admin</a></p>
-            <p><a href="#">Repuestos y accesorios</a></p>
-          </div>
-      </header>
+    <%- include('partials/header') %>
     <main>
         <!-- !CARRUSEL -->
         <div class="swiper mySwiper">
@@ -160,6 +127,7 @@
             <input type="button" value="Ver Mas Productos">
         </div>
     </main>
+    <%- include('partials/footer') %>
     <div class="home-botonwhatsap">
         <i class="fa-brands fa-whatsapp fa-2xl"></i>
     </div>
