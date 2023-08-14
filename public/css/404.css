@@ -118,20 +118,20 @@
   background-color: #0077b5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-li,
-button,
-a,
-i,
-input,
-body {
+.error h1,
+.error h2,
+.error h3,
+.error h4,
+.error h5,
+.error h6,
+.error p,
+.error ul,
+.error li,
+.error button,
+.error a,
+.error i,
+.error input,
+body.error {
   margin: 0;
   padding: 0;
   list-style: none;
