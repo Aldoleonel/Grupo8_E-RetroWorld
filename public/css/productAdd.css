@@ -1,0 +1,199 @@
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+.form__registro {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background : radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%);
+    
+}
+
+.form-box2 {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.0);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: inset 0px 0px 3px #fff, inset 0px 0px 20px #3D1673, 0px 0px 3px #fff;
+    
+}
+
+
+.form-box2 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.form-box2 form {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form-box2 .form-input {
+    flex-basis: 48%; 
+    margin-bottom: 15px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.form-box2 label {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.form-box2 input[type="text"],
+.form-box2 input[type="email"],
+.form-box2 input[type="password"],
+.form-box2 input[type="date"],
+
+.form-box2 select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%; 
+}
+
+.form-box2 input[type="number"]{
+    height: 45px;
+    border-radius: 5px;
+}
+.form-box2 input::placeholder { 
+    color: black; 
+}
+
+.form-box2 .form-checkbox {
+    flex-basis: 100%; 
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.form-box2 .form-checkbox input {
+    margin-right: 10px;
+}
+
+.form-box2 .form-submit-button2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+   
+}
+#fichero {
+    display: none;
+}
+.form-boton-foto {
+    display: inline-block;
+    background-color: blueviolet;
+    width: 100%;
+    cursor: pointer;
+    height: 38px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+        
+}
+.form-foto {
+    display: flex;
+    width: 97%;
+    margin-top: 18px;
+}
+.form-input-textArea {
+    width: 97%; 
+    margin-bottom: 15px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box2 button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: blueviolet;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid blueviolet;
+    width: 98%;
+    transition: all 1s ease;
+    gap: 15px;
+   
+}
+.form-box2 button:hover {
+    
+    background-color: blueviolet;
+    color: white;     
+        
+}
+
+
+.form-box2 .form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+.form__link {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+@media (min-width: 481px) {
+    .form-box2 {
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.0);
+        border-radius: 10px;
+        padding: 20px;
+        
+        box-shadow: inset 0px 0px 3px #fff, inset 0px 0px 20px #3D1673, 0px 0px 3px #fff;
+        
+    }
+}
+
+@media (min-width: 769px) {
+    .form-box2 form {
+        display: flex;
+        flex-direction: row;
+    }
+    .form-box2 button {
+        
+        width: 50%;
+        max-width: 800px;
+    }
+    .form-box2 .form-submit-button2{
+        display: flex;
+        flex-direction: row;
+        width: 97%;
+        gap: 15px;
+    }
+    .form-box2 {
+        
+        max-width: 800px;
+        
+        
+    }
+    .form-foto {
+        display: flex;
+        width: 48%;
+        margin-top: 18px;
+    }
+}
