@@ -1,4 +1,3 @@
-<a href ="https://github.com/Aldoleonel/Grupo8_E-RetroWorld/blob/develop/retro/retro.jpeg" ><h2> Retrospectiva</h2></a>
 <h1 id="titulo"> E-RetroWorld </h1>
 <h3>Tu pasado, tu presente y tu futuro</h3>
 
@@ -49,3 +48,7 @@
     <li><a href="https://www.gameplanet.com.ar/pagina-inicial.htm"> GamePlanet </a></li>
     <p>Elegimos esta página por las funcionalidades del menú desplegable y el botón de WhatsApp.</p>
 </ul>
+
+<hr/>
+<a href ="https://github.com/Aldoleonel/Grupo8_E-RetroWorld/tree/E-retroWorld-retrospectivas"><h2> Retrospectivas</h2></a>
+<hr/>
