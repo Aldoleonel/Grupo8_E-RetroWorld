@@ -50,5 +50,5 @@
 </ul>
 
 <hr/>
-<a href ="https://github.com/Aldoleonel/Grupo8_E-RetroWorld/tree/E-retroWorld-retrospectivas"><h2> Retrospectivas</h2></a>
+<a href ="https://github.com/Aldoleonel/Grupo8_E-RetroWorld/tree/E-retroWorld-retrospectivas">Retrospectivas</a>
 <hr/>
