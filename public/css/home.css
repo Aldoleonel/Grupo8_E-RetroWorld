@@ -11,7 +11,7 @@
 
 }
 
-body {
+.home--body {
     background-color: #202324;
 }
 
@@ -48,17 +48,20 @@ body {
 .home__categorias__consolas__logo--play:hover {
     text-shadow: 0 0 20px #1B15BF, 0 0 20px #1B15BF, 0 0 20px #1B15BF;
     transition-delay: 0.1s;
+    cursor: pointer;
 }
 
 .home__categorias__consolas__logo--xbox:hover {
     text-shadow: 0 0 20px green, 0 0 20px green, 0 0 20px green;
     transition-delay: 0.1s;
+    cursor: pointer;
 }
 
 
 .home__categorias__consola__logo--nintedo:hover{
     text-shadow: 0 0 20px red, 0 0 20px red, 0 0 20px red ;
     transition-delay: 0.1s;
+    cursor: pointer;
 }
 
 
@@ -66,6 +69,7 @@ body {
     
     text-shadow: 0 0 20px yellow, 0 0 20px yellow, 0 0 20px yellow;
     transition-delay: 0.1s;
+    cursor: pointer;
 }
 
 
