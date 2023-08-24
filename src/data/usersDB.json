@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "firstName": "Andony",
+        "lastName": "Sanchez",
+        "email" : "1010andony@gmail.com",
+        "password" : "123",
+        "category" : "admin",
+        "image" : null
+    },
+    {
+        "id": 2,
+        "firstName": "Axel",
+        "lastName": "Michel",
+        "email" : "axelmichel515@gmail.com",
+        "password" : "123",
+        "category" : "admin",
+        "image" : null
+    },
+    {
+        "id": 3,
+        "firstName": "Aldo",
+        "lastName": "Chalup",
+        "email" : "aldoleonelchalup@gmail.com",
+        "password" : "123",
+        "category" : "admin",
+        "image" : null
+    },
+    {
+        "id": 4,
+        "firstName": "Sebastian",
+        "lastName": "Tapia",
+        "email" : "sebastian.tapia35202@gmail.com",
+        "password" : "123",
+        "category" : "admin",
+        "image" : null
+    }
+]
