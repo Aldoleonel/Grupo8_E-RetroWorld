@@ -101,7 +101,7 @@
   "image": "NintendoSwitch.png",
   "stock":0
 },
-git commit --amend "agrega productos al archicho productsJson01"
+
 {
   "id": 10,
   "name": "Magnavox Odyssey",
