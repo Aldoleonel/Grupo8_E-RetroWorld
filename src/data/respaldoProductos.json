@@ -31,7 +31,7 @@
       "estado": "in-sale",
       "description": "Nintendo 64 es la cuarta videoconsola de sobremesa descontinuada producida por Nintendo, desarrollada para suceder a la Super Nintendo. Fue la primera consola concebida para dar el salto del 2D al 3D.",
       "image": "Nintendo64.png",
-      "stock":true
+      "stock":0
 },
 {
   "id": 4,
@@ -73,7 +73,7 @@
   "price": 170000,
   "discount": 0,
   "category": "nintendo",
-  "estado":"visited",
+  "estado":"in-sale",
   "description": "Virtual Boy es una consola de sobremesa producida por Nintendo en 1995. La consola crea una ilusión monocromática (rojo/negro) de profundidad tridimensional que Nintendo promovió como realidad virtua,",
   "image": "NintendoVirtualBoy.png",
   "stock":0
@@ -84,7 +84,7 @@
   "price": 117.650,
   "discount": 0,
   "category": "nintendo",
-  "estado":"visited",
+  "estado":"in-sale",
   "description": "El control Wii Remote se destaca por su capacidad de detectar movimientos en un determinado espacio lo que te permite una mayor interacción y dinamismo,Guardá tus apps, fotos, videos y mucho más en el disco duro, que cuenta con una capacidad de 512 MB",
   "image": "NintendoWii.png",
   "stock":0
@@ -96,7 +96,7 @@
   "price": 366.330,
   "discount": 0,
   "category": "nintendo",
-  "estado":"visited",
+  "estado":"in-sale",
   "description": "Sumérgete en el mundo de los videojuegos con la Nintendo Switch de 32GB, una consola híbrida que te permite disfrutar de tus juegos favoritos tanto en casa como en cualquier lugar,Incluye 2 controles para compartir la diversión",
   "image": "NintendoSwitch.png",
   "stock":0
@@ -121,7 +121,7 @@
   "estado":"in-sale",
   "description": "Plataformas aplicables: televisores, monitores, proyectores.Miles de juegos clásicos de juegos de árcade,Control de volumen.Entrada 3.5 para audífonos.Menú para búsqueda de juego.Diseño de bajo consumo de energía.",
   "image": "tablero1.png",
-  "stock":true
+  "stock":0
 },
 {
   "id": 12,
@@ -153,7 +153,7 @@
   "category": "retro",
   "estado":"in-sale",
   "description": " Se conectan a la pantalla por cable HDMI y un eliminador de corriente ya incluidos.Incluye cable usb para conectarse entre ambos tableros.16,000 Juegos",
-  "image": "tablero4.jpg",
+  "image": "tablero4.png",
   "stock":0
 },
 {
