@@ -2,12 +2,12 @@
     {
         "id": 1,
       "name": "Xbox",
-      "price": 0,
+      "price": 50000,
       "discount": 0,
       "category": "xbox",
       "estado":"in-sale",
-      "description": "Macbook Pro 2019 Mpxq2ll/a Intel Core i5 2.3 Ghz 8gb RAM 128gb SSD Pantalla 13.3\" Retina Apple Nueva Original. Importada de USA. Se entrega con la factura de compra para contar con la garantía del fabricante",
-      "image": "img-macbook-pro-2019.jpg",
+      "description": "Xbox es una videoconsola doméstica de 32 bits y la primera de la serie de videoconsolas Xbox fabricada por Microsoft.",
+      "image":"xbox.png",
       "stock":0
       
 },
@@ -110,6 +110,72 @@
   "estado":"in-sale",
   "description": "Viaja al pasado y obten La primer consola de videojuegos de la historia,Trae 28 juegos,Contiene 2 mandos,Contiene manual de usos",
   "image": "Magnavox-Odyssey-Console(Primera-consola-de-la-historia).png",
+  "stock":0
+},
+{
+  "id": 11,
+  "name": " Tablero arcade 10,600 en WAR",
+  "price": 60299,
+  "discount": 0,
+  "category": "retro",
+  "estado":"in-sale",
+  "description": "Plataformas aplicables: televisores, monitores, proyectores.Miles de juegos clásicos de juegos de árcade,Control de volumen.Entrada 3.5 para audífonos.Menú para búsqueda de juego.Diseño de bajo consumo de energía.",
+  "image": "tablero1.png",
+  "stock":0
+},
+{
+  "id": 12,
+  "name": " Tablero con base pandora 80cm",
+  "price": 90300,
+  "discount": 0,
+  "category": "retro",
+  "estado":"in-sale",
+  "description": "Fabricado en MDFcon formaica .Vinil alta resolución (varios diseños).Acrílico 3mm en tablero.Ram 512 megas.Memoria flash de 32 gb.Medidas:80 cm de ancho x 26 cm de fondo x 12-16 cm de altura.",
+  "image": "tablero2.png",
+  "stock":0
+},
+{
+  "id": 13,
+  "name": " Consola Arcade Individual The King of fighters",
+  "price": 50700,
+  "discount": 0,
+  "category": "retro",
+  "estado":"in-sale",
+  "description": "  Se conectan a la pantalla por cable HDMI y un eliminador de corriente ya incluidos. Vienen en pares (puedes escoger uno del mismo diseño y otro diferente o ambos iguales). Incluye cable usb para conectarse entre ambos tableros.17,000 Juegos",
+  "image": "tablero3.png",
+  "stock":0
+},
+{
+  "id": 14,
+  "name": " Tablero Arcade Individual 2 piezas 16 Mil Juegos Street Fighters",
+  "price": 53400,
+  "discount": 0,
+  "category": "retro",
+  "estado":"in-sale",
+  "description": " Se conectan a la pantalla por cable HDMI y un eliminador de corriente ya incluidos.Incluye cable usb para conectarse entre ambos tableros.16,000 Juegos",
+  "image": "tablero4.png",
+  "stock":0
+},
+{
+  "id": 15,
+  "name": "Xbox 360",
+  "price": 70000,
+  "discount": 0,
+  "category": "xbox",
+  "estado":"in-sale",
+  "description": "Xbox 360 es la segunda videoconsola de sobremesa de la marca Xbox producida por Microsoft. Fue desarrollada en colaboración con IBM y ATI (AMD) y lanzada en América del Sur, América del Norte, Japón, Europa y Australia entre 2005 y 2006.",
+  "image":"xbox360.png",
+  "stock":0
+},
+{
+  "id": 16,
+  "name": "Xbox 360",
+  "price": 70000,
+  "discount": 0,
+  "category": "xbox",
+  "estado":"in-sale",
+  "description": "Xbox One es la tercera videoconsola de sobremesa de la marca Xbox, producida por Microsoft. Forma parte de las videoconsolas de octava generación, fue presentada por Microsoft el 21 de mayo de 2013.7​ Es la sucesora de la Xbox 360 y la predecesora de la Xbox Series X|S. Actualmente compite con PlayStation 4 de Sony y Wii U de Nintendo. Su salida a la venta fue el 22 de noviembre de 2013",
+  "image":"xbox360.png",
   "stock":0
 }
 ]
