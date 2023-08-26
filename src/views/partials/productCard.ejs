@@ -1,0 +1,13 @@
+
+
+<article class="home__productos--article" >
+    <img src="/img/products/<%= image || 'default.png' %>" alt="producto">
+    <div class="home__productos-producto">
+        <p class="descripcion"><%= name %></p>
+        <p class="precio">$<%= toThousand((price).toFixed(0)) %></p>
+
+        <input type="button" value="Agregar al carrito">
+
+    </div>
+</article>
+
