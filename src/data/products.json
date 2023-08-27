@@ -1,181 +1,178 @@
 [
-    {
-        "id": 1,
+   {
+      "id": 1,
       "name": "Xbox",
       "price": 50000,
       "discount": 0,
       "category": "xbox",
-      "estado":"in-sale",
+      "estado": "in-sale",
       "description": "Xbox es una videoconsola doméstica de 32 bits y la primera de la serie de videoconsolas Xbox fabricada por Microsoft.",
-      "image":"xbox.png",
-      "stock":0
-      
-},
-{
-  "id": 2,
+      "image": "xbox.png",
+      "stock": 0
+   },
+   {
+      "id": 2,
       "name": "Nintendo Game&Watch-Edición donkey kong 2",
       "price": 75000,
       "discount": 0,
-      "category":"nintendo",
+      "category": "nintendo",
       "estado": "in-sale",
       "description": "-Made in japan , funciona con pulas LR44, contiene relog digital,vuelve al pasado y disfruta esta gran consola ",
       "image": "Game&watch-donkey-kong-2.png",
-      "stock":0
-},
-{
-  "id": 3,
+      "stock": 0
+   },
+   {
+      "id": 3,
       "name": "Nintendo 64",
       "price": 67600,
       "discount": 0,
-      "category":"nintendo",
+      "category": "nintendo",
       "estado": "in-sale",
       "description": "Nintendo 64 es la cuarta videoconsola de sobremesa descontinuada producida por Nintendo, desarrollada para suceder a la Super Nintendo. Fue la primera consola concebida para dar el salto del 2D al 3D.",
       "image": "Nintendo64.png",
-      "stock":true
-},
-{
-  "id": 4,
-  "name": "Nintendo GameCube-color Indigo",
-  "price": 35000,
-  "discount": 0,
-  "category": "nintendo",
-  "estado":"in-sale",
-  "description": "Incluye consola, cable de alimentación,cable AV y controlador índigo para,Nintendo GameCube,El procesador de 485 MHz hace que cargar y iniciar los juegos sea más rápido que nunca, no más tiempos de carga largos El procesador crea de 6 a 12 millones de polígonos por segundo, no más ralentizaciones en medio del juego,Soporta instrucciones para efectos increíbles: tus juegos serán más brillantes, rápidos y más dramáticos,También incluye 64 canales de sonido: te sentirás como si estuvieras en el juego, con el audio de alta calidad.",
-  "image": "NintendoGameCube.png",
-  "stock":1
-
-},
-{
-  "id": 5,
+      "stock": true
+   },
+   {
+      "id": 4,
+      "name": "Nintendo GameCube-color Indigo",
+      "price": 35000,
+      "discount": 0,
+      "category": "nintendo",
+      "estado": "in-sale",
+      "description": "Incluye consola, cable de alimentación,cable AV y controlador índigo para,Nintendo GameCube,El procesador de 485 MHz hace que cargar y iniciar los juegos sea más rápido que nunca, no más tiempos de carga largos El procesador crea de 6 a 12 millones de polígonos por segundo, no más ralentizaciones en medio del juego,Soporta instrucciones para efectos increíbles: tus juegos serán más brillantes, rápidos y más dramáticos,También incluye 64 canales de sonido: te sentirás como si estuvieras en el juego, con el audio de alta calidad.",
+      "image": "NintendoGameCube.png",
+      "stock": 1
+   },
+   {
+      "id": 5,
       "name": "Nintendo Entertainment System: NES ",
       "price": 390000,
       "discount": 0,
       "category": "nintendo",
-      "estado":"in-sale",
+      "estado": "in-sale",
       "description": "Control Deck,2 controladores, pistola de luz Zapper Cable A/V, adaptador de CA para Nintendo,Nintendo RF Switch y 2 A/V convertidores",
       "image": "NintendoNes.png",
-      "stock":0
-},
-{
-  "id": 6,
-  "name": "Nintendo Ds ",
-  "price": 72000,
-  "discount": 0,
-  "category": "nintendo",
-  "estado":"in-sale",
-  "description": "-Motor de gráficos 3D avanzado y audio de 16 canales, para gráficos y sonido superiores a otros sistemas de juegos portátiles,Puerto de micrófono integrado para control de voz de juegos, o para chat de voz con otros reproductores DS",
-  "image": "NintendoDs.png",
-  "stock":3
-},
-{
-  "id": 7,
-  "name": "Nintendo VirtualBoy ",
-  "price": 170000,
-  "discount": 0,
-  "category": "nintendo",
-  "estado":"visited",
-  "description": "Virtual Boy es una consola de sobremesa producida por Nintendo en 1995. La consola crea una ilusión monocromática (rojo/negro) de profundidad tridimensional que Nintendo promovió como realidad virtua,",
-  "image": "NintendoVirtualBoy.png",
-  "stock":0
-},
-{
-  "id": 8,
-  "name": "Nintendo Wii ",
-  "price": 117.650,
-  "discount": 0,
-  "category": "nintendo",
-  "estado":"visited",
-  "description": "El control Wii Remote se destaca por su capacidad de detectar movimientos en un determinado espacio lo que te permite una mayor interacción y dinamismo,Guardá tus apps, fotos, videos y mucho más en el disco duro, que cuenta con una capacidad de 512 MB",
-  "image": "NintendoWii.png",
-  "stock":0
-},
-{
-  
-  "id": 9,
-  "name": "Nintendo Switch  ",
-  "price": 366.330,
-  "discount": 0,
-  "category": "nintendo",
-  "estado":"visited",
-  "description": "Sumérgete en el mundo de los videojuegos con la Nintendo Switch de 32GB, una consola híbrida que te permite disfrutar de tus juegos favoritos tanto en casa como en cualquier lugar,Incluye 2 controles para compartir la diversión",
-  "image": "NintendoSwitch.png",
-  "stock":0
-},
-{
-  "id": 10,
-  "name": "Magnavox Odyssey",
-  "price": 450000,
-  "discount": 0,
-  "category": "nintendo",
-  "estado":"in-sale",
-  "description": "Viaja al pasado y obten La primer consola de videojuegos de la historia,Trae 28 juegos,Contiene 2 mandos,Contiene manual de usos",
-  "image": "Magnavox-Odyssey-Console(Primera-consola-de-la-historia).png",
-  "stock":0
-},
-{
-  "id": 11,
-  "name": " Tablero arcade 10,600 en WAR",
-  "price": 60299,
-  "discount": 0,
-  "category": "retro",
-  "estado":"in-sale",
-  "description": "Plataformas aplicables: televisores, monitores, proyectores.Miles de juegos clásicos de juegos de árcade,Control de volumen.Entrada 3.5 para audífonos.Menú para búsqueda de juego.Diseño de bajo consumo de energía.",
-  "image": "tablero1.png",
-  "stock":true
-},
-{
-  "id": 12,
-  "name": " Tablero con base pandora 80cm",
-  "price": 90300,
-  "discount": 0,
-  "category": "retro",
-  "estado":"in-sale",
-  "description": "Fabricado en MDFcon formaica .Vinil alta resolución (varios diseños).Acrílico 3mm en tablero.Ram 512 megas.Memoria flash de 32 gb.Medidas:80 cm de ancho x 26 cm de fondo x 12-16 cm de altura.",
-  "image": "tablero2.png",
-  "stock":0
-},
-{
-  "id": 13,
-  "name": " Consola Arcade Individual The King of fighters",
-  "price": 50700,
-  "discount": 0,
-  "category": "retro",
-  "estado":"in-sale",
-  "description": "  Se conectan a la pantalla por cable HDMI y un eliminador de corriente ya incluidos. Vienen en pares (puedes escoger uno del mismo diseño y otro diferente o ambos iguales). Incluye cable usb para conectarse entre ambos tableros.17,000 Juegos",
-  "image": "tablero3.png",
-  "stock":0
-},
-{
-  "id": 14,
-  "name": " Tablero Arcade Individual 2 piezas 16 Mil Juegos Street Fighters",
-  "price": 53400,
-  "discount": 0,
-  "category": "retro",
-  "estado":"in-sale",
-  "description": " Se conectan a la pantalla por cable HDMI y un eliminador de corriente ya incluidos.Incluye cable usb para conectarse entre ambos tableros.16,000 Juegos",
-  "image": "tablero4.jpg",
-  "stock":0
-},
-{
-  "id": 15,
-  "name": "Xbox 360",
-  "price": 70000,
-  "discount": 0,
-  "category": "xbox",
-  "estado":"in-sale",
-  "description": "Xbox 360 es la segunda videoconsola de sobremesa de la marca Xbox producida por Microsoft. Fue desarrollada en colaboración con IBM y ATI (AMD) y lanzada en América del Sur, América del Norte, Japón, Europa y Australia entre 2005 y 2006.",
-  "image":"xbox360.png",
-  "stock":0
-},
-{
-  "id": 16,
-  "name": "Xbox 360",
-  "price": 70000,
-  "discount": 0,
-  "category": "xbox",
-  "estado":"in-sale",
-  "description": "Xbox One es la tercera videoconsola de sobremesa de la marca Xbox, producida por Microsoft. Forma parte de las videoconsolas de octava generación, fue presentada por Microsoft el 21 de mayo de 2013.7​ Es la sucesora de la Xbox 360 y la predecesora de la Xbox Series X|S. Actualmente compite con PlayStation 4 de Sony y Wii U de Nintendo. Su salida a la venta fue el 22 de noviembre de 2013",
-  "image":"xbox360.png",
-  "stock":0
-}
+      "stock": 0
+   },
+   {
+      "id": 6,
+      "name": "Nintendo Ds ",
+      "price": 72000,
+      "discount": 0,
+      "category": "nintendo",
+      "estado": "in-sale",
+      "description": "-Motor de gráficos 3D avanzado y audio de 16 canales, para gráficos y sonido superiores a otros sistemas de juegos portátiles,Puerto de micrófono integrado para control de voz de juegos, o para chat de voz con otros reproductores DS",
+      "image": "NintendoDs.png",
+      "stock": 3
+   },
+   {
+      "id": 7,
+      "name": "Nintendo VirtualBoy ",
+      "price": 170000,
+      "discount": 0,
+      "category": "nintendo",
+      "estado": "visited",
+      "description": "Virtual Boy es una consola de sobremesa producida por Nintendo en 1995. La consola crea una ilusión monocromática (rojo/negro) de profundidad tridimensional que Nintendo promovió como realidad virtua,",
+      "image": "NintendoVirtualBoy.png",
+      "stock": 0
+   },
+   {
+      "id": 8,
+      "name": "Nintendo Wii ",
+      "price": 117.65,
+      "discount": 0,
+      "category": "nintendo",
+      "estado": "visited",
+      "description": "El control Wii Remote se destaca por su capacidad de detectar movimientos en un determinado espacio lo que te permite una mayor interacción y dinamismo,Guardá tus apps, fotos, videos y mucho más en el disco duro, que cuenta con una capacidad de 512 MB",
+      "image": "NintendoWii.png",
+      "stock": 0
+   },
+   {
+      "id": 9,
+      "name": "Nintendo Switch  ",
+      "price": 366.33,
+      "discount": 0,
+      "category": "nintendo",
+      "estado": "visited",
+      "description": "Sumérgete en el mundo de los videojuegos con la Nintendo Switch de 32GB, una consola híbrida que te permite disfrutar de tus juegos favoritos tanto en casa como en cualquier lugar,Incluye 2 controles para compartir la diversión",
+      "image": "NintendoSwitch.png",
+      "stock": 0
+   },
+   {
+      "id": 10,
+      "name": "Magnavox Odyssey",
+      "price": 450000,
+      "discount": 0,
+      "category": "nintendo",
+      "estado": "in-sale",
+      "description": "Viaja al pasado y obten La primer consola de videojuegos de la historia,Trae 28 juegos,Contiene 2 mandos,Contiene manual de usos",
+      "image": "Magnavox-Odyssey-Console(Primera-consola-de-la-historia).png",
+      "stock": 0
+   },
+   {
+      "id": 11,
+      "name": " Tablero arcade 10,600 en WAR",
+      "price": 60299,
+      "discount": 0,
+      "category": "retro",
+      "estado": "in-sale",
+      "description": "Plataformas aplicables: televisores, monitores, proyectores.Miles de juegos clásicos de juegos de árcade,Control de volumen.Entrada 3.5 para audífonos.Menú para búsqueda de juego.Diseño de bajo consumo de energía.",
+      "image": "tablero1.png",
+      "stock": true
+   },
+   {
+      "id": 12,
+      "name": " Tablero con base pandora 80cm",
+      "price": 90300,
+      "discount": 0,
+      "category": "retro",
+      "estado": "in-sale",
+      "description": "Fabricado en MDFcon formaica .Vinil alta resolución (varios diseños).Acrílico 3mm en tablero.Ram 512 megas.Memoria flash de 32 gb.Medidas:80 cm de ancho x 26 cm de fondo x 12-16 cm de altura.",
+      "image": "tablero2.png",
+      "stock": 0
+   },
+   {
+      "id": 13,
+      "name": " Consola Arcade Individual The King of fighters",
+      "price": 50700,
+      "discount": 0,
+      "category": "retro",
+      "estado": "in-sale",
+      "description": "  Se conectan a la pantalla por cable HDMI y un eliminador de corriente ya incluidos. Vienen en pares (puedes escoger uno del mismo diseño y otro diferente o ambos iguales). Incluye cable usb para conectarse entre ambos tableros.17,000 Juegos",
+      "image": "tablero3.png",
+      "stock": 0
+   },
+   {
+      "id": 14,
+      "name": " Tablero Arcade Individual 2 piezas 16 Mil Juegos Street Fighters",
+      "price": 53400,
+      "discount": 0,
+      "category": "retro",
+      "estado": "in-sale",
+      "description": " Se conectan a la pantalla por cable HDMI y un eliminador de corriente ya incluidos.Incluye cable usb para conectarse entre ambos tableros.16,000 Juegos",
+      "image": "tablero4.jpg",
+      "stock": 0
+   },
+   {
+      "id": 15,
+      "name": "Xbox 360",
+      "price": 70000,
+      "discount": 0,
+      "category": "xbox",
+      "estado": "in-sale",
+      "description": "Xbox 360 es la segunda videoconsola de sobremesa de la marca Xbox producida por Microsoft. Fue desarrollada en colaboración con IBM y ATI (AMD) y lanzada en América del Sur, América del Norte, Japón, Europa y Australia entre 2005 y 2006.",
+      "image": "xbox360.png",
+      "stock": 0
+   },
+   {
+      "id": 16,
+      "name": "Xbox 360",
+      "price": 70000,
+      "discount": 0,
+      "category": "xbox",
+      "estado": "in-sale",
+      "description": "Xbox One es la tercera videoconsola de sobremesa de la marca Xbox, producida por Microsoft. Forma parte de las videoconsolas de octava generación, fue presentada por Microsoft el 21 de mayo de 2013.7​ Es la sucesora de la Xbox 360 y la predecesora de la Xbox Series X|S. Actualmente compite con PlayStation 4 de Sony y Wii U de Nintendo. Su salida a la venta fue el 22 de noviembre de 2013",
+      "image": "xbox360.png",
+      "stock": 0
+   }
 ]

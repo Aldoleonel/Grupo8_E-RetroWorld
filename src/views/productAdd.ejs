@@ -10,50 +10,52 @@
         <section class="form__registro">
             <div class="form-box2">
                 <h2>Agregar Producto</h2>
-                <form action="" method="POST">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <div class="form-input">
-                        <label for="titulo">Titulo:</label>
-                        <input type="text" id="titulo" placeholder="Titulo del producto" name="titulo">
+                        <label for="name">Titulo:</label>
+                        <input type="text" id="titulo" placeholder="Titulo del producto" name="name">
                     </div>
                     <div class="form-input">
-                        <label for="categoria">Categoria:</label>
-                        <select id="categoria" name="categoria" required>
+                        <label for="category">Categoria:</label>
+                        <select id="categoria" name="category" required>
                             <option selected hidden>Seleccione...</option>
                             <option value="arcade">Arcade</option>
                             <option value="playstation">Playstation</option>
                             <option value="xbox">Xbox</option>
-                            <option value="Nintendo">Nintendo</option>
+                            <option value="nintendo">Nintendo</option>
                         </select>
 
                     </div>
                     <div class="form-input">
                         <label for="tipo">Estado:</label>
-                        <select id="tipo" name="tipo" required>
+                        <select id="tipo" name="estado" required>
                             <option selected hidden>Seleccione...</option>
                             <option value="retro">En Oferta</option>
                             <option value="actual">En Venta</option>
                         </select>
                     </div>
-                    <div class="form-foto">
-                        <input id="fichero" type="file">
-                        <label for="fichero" class="form-boton-foto" type="button" name="fichero" value="Subi tu foto">Subi tu foto
-                        </label>
+                    <div class="form-foto" >
+                        <label for="image" >Cargar foto</label>
+						<input type="file"  name="image">
+                       <!--  <input id="image" type="file">
+                        <label for="image" class="form-boton-foto" type="button" name="image" value="Subi tu foto">Subi tu foto
+                        </label> -->
                     </div>
                     <div class="form-input">
-                        <label for="precio">Precio:</label>
-                        <input type="number" id="precio" placeholder="$ 0.00" name="precio">
+                        <label for="price">Precio:</label>
+                        <input type="number" id="price" placeholder="$ 0.00" name="price">
                     </div>
                     <div class="form-input">
                         <label for="discount">Descuento:</label>
                         <input type="number" id="discount" placeholder="% 0" name="discount">
                     </div>
                     <div class="form-input-textArea">
-                        <label for="descripcion">Descripcion:</label>
-                        <textarea id="descripcion" rows="4" cols="50" placeholder="Describe tu producto..." name="descripcion"></textarea>
+                        <label for="description">Descripcion:</label>
+                        <textarea id="description" rows="4" cols="50" placeholder="Describe tu producto..." name="description"></textarea>
                         
                     </div>
                     <div class="form-submit-button2">
-                        <button type="submit">Cancelar</button>
+                        <button type="reset">Cancelar</button>
                         <button type="submit">Crear producto</button>
                     </div>
                 </form>
