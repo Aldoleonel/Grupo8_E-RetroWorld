@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head',{
+    title: 'Resultados de : ' + keywords
+}) %>
+<body class="home--body">
+    <%- include('partials/header') %>
+    <main>
+
+        <!-- !LOGOS DE CONSOLA -->
+        <div class="home--categorias-consolas">
+            <div class="home--categorias-consolas-logo">
+                <div class="home__categorias__consolas__logo--play">
+                    <i class="fa-brands fa-playstation "></i>
+                </div>
+            </div>
+
+            <div class="home--categorias-consolas-logo">
+                <div class="home__categorias__consolas__logo--xbox">
+                    <i class="fa-brands fa-xbox "></i>
+                </div>
+            </div>
+
+            <div class="home--categorias-consolas-logo">
+                <div class="home__categorias__consola__logo--nintedo">
+                    <i class="bi bi-nintendo-switch"></i>
+                </div>
+
+
+            </div>
+
+            <div class="home--categorias-consolas-logo">
+                <div class="home__categorias__consolas__logo--joystick">
+                    <i class="bi bi-joystick"></i>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <!-- !PRODUCTOS DEl HOME  -->
+        <div class="home--productosTitulo">
+            <h2 >Todos los resultados de : <%= keywords %></h2>
+        </div>
+        <div class="home__productos">
+
+            <% if (results.length) { %>
+            
+            <% results.forEach(product => { %>
+				
+                <%- include('partials/productCard',{
+                    ...product,
+                    toThousand
+                })%>
+            
+            <% }) %>
+            <% }else{  %>
+
+                <div class="col-12">
+                    <h2 class="products-title text-center" style="color: red;">Lo lamento, no hay productos que coincidan con : <%= keywords %> </h2>
+                </div>
+                <% } %>
+          
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center mt-5">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+    </main>
+    <%- include('partials/footer') %>
+    <div class="home-botonwhatsap">
+        <i class="fa-brands fa-whatsapp fa-2xl"></i>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="/js/carusel.js"></script>
+
+
+
+</html>

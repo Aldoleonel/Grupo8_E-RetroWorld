@@ -118,7 +118,7 @@
 }
 .home__productos img {
     width: 100%;
-    height: 100%;
+    height: 180px;
     /* background-color: rgb(252, 252, 252); */
    border-bottom: solid 1px grey;
 }

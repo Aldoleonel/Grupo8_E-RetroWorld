@@ -11,14 +11,16 @@
       </div> 
     </div>  
     <div class="header__bar-search">
-      <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-      <input type="text" placeholder="Buscar producto...">
+      <form action="/search" method="GET">
+        <button type="submit" class="search-form_button"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+        <input type="text" name="keywords" placeholder="Buscar producto...">
+      </form>
     </div>
   </div>
   <div class="header__links">
     <p><a href="/">Inicio</a></p>
-    <p><a href="#">Productos</a></p>      
-    <p><a href="#">Consolas</a></p>
+    <p><a href="/products/products">Productos</a></p>      
+    <p><a href="/products/consolas">Consolas</a></p>
     <p><a href="/admin">Admin</a></p>
     <p><a href="#">Repuestos y accesorios</a></p>
   </div>

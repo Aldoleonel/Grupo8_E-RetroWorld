@@ -3,5 +3,8 @@
 module.exports = {
     detail: require('./products/detail'),
     add: require('./products/add'),
-    edit: require('./products/edit')
+    create:require('./products/create'),
+    edit: require('./products/edit'),
+    products: require('./products/products'),
+    
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head',{
-        title: 'Detalle de Producto'
+        title: 'Detalle de Producto : ' + name 
 }) %>
 <body class="detalleProducto">
     <%- include('partials/header') %>
@@ -10,39 +10,39 @@
             <div class="detalleProducto__container--box-nav">
                 <a href="/">Inicio</a>
                 <i class="fa-solid fa-angle-right"></i>
-                <a href="/products/detail">Xbox</a>
+                <a href="/products/detail"><%= category%></a>
                 <div class="nav-line"></div>
             </div>
             <div class="detalleProducto__container--box-product">
                 <div class="box-product-img">
-                    <img src="/img/xbox-one-s.png" width="400" alt="">
+                    <img src="/img/products/<%= image || 'default-image.png' %>"
                 </div>
                 <h2>
-                    Consola Xbox One S 500gb + Joysticks + 3 Meses de Game Pass
+                    <%= name %>
                 </h2>
                 <div class="box-product-info">
                     <div class="product-info-stock">
                         <span>Stock</span>
-                        <span>Disponible</span>
+                        <span><%= !stock? 'No disponible' : 'Disponible' %></span>
                     </div>
                     <div class="product-info-price">
-                        <p>$ 142.620</p>
-                        <p>o 6 x $34.228,28 <span>c/iva</span></p>
+                        <p>$ <%= toThousand((price).toFixed(0))%></p>
+                        <p>o 6 x $<%=toThousand((price / 6).toFixed(0))  %> <span>c/iva</span></p>
                     </div>
                 </div>
             </div>
 
             <div class="detalleProducto__container--box-detail">
                 <div class=" box-detail-info">
-                    <h4>Detalles</h4>
+                    <h4>DETALLES</h4>
                     <table>
                         <tr>
-                            <td>Marca</td>
-                            <td>Microsoft</td>
+                            <td>Categoría</td>
+                            <td><%= category %></td>
                         </tr>
                         <tr>
                             <td>Código</td>
-                            <td>1118822</td>
+                            <td><%= id %></td>
                         </tr>
                     </table>
                 </div>
@@ -88,11 +88,9 @@
                 </div>
             </div>
             <div class="detalleProducto__container--box-description">
-                <h4>Descripción del Producto</h4>
+                <h4>Descripción del Producto : <%= name %> </h4>
                 <p>
-                    Se considera que esta consola es de las mejores dentro del mercado, dado que representa una resolución de hasta 4k.
-                    Microsoft Xbox One S ofrece impresionantes gráficos, sonido de primer nivel e incluso la posibilidad de guardar todas sus partidas en la nube.
-                    Adaptada a tus necesidades, guarda tus apps, fotos, videos y muchos más en el disco duro que cuenta con una capacidad de 500 y 1 tera, al contar con un procesador de 8 nucleos, brinda una experiencia dinámica, respuestas agiles y transisiones fluidas de imágenes de alta definición. Por otro lado tiene puerto USB y salida HDMI, que permiten conectar accesorios y cargar la bateria de tu control mientras jugás. Vas a poder reproducir música, ver tus peliculas y series favoritas a través de las aplicaciones descargables.
+                    <%= description %>
                 </p>
             </div>
         </div>
