@@ -1,0 +1,87 @@
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Producto</th>
+                <th scope="col">precio</th>
+                <th scope="col">descuento</th>
+                <th scope="col">Precio Final</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% products.forEach(({id,name, price, discount, description, image}, index)=> { %>
+                <tr>
+                    <th scope="row">
+                        <%= index + 1 %>
+                    </th>
+                    <td>
+                        <%= name %>
+                    </td>
+                    <td>
+                        <%= price%>
+                    </td>
+                    <td>
+                        <%= discount %>
+                    </td>
+                    <td>
+                        <%= price - (price * discount/100)%>
+                    </td>
+                    <td>
+                        <div class="d-flex gap-2">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#detailProduct<%= id %>">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade col-7" id="detailProduct<%= id %>" tabindex="-1" aria-labelledby="detailpProduct<%= id %>Label"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="detailpProduct<%= id %>Label">
+                                                <%= name %>
+                                            </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="card mb-3" style="max-width: 540px;">
+                                                <div class="row g-0">
+                                                    <div class="col-md-4">
+                                                        <img src="/img/products/<%= image %>" class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title"><%= name %></h5>
+                                                            <p class="card-text"><%= description %></p>
+                                                            <p class="card-text"><small class="text-body-secondary">Last
+                                                                    updated 3 mins ago</small></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="/products/edit/<%= id %>?_method=PUT" class="btn btn-success"><i
+                                    class="fa-solid fa-pen-to-square"></i></a>
+
+                            <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</div>
