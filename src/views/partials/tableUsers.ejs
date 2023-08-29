@@ -1,0 +1,47 @@
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Email</th>
+                <th scope="col">Category</th>
+                <th scope="col">image</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(({id, firstName, lastName, email, category, image}, index)=> { %>
+                <tr>
+                    <th scope="row">
+                        <%= index + 1 %>
+                    </th>
+                    <td>
+                        <%= firstName %>
+                    </td>
+                    <td>
+                        <%= lastName %>
+                    </td>
+                    <td>
+                        <%= email %>
+                    </td>
+                    <td>
+                        <%= category %>
+                    </td>
+                    <td>
+                        <%= image %>
+                    </td>
+                    <td>
+                        <div class="d-flex gap-2">
+                            <a class="btn btn-sm btn-success" href="/categories/edit/<%= id %>"><i
+                                    class="fas fa-edit"></i></a>
+                            <a class="btn btn-sm btn-danger" href="/categories/remove/<%= id %>"><i
+                                    class="fas fa-trash"></i></a>
+                        </div>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</div>

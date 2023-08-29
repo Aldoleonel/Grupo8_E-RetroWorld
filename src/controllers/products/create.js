@@ -1,6 +1,6 @@
 const { readJSON,writeJson } = require("../../data/index");
 
-const products= readJSON('products.json')
+const products= readJSON('products')
 
 module.exports = (req, res) => {
 
