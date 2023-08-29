@@ -2,7 +2,7 @@
 <html lang="es">
 
 <%- include('partials/head',{
-    title: 'Todos los consolas'
+    title: 'Todas las consolas'
 }) %>
 <body class="home--body">
     <%- include('partials/header') %>
@@ -18,7 +18,7 @@
         </div>
         <div class="home__productos">
             
-            <% products.forEach(product => { %>
+            <% consoles.forEach(product => { %>
 				
                 <%- include('partials/productCard',{
                     ...product,

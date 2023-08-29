@@ -190,5 +190,101 @@
       "description": "Xbox One es la tercera videoconsola de sobremesa de la marca Xbox, producida por Microsoft. Forma parte de las videoconsolas de octava generación, fue presentada por Microsoft el 21 de mayo de 2013.7​ Es la sucesora de la Xbox 360 y la predecesora de la Xbox Series X|S. Actualmente compite con PlayStation 4 de Sony y Wii U de Nintendo. Su salida a la venta fue el 22 de noviembre de 2013",
       "image": "1693302479511_products_.jpg",
       "stock": 0
+   },
+   {
+      "id": 17,
+      "name": "Camara Playstation Ps4",
+      "price": 150000,
+      "discount": 0,
+      "category": "playstation",
+      "type":"repuesto",
+      "estado": "visited",
+      "description": "Es compatible con realidad virtual Con reconocimiento facial Con comando de voz",
+      "image": "playstation4cam.png",
+      "stock": 0
+   },
+   {
+      "id": 18,
+      "name": "Joystick Dualshock Ps4 Black",
+      "price": 60000,
+      "discount": 0,
+      "category": "playstation",
+      "type":"repuesto",
+      "estado": "visited",
+      "description": "Tipo de control Gamepad ,sensor de movimiento,vibración, touchpad , altavoz, Dispositivos compatibles: PlayStation 4.",
+      "image": "joystickPlaystation4.png",
+      "stock": 0
+   },
+   {
+      "id": 19,
+      "name": "Joystick Xbox Series S/X",
+      "price": 62000,
+      "discount": 0,
+      "category": "xbox",
+      "type":"repuesto",
+      "estado": "visited",
+      "description": "Es inalámbrico,Con Bluetooth,Conectores de entrada",
+      "image": "joystickxbox.png",
+      "stock": 0
+   },
+   {
+      "id": 20,
+      "name": "Sensor de movimiento KINECT Xbox",
+      "price": 28000,
+      "discount": 0,
+      "category": "xbox",
+      "type":"repuesto",
+      "estado": "visited",
+      "description": "camara compatible con xbox 360 con sensor demovimiento",
+      "image": "xboxcam.png",
+      "stock": 0
+   },
+   {
+      "id": 21,
+      "name": "Joystick Nintendo 64",
+      "price": 10800,
+      "discount": 0,
+      "category": "nintendo",
+      "type":"repuesto",
+      "estado": "visited",
+      "description": "Controles Retro USB,Diseño inspirado en los de la consola Nintendo 64,Conexion Plug & Play no necesitas instalar drivers.Compatible con Windows y Mac",
+      "image": "nintendo64joystick.png",
+      "stock": 0
+   },
+   {
+      "id": 22,
+      "name": "Joysticks Nintendo switch",
+      "price": 68000,
+      "discount": 0,
+      "category": "nintendo",
+      "type":"repuesto",
+      "estado": "visited",
+      "description": "Cuenta con Bluetooth.Mando inalámbrico.Compatible con: Nintendo Switch.Incluye control izquierdo y derecho. Con sistema de vibración incorporado.Cuenta con 2 correas.",
+      "image": "joysticknintendo.png",
+      "stock": 0
+   },
+   {
+      "id": 23,
+      "name": "Palanca Arcade Perita De 4/8",
+      "price": 12000,
+      "discount": 0,
+      "category": "arcade",
+      "type":"repuesto",
+      "estado": "visited",
+      "description": "Incluye una palanca Arcade perita,Colores: rojo, verde, blanco, negro, celeste y amarillo",
+      "image": "palancaArcade.png",
+      "stock": 0
+   },
+   {
+      "id": 24,
+      "name": "Boton arcade 24mm",
+      "price": 800,
+      "discount": 0,
+      "category": "arcade",
+      "type":"repuesto",
+      "estado": "visited",
+      "description": "boton pulsador arcade color a eleccion rojo, blanco, negro , amarillo ,azul y verde",
+      "image": "botonesArcade.png",
+      "stock": 0
    }
 ]

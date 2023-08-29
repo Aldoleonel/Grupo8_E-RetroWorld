@@ -1,5 +1,5 @@
 const express = require('express');
-const {edit,create,add,detail, products, consolas, accessories,update, deleteProd,addCart} = require('../controllers/productsController');
+const {edit,create,add,detail, products, consoles, accessories,update, deleteProd,addCart} = require('../controllers/productsController');
 const upload = require('../middlewares/upload');
 const _delete = require('../controllers/products/deleteProd');
 const router = express.Router();
@@ -16,7 +16,7 @@ router.delete('/delete/:id', deleteProd);
 router.get('/edit/:id',edit);
 router.put('/edit/:id',upload.single('image'),update);
 router.get('/products',products);
-router.get('/consolas/:name',consolas);
+router.get('/consoles',consoles);
 router.get('/accessories',accessories);
 
 
