@@ -118,7 +118,7 @@
       "estado": "in-sale",
       "description": "Plataformas aplicables: televisores, monitores, proyectores.Miles de juegos clásicos de juegos de árcade,Control de volumen.Entrada 3.5 para audífonos.Menú para búsqueda de juego.Diseño de bajo consumo de energía.",
       "image": "tablero1.png",
-      "stock": true
+      "stock": false
    },
    {
       "id": 12,

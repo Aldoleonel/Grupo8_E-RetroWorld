@@ -2,7 +2,7 @@
 <html lang="es">
 
 <%- include('partials/head',{
-    title: 'Resultados de : ' + keywords
+    title: 'Todos los consolas'
 }) %>
 <body class="home--body">
     <%- include('partials/header') %>
@@ -14,13 +14,11 @@
         
         <!-- !PRODUCTOS DEl HOME  -->
         <div class="home--productosTitulo">
-            <h2 >Todos los resultados de : <%= keywords %></h2>
+            <h2 c>Todas las consolas</h2>
         </div>
         <div class="home__productos">
-
-            <% if (results.length) { %>
             
-            <% results.forEach(product => { %>
+            <% products.forEach(product => { %>
 				
                 <%- include('partials/productCard',{
                     ...product,
@@ -28,12 +26,6 @@
                 })%>
             
             <% }) %>
-            <% }else{  %>
-
-                <div class="col-12">
-                    <h2 class="products-title text-center" style="color: red;">Lo lamento, no hay productos que coincidan con : <%= keywords %> </h2>
-                </div>
-                <% } %>
           
         </div>
         <nav aria-label="Page navigation example">

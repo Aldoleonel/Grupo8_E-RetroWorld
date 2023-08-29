@@ -8,48 +8,10 @@
     <%- include('partials/header') %>
     <main>
         <!-- !CARRUSEL -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"> <img src="/img/home/banner.jpg" alt=""> </div>
-                <div class="swiper-slide"> <img src="/img/home/banner1.jpg" alt=""> </div>
-                <div class="swiper-slide"> <img src="/img/home/banner2.jpg" alt=""> </div>
-
-
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
+        <%- include('partials/banner') %>
 
         <!-- !LOGOS DE CONSOLA -->
-        <div class="home--categorias-consolas">
-            <div class="home--categorias-consolas-logo">
-                <div class="home__categorias__consolas__logo--play">
-                    <i class="fa-brands fa-playstation "></i>
-                </div>
-            </div>
-
-            <div class="home--categorias-consolas-logo">
-                <div class="home__categorias__consolas__logo--xbox">
-                    <i class="fa-brands fa-xbox "></i>
-                </div>
-            </div>
-
-            <div class="home--categorias-consolas-logo">
-                <div class="home__categorias__consola__logo--nintedo">
-                    <i class="bi bi-nintendo-switch"></i>
-                </div>
-
-
-            </div>
-
-            <div class="home--categorias-consolas-logo">
-                <div class="home__categorias__consolas__logo--joystick">
-                    <i class="bi bi-joystick"></i>
-                </div>
-            </div>
-
-        </div>
+        <%- include('partials/logos') %>
         <!-- !OFERTAS DESTADAS -->
         <div class="home--ofertasTitulo">
             <h2 c>OFERTAS DESTACADAS</h2>

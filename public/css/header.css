@@ -111,7 +111,6 @@ input::placeholder{
     flex-direction:row;
     flex-wrap:nowrap;
     }
-
     .header__bar-search input{
     display:flex;
     width:40%; 
@@ -171,6 +170,7 @@ input::placeholder{
     position:absolute;
     left:67%;
     top:40%;
+    z-index: 200;
 }
 
     .header__top-login-shop a{

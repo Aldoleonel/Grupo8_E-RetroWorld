@@ -6,5 +6,7 @@ module.exports = {
     create:require('./products/create'),
     edit: require('./products/edit'),
     products: require('./products/products'),
+    consolas : require('./products/consolas'),
+    accessories : require('./products/accessories')
     
 }
