@@ -1,5 +1,5 @@
 const express = require('express');
-const {edit,create,add,detail, products, consolas, accessories} = require('../controllers/productsController');
+const {edit,create,add,detail, products, consolas, accessories,update} = require('../controllers/productsController');
 const upload = require('../middlewares/upload');
 const router = express.Router();
 
@@ -8,10 +8,13 @@ const router = express.Router();
 router.get('/detail/:id?',detail);
 router.get('/add',add);
 router.post('/add',upload.single('image'),create)
-router.get('/edit',edit);
+router.get('/edit/:id',edit);
+router.put('/edit/:id',update);
 router.get('/products',products);
 router.get('/consolas/:name',consolas);
 router.get('/accessories',accessories);
+
+
 
 
 /* router.get('/edit/:id?',productsController.edit) */

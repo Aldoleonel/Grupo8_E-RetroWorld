@@ -10,19 +10,20 @@
         <section class="form__registro">
             <div class="form-box">
                 <h2>Editar Producto</h2>
-                <form action="" method="POST">
+                <form action="/products/edit/<%= productDetail.id %>?_method=PUT" method="POST">
                     <div class="form-input">
                         <label for="titulo">Titulo:</label>
-                        <input type="text" id="titulo" placeholder="Titulo del producto" name="titulo">
+                        <input type="text" id="titulo" placeholder="" name="name" value="<%= productDetail.name %>">
                     </div>
                     <div class="form-input">
                         <label for="categoria">Categoria:</label>
-                        <select id="categoria" name="categoria" required>
+                        <select id="categoria" name="category" required>
                             <option selected hidden>Seleccione...</option>
-                            <option value="arcade">Arcade</option>
-                            <option value="playstation">Playstation</option>
-                            <option value="xbox">Xbox</option>
-                            <option value="Nintendo">Nintendo</option>
+                            <option value="arcade"<%= productDetail.category ==='arcade' && 'selected' %>>Arcade</option>
+							<option value="playstation"<%= productDetail.category ==='playstation' && 'selected' %>>Playstation</option>
+                            <option value="xbox"<%= productDetail.category ==='xbox' && 'selected' %>>Xbox</option>
+							<option value="Nintendo"<%= productDetail.category ==='Nintendo' && 'selected' %>>Nintendo</option>
+                            
                         </select>
 
                     </div>
@@ -30,26 +31,27 @@
                         <label for="tipo">Tipo de Producto:</label>
                         <select id="tipo" name="tipo" required>
                             <option selected hidden>Seleccione...</option>
-                            <option value="retro">Retro</option>
-                            <option value="actual">Actual</option>
+                            <option value="retro"<%= productDetail.category ==='retro' && 'selected' %>>Retro</option>
+							<option value="actual"<%= productDetail.category ==='actual' && 'selected' %>>Actual</option>
+                            
                         </select>
                     </div>
                     <div class="form-foto">
                         <input id="fichero" type="file">
-                        <label for="fichero" class="form-boton-foto" type="button" name="fichero" value="Subi tu foto">Editar Foto
+                        <label for="fichero" class="form-boton-foto" type="button" name="image" value="Subi tu foto">Editar Foto
                         </label>
                     </div>
                     <div class="form-input">
                         <label for="precio">Precio:</label>
-                        <input type="number" id="precio" placeholder="$ 0.00" name="precio">
+                        <input type="number" id="precio" placeholder="$ 0.00" name="price" value="<%= productDetail.price %>">
                     </div>
                     <div class="form-input">
                         <label for="promo">Precio promocional:</label>
-                        <input type="number" id="promo" placeholder="$ 0.00" name="promo">
+                        <input type="number" id="promo" placeholder="$ 0.00" name="discount" value="<%= productDetail.discount %>">
                     </div>
                     <div class="form-input-textArea">
                         <label for="descripcion">Descripcion:</label>
-                        <textarea id="descripcion" rows="4" cols="50" placeholder="Describe tu producto..." name="descripcion"></textarea>
+                        <textarea id="descripcion" rows="4" cols="50" placeholder="Describe tu producto..." name="description"><%= productDetail.description %></textarea>
                         
                     </div>
                 

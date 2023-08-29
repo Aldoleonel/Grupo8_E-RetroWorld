@@ -188,12 +188,12 @@
    },
    {
       "id": 18,
-      "name": "aldo",
-      "price": 123,
-      "discount": 2,
-      "category": "playstation",
+      "name": "aldoasdasd",
+      "price": 4444,
+      "discount": 5,
+      "category": "xbox",
       "estado": "in-sale",
-      "description": "aldo",
+      "description": "asdasd",
       "image": "1693206704067_products_.jpg",
       "stock": 0
    }
