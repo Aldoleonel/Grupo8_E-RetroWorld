@@ -18,5 +18,5 @@ module.exports = (req, res) => {
     }
      products.push(newProduct)
     writeJson(products,'products')
-    return res.redirect('/admin')
+    return res.redirect('/')
 }

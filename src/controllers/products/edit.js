@@ -1,3 +1,21 @@
+const fs = require('fs');
+const path = require('path');
+const { readJSON,writeJson } = require("../../data/index");
+
+const products= readJSON('products.json')
+
 module.exports=(req,res)=>{
-    return res.render('productEdit');
-}
+    
+		const productDetail = products.find(product => product.id === +req.params.id)
+        
+		return res.render('productEdit', {
+			productDetail
+            
+			
+		})
+        
+	}
+   
+		
+	
+    
