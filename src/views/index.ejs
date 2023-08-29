@@ -16,12 +16,12 @@
         <div class="home--ofertasTitulo">
             <h2 c>OFERTAS DESTACADAS</h2>
         </div>
-        <div class="home--productosEnOferta">
+        <div class="home--productosTitulo">
 
             <% productsSale.forEach(product => { %>
-                <div class="home__productosEnOferta-producto">
+                <div class="home__productos">
 				
-					<%- include('partials/productCardSale',{
+					<%- include('partials/productCard',{
 						...product,
                         toThousand
 					})%>

@@ -81,8 +81,10 @@ input::placeholder{
     font-size:70%;
     position:relative;
     left:94%;
-    top:17px
+    top:17px;
+    z-index: 13;
 }
+
 
 @media (min-width:481px){
     
