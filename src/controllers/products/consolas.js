@@ -1,10 +1,10 @@
-const fs = require('fs');
-const path = require('path');
-const productsFilePath = path.join(__dirname, '../../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const { readJSON } = require("../../data/index");
+
+const products= readJSON('products.json')
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports=(req,res)=>{
+    const product = products.find(product => product.id === +req.params.id);
     return res.render('consolas',{
         products,
         toThousand
