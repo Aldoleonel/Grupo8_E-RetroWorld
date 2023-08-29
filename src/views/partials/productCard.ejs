@@ -4,7 +4,10 @@
     <a href="/products/detail/<%= id %>"><img src="/img/products/<%= image || 'default-img.png' %>" alt="producto"></a>
     <div class="home__productos-producto">
         <p class="descripcion"><%= name %></p>
-        <p class="precio">$<%= toThousand((price).toFixed(0)) %></p>
+        <p class="precio">$<%= toThousand((price - (price * discount / 100)).toFixed(0)) %></p>
+        <% if (discount) { %>
+            <span><%= discount  %> % OFF</span>
+           <% } %>
 
         <input type="button" value="Agregar al carrito">
 
