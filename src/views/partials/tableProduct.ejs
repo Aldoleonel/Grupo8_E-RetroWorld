@@ -74,10 +74,36 @@
                                 </div>
                             </div>
 
-                            <a href="/products/edit/<%= id %>?_method=PUT" class="btn btn-success"><i
+                            <a href="/products/edit/<%= id %>" class="btn btn-success"><i
                                     class="fa-solid fa-pen-to-square"></i></a>
 
-                            <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                            <!-- <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button> -->
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#deleteProduct<%= id %>Toggle">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                            <div class="modal fade" id="deleteProduct<%= id %>Toggle" aria-hidden="true"
+                                aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Warning!!</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Estás seguro que quieres eliminar el producto: <%= name %>?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <form action="/products/delete/<%= id %>?_method=DELETE" method="POST">
+                                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                                data-bs-toggle="modal">Eliminar</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </td>
                 </tr>

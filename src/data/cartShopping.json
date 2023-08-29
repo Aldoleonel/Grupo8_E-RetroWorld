@@ -1,0 +1,96 @@
+[
+   {
+      "id": 2,
+      "name": "Nintendo Game&Watch-Edición donkey kong 2",
+      "price": 75000,
+      "discount": 0,
+      "category": "nintendo",
+      "estado": "in-sale",
+      "description": "-Made in japan , funciona con pulas LR44, contiene relog digital,vuelve al pasado y disfruta esta gran consola ",
+      "image": "Game&watch-donkey-kong-2.png",
+      "stock": 0
+   },
+   {
+      "id": 3,
+      "name": "Nintendo 64",
+      "price": 67600,
+      "discount": 0,
+      "category": "nintendo",
+      "estado": "in-sale",
+      "description": "Nintendo 64 es la cuarta videoconsola de sobremesa descontinuada producida por Nintendo, desarrollada para suceder a la Super Nintendo. Fue la primera consola concebida para dar el salto del 2D al 3D.",
+      "image": "Nintendo64.png",
+      "stock": true
+   },
+   {
+      "id": 3,
+      "name": "Nintendo 64",
+      "price": 67600,
+      "discount": 0,
+      "category": "nintendo",
+      "type": "consola",
+      "estado": "in-sale",
+      "description": "Nintendo 64 es la cuarta videoconsola de sobremesa descontinuada producida por Nintendo, desarrollada para suceder a la Super Nintendo. Fue la primera consola concebida para dar el salto del 2D al 3D.",
+      "image": "Nintendo64.png",
+      "stock": true
+   },
+   {
+      "id": 3,
+      "name": "Nintendo 64",
+      "price": 67600,
+      "discount": 0,
+      "category": "nintendo",
+      "type": "consola",
+      "estado": "in-sale",
+      "description": "Nintendo 64 es la cuarta videoconsola de sobremesa descontinuada producida por Nintendo, desarrollada para suceder a la Super Nintendo. Fue la primera consola concebida para dar el salto del 2D al 3D.",
+      "image": "Nintendo64.png",
+      "stock": true
+   },
+   {
+      "id": 2,
+      "name": "Nintendo Game&Watch-Edición donkey kong 2",
+      "price": 75000,
+      "discount": 0,
+      "category": "nintendo",
+      "type": "consola",
+      "estado": "in-sale",
+      "description": "-Made in japan , funciona con pulas LR44, contiene relog digital,vuelve al pasado y disfruta esta gran consola ",
+      "image": "Game&watch-donkey-kong-2.png",
+      "stock": 0
+   },
+   {
+      "id": 3,
+      "name": "Nintendo 64",
+      "price": 67600,
+      "discount": 0,
+      "category": "nintendo",
+      "type": "consola",
+      "estado": "in-sale",
+      "description": "Nintendo 64 es la cuarta videoconsola de sobremesa descontinuada producida por Nintendo, desarrollada para suceder a la Super Nintendo. Fue la primera consola concebida para dar el salto del 2D al 3D.",
+      "image": "Nintendo64.png",
+      "stock": true
+   },
+   {
+      "id": 1,
+      "name": "Xbox",
+      "price": 50000,
+      "discount": 0,
+      "category": "xbox",
+      "type": "consola",
+      "estado": "in-sale",
+      "description": "Xbox es una videoconsola doméstica de 32 bits y la primera de la serie de videoconsolas Xbox fabricada por Microsoft.",
+      "image": "xbox.png",
+      "stock": 0
+   },
+   {
+      "id": 7,
+      "name": "Nintendo VirtualBoy ",
+      "price": 170000,
+      "discount": 0,
+      "category": "nintendo",
+      "type": "consola",
+      "estado": "in-sale",
+      "description": "Virtual Boy es una consola de sobremesa producida por Nintendo en 1995. La consola crea una ilusión monocromática (rojo/negro) de profundidad tridimensional que Nintendo promovió como realidad virtua,",
+      "image": "NintendoVirtualBoy.png",
+      "stock": 0
+   }
+]

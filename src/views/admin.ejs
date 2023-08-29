@@ -24,11 +24,6 @@
                             data-bs-target="#contact-tab-pane" type="button" role="tab"
                             aria-controls="contact-tab-pane" aria-selected="false">Usuarios</button>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="disabled-tab" data-bs-toggle="tab"
-                            data-bs-target="#disabled-tab-pane" type="button" role="tab"
-                            aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
-                    </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
@@ -41,11 +36,20 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
-                        tabindex="0">Categorias</div>
+                        tabindex="0">
+                        <%- include('partials/tableCategory',{
+                            category
+                        }) %>
+                    </div>
                     <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
-                        tabindex="0">Usuarios</div>
-                    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab"
-                        tabindex="0">...</div>
+                        tabindex="0">
+                        <%- include('partials/tableUsers',{
+                            users
+                        }) %>
+                        <div class="d-flex justify-content-end mb-4">
+                            <a href="/users/register" class="btn  bg-primary-subtle">Crear usuario</a>
+                        </div>
+                    </div>
                 </div>
                 
             </div>
