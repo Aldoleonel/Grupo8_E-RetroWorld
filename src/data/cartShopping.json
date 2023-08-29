@@ -92,5 +92,17 @@
       "description": "Virtual Boy es una consola de sobremesa producida por Nintendo en 1995. La consola crea una ilusión monocromática (rojo/negro) de profundidad tridimensional que Nintendo promovió como realidad virtua,",
       "image": "NintendoVirtualBoy.png",
       "stock": 0
+   },
+   {
+      "id": 16,
+      "name": "Xbox 360",
+      "price": 70000,
+      "discount": 0,
+      "category": "xbox",
+      "type": "consola",
+      "estado": "visited",
+      "description": "Xbox One es la tercera videoconsola de sobremesa de la marca Xbox, producida por Microsoft. Forma parte de las videoconsolas de octava generación, fue presentada por Microsoft el 21 de mayo de 2013.7​ Es la sucesora de la Xbox 360 y la predecesora de la Xbox Series X|S. Actualmente compite con PlayStation 4 de Sony y Wii U de Nintendo. Su salida a la venta fue el 22 de noviembre de 2013",
+      "image": "xbox360.png",
+      "stock": 0
    }
 ]

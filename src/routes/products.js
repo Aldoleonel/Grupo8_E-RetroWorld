@@ -14,7 +14,7 @@ router.post('/add',upload.single('image'),create)
 router.get('/edit',edit);
 router.delete('/delete/:id', deleteProd);
 router.get('/edit/:id',edit);
-router.put('/edit/:id',update);
+router.put('/edit/:id',upload.single('image'),update);
 router.get('/products',products);
 router.get('/consolas/:name',consolas);
 router.get('/accessories',accessories);

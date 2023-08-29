@@ -10,7 +10,7 @@
         <section class="form__registro">
             <div class="form-box">
                 <h2>Editar Producto</h2>
-                <form action="/products/edit/<%= productDetail.id %>?_method=PUT" method="POST">
+                <form action="/products/edit/<%= productDetail.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="form-input">
                         <label for="titulo">Titulo:</label>
                         <input type="text" id="titulo" placeholder="" name="name" value="<%= productDetail.name %>">
@@ -36,10 +36,9 @@
                             
                         </select>
                     </div>
-                    <div class="form-foto">
-                        <input id="fichero" type="file">
-                        <label for="fichero" class="form-boton-foto" type="button" name="image" value="Subi tu foto">Editar Foto
-                        </label>
+                    <div class="form-foto" >
+                        <label for="image" class="form-boton-foto" >Subi tu foto</label>
+                        <input hidden type="file"  name="image" id="image">
                     </div>
                     <div class="form-input">
                         <label for="precio">Precio:</label>
