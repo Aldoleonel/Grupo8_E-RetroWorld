@@ -3,8 +3,10 @@
 module.exports = {
     detail: require('./products/detail'),
     add: require('./products/add'),
+    addCart: require('./products/addCart'),
     create:require('./products/create'),
     edit: require('./products/edit'),
+    deleteProd: require('./products/deleteProd'),
     products: require('./products/products'),
     consolas : require('./products/consolas'),
     accessories : require('./products/accessories')

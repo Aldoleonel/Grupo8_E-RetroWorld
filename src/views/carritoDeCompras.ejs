@@ -14,24 +14,28 @@
 
         <main class="carrito__main">
             <section class="carrito__articles">
-                <div class="carrito__box-articles">
-                    <article class="carrito__articles-details">
-                        <img src="/img/play-4.png" alt="foto ps4" width="200" height="200">
-                        <h5>Sony PlayStation 4 Slim Standard</h5>
-                    </article>
-                    <div class="num__products">
-                        <button type="button"><i class="fa-solid fa-minus"></i></button>
-                        <h2>1</h2>
-                        <button type="button"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                    <div class="carrito__products-precio">
-                        <h4>$240.000</h4>
-                        <div>
-                            <button type="button"><i class="fa-solid fa-xmark"></i></button>
+                <% cartShopping.forEach(({id,name,price,image}) => { %>
+                    <div class="carrito__box-articles">
+                        <article class="carrito__articles-details">
+                            <img src="/img/<%= image %>" alt="foto ps4" width="200" height="200">
+                            <h5><%= name %></h5>
+                        </article>
+                        <div class="num__products">
+                            <button type="button"><i class="fa-solid fa-minus"></i></button>
+                            <h2><%= id %></h2>
+                            <button type="button"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="carrito__products-precio">
+                            <h4>$<%= price %></h4>
+                            <div>
+                                <form action="" method="post">
+                                    <button type="button"><i class="fa-solid fa-xmark"></i></button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carrito__box-articles">
+                <% }) %>    
+                <!-- <div class="carrito__box-articles">
                     <article class="carrito__articles-details">
                         <img src="/img/atari-8.png" alt="foto ps4" width="200" height="200">
                         <h5>Consola Atari Flashback 8</h5>
@@ -47,7 +51,7 @@
                             <button type="button"><i class="fa-solid fa-xmark"></i></button>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </section>
         </main>
@@ -56,7 +60,7 @@
 
             <div class="carrito__options--total-precio">
                 <h3>Total</h3>
-                <h3>$000.00</h3>
+                <h3>$<%= toThousand(priceFinal) %></h3>
             </div>
 
             <div class="carrito__options-buttons">

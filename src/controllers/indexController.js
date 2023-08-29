@@ -60,7 +60,13 @@ module.exports = {
 
     /*Controlador de Carrito de Compras*/
     cart: (req,res)=>{
-        return res.render('carritoDeCompras');
+        const cartShopping = readJSON('cartShopping');
+        const priceFinal = cartShopping.reduce((a,b)=>a.price + b.price);
+        return res.render('carritoDeCompras',{
+            cartShopping,
+            priceFinal,
+            toThousand,
+        });
     },
     search: (req, res) => {
 

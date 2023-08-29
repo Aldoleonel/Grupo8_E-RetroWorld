@@ -2,5 +2,7 @@
     <a href="/products/detail/<%= id %>"><img src="/img/products/<%= image || 'default-img.png' %>" alt="producto"></a>
     <p class="descripcion"><%= name %></p>
     <p class="precio">$<%= toThousand((price).toFixed(0)) %></p>
-    <input type="button" value="Agregar al carrito">
+    <form action="/products/addCart/<%= id %>">
+        <input type="submit" value="Agregar al carrito">
+    </form>
 </article>
