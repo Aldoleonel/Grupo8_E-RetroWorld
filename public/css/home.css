@@ -91,7 +91,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .home--productosEnOferta{
     width: 100%;
@@ -184,7 +185,12 @@
     .swiper{
         display: block;
     }
-    
+    .home--productosTitulo {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        flex-direction: row;
+    }
     .home__productos {
 
         display: flex;

@@ -1,10 +1,7 @@
 const { readJSON,writeJson } = require("../../data/index");
-
 const products= readJSON('products.json')
-
-module.exports = (req, res) => {
-
-    /* const {name,categoria,tipo,price,discount,description}=req.body */
+module.exports = (req, res) => {   
+    console.log(req.body);
     let newProduct = {
         id: products.length + 1,
         name: req.body.name.trim(),
@@ -18,5 +15,5 @@ module.exports = (req, res) => {
     }
      products.push(newProduct)
     writeJson(products,'products')
-    return res.redirect('/admin')
+    return res.redirect('/')
 }
