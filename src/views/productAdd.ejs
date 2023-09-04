@@ -34,9 +34,18 @@
                             <option value="visited">Ultima visita</option>
                         </select>
                     </div>
-                    <div class="form-foto" >
-                        <label for="image" class="form-boton-foto" >Subi tu foto</label>
+                  <!--   <div class="form-foto" >
+                        <label for="type" class="form-boton-foto" >Subi tu foto</label>
                         <input hidden type="file"  name="image" id="image">
+                    </div> -->
+
+                    <div class="form-input">
+                        <label for="type">Type:</label>
+                        <select id="type" name="type" required>
+                            <option selected hidden>Seleccione...</option>
+                            <option value="repuesto">Repuesto</option>
+                            <option value="consola">Consola</option>
+                        </select>
                     </div>
                     <div class="form-input">
                         <label for="price">Precio:</label>
@@ -45,6 +54,10 @@
                     <div class="form-input">
                         <label for="discount">Descuento:</label>
                         <input type="number" id="discount" placeholder="% 0" name="discount">
+                    </div>
+                    <div class="form-foto" >
+                        <label for="image" class="form-boton-foto" >Subir imagen de producto</label>
+                        <input hidden type="file"  name="image" id="image">
                     </div>
                     <div class="form-input-textArea">
                         <label for="description">Descripcion:</label>

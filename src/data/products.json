@@ -1,6 +1,6 @@
 [
    {
-      "id": 1,
+      "id": "a1d189a1-9aaa-46bb-aca7-6401397cf551",
       "name": "Xbox",
       "price": 50000,
       "discount": 0,
@@ -12,7 +12,7 @@
       "stock": 0
    },
    {
-      "id": 2,
+      "id": "7e39e667-66bb-46a8-a49f-cda7d8e95fea",
       "name": "Nintendo Game&Watch-Edición donkey kong 2",
       "price": 75000,
       "discount": 0,
@@ -24,7 +24,7 @@
       "stock": 0
    },
    {
-      "id": 3,
+      "id": "b084b473-c35d-4a31-b435-2c02401fa9e5",
       "name": "Nintendo 64",
       "price": 67600,
       "discount": 0,
@@ -36,7 +36,7 @@
       "stock": true
    },
    {
-      "id": 4,
+      "id": "f0f45d21-66d9-406e-9921-1009d0c77758",
       "name": "Nintendo GameCube-color Indigo",
       "price": 35000,
       "discount": 10,
@@ -48,7 +48,7 @@
       "stock": 1
    },
    {
-      "id": 5,
+      "id": "b301e448-0122-463c-ac90-048ecd1af1d7",
       "name": "Nintendo Entertainment System: NES ",
       "price": 390000,
       "discount": 0,
@@ -60,7 +60,7 @@
       "stock": 0
    },
    {
-      "id": 6,
+      "id": "75515789-87af-4623-91c7-3687688444e8",
       "name": "Nintendo Ds ",
       "price": 72000,
       "discount": 0,
@@ -72,7 +72,7 @@
       "stock": 3
    },
    {
-      "id": 7,
+      "id": "b3bbf45f-7918-42f7-9d24-cedfc1dff91c",
       "name": "Nintendo VirtualBoy ",
       "price": 170000,
       "discount": 0,
@@ -84,7 +84,7 @@
       "stock": 0
    },
    {
-      "id": 8,
+      "id": "937292ac-0ee1-48a5-9a7f-33a7d1fa387e",
       "name": "Nintendo Wii ",
       "price": 117.65,
       "discount": 0,
@@ -96,7 +96,7 @@
       "stock": 0
    },
    {
-      "id": 9,
+      "id": "ec419e4c-95b3-4010-af10-71b4b7a947e9",
       "name": "Nintendo Switch  ",
       "price": 366.33,
       "discount": 5,
@@ -108,7 +108,7 @@
       "stock": 0
    },
    {
-      "id": 10,
+      "id": "70524d30-66c0-445c-b003-1dbe8aeffa51",
       "name": "Magnavox Odyssey ",
       "price": 450000,
       "discount": 0,
@@ -120,7 +120,7 @@
       "stock": 0
    },
    {
-      "id": 11,
+      "id": "88e480f6-7348-4da6-a40c-200d77a31def",
       "name": " Tablero arcade 10,600 en WAR",
       "price": 60299,
       "discount": 0,
@@ -132,7 +132,7 @@
       "stock": false
    },
    {
-      "id": 12,
+      "id": "4ec63c09-9d20-4e70-b8d0-5a0edfeec6f1",
       "name": " Tablero arcade con base pandora 80cm",
       "price": 90300,
       "discount": 0,
@@ -144,7 +144,7 @@
       "stock": 0
    },
    {
-      "id": 13,
+      "id": "2ec5b7fc-5c7c-4e19-828b-18fb04ab804a",
       "name": " Consola Arcade Individual The King of fighters",
       "price": 50700,
       "discount": 0,
@@ -156,7 +156,7 @@
       "stock": 0
    },
    {
-      "id": 14,
+      "id": "47058204-48f6-4c93-987e-c79d0652b3a0",
       "name": "Tablero Arcade Individual 2 piezas 16 Mil Juegos Street Fighters",
       "price": 53400,
       "discount": 0,
@@ -168,7 +168,7 @@
       "stock": 0
    },
    {
-      "id": 15,
+      "id": "9b4af1b1-215f-4c62-8591-d3d85ebc7d7d",
       "name": "Xbox 360",
       "price": 70000,
       "discount": 0,
@@ -180,7 +180,7 @@
       "stock": 0
    },
    {
-      "id": 16,
+      "id": "71d0012c-f2bc-4463-8f68-04cee599563c",
       "name": "Xbox 360",
       "price": 70000,
       "discount": 0,
@@ -188,11 +188,11 @@
       "type": "consola",
       "estado": "visited",
       "description": "Xbox One es la tercera videoconsola de sobremesa de la marca Xbox, producida por Microsoft. Forma parte de las videoconsolas de octava generación, fue presentada por Microsoft el 21 de mayo de 2013.7​ Es la sucesora de la Xbox 360 y la predecesora de la Xbox Series X|S. Actualmente compite con PlayStation 4 de Sony y Wii U de Nintendo. Su salida a la venta fue el 22 de noviembre de 2013",
-      "image": "1693302479511_products_.jpg",
+      "image": "xboxone.png",
       "stock": 0
    },
    {
-      "id": 17,
+      "id": "a657fca8-3af6-4657-b32e-209dc43bb86e",
       "name": "Camara Playstation Ps4",
       "price": 150000,
       "discount": 0,
@@ -204,7 +204,7 @@
       "stock": 0
    },
    {
-      "id": 18,
+      "id": "b4a3ed0b-c294-46e3-a344-f52e55502765",
       "name": "Joystick Dualshock Ps4 Black",
       "price": 60000,
       "discount": 0,
@@ -216,7 +216,7 @@
       "stock": 0
    },
    {
-      "id": 19,
+      "id": "faef08d6-f1ce-4c58-bfdd-56b15279a115",
       "name": "Joystick Xbox Series S/X",
       "price": 62000,
       "discount": 0,
@@ -228,7 +228,7 @@
       "stock": 0
    },
    {
-      "id": 20,
+      "id": "459a4218-a7b7-46ca-a3cb-9abc00585afa",
       "name": "Sensor de movimiento KINECT Xbox",
       "price": 28000,
       "discount": 0,
@@ -240,7 +240,7 @@
       "stock": 0
    },
    {
-      "id": 21,
+      "id": "75e1a9e0-fed4-4adb-ab1f-c6e54be009d7",
       "name": "Joystick Nintendo 64",
       "price": 10800,
       "discount": 0,
@@ -252,7 +252,7 @@
       "stock": 0
    },
    {
-      "id": 22,
+      "id": "a60d08fd-5687-4e96-ba61-448595f014a3",
       "name": "Joysticks Nintendo switch",
       "price": 68000,
       "discount": 0,
@@ -264,7 +264,7 @@
       "stock": 0
    },
    {
-      "id": 23,
+      "id": "eb056aab-e873-4605-ba9e-ff923f5cc1b2",
       "name": "Palanca Arcade Perita De 4/8",
       "price": 12000,
       "discount": 0,
@@ -276,7 +276,7 @@
       "stock": 0
    },
    {
-      "id": 24,
+      "id": "8aad699b-3b0a-45f8-8e9e-5c4fad5a0816",
       "name": "Boton arcade 24mm",
       "price": 800,
       "discount": 0,
