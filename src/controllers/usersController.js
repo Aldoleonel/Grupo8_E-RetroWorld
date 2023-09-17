@@ -6,8 +6,10 @@ module.exports = {
     },
 
     register : (req,res) => {
-        return res.render('registro');
-    }
+        return res.render('register')
+    },
 
+    processRegister: require('./users/processRegister')
+     
     
 }

@@ -1,38 +1,83 @@
 [
-    {
-        "id": 1,
-        "firstName": "Andony",
-        "lastName": "Sanchez",
-        "email" : "1010andony@gmail.com",
-        "password" : "123",
-        "category" : "admin",
-        "image" : null
-    },
-    {
-        "id": 2,
-        "firstName": "Axel",
-        "lastName": "Michel",
-        "email" : "axelmichel515@gmail.com",
-        "password" : "123",
-        "category" : "admin",
-        "image" : null
-    },
-    {
-        "id": 3,
-        "firstName": "Aldo",
-        "lastName": "Chalup",
-        "email" : "aldoleonelchalup@gmail.com",
-        "password" : "123",
-        "category" : "admin",
-        "image" : null
-    },
-    {
-        "id": 4,
-        "firstName": "Sebastian",
-        "lastName": "Tapia",
-        "email" : "sebastian.tapia35202@gmail.com",
-        "password" : "123",
-        "category" : "admin",
-        "image" : null
-    }
+   {
+      "id": 1,
+      "firstName": "Andony",
+      "lastName": "Sanchez",
+      "email": "1010andony@gmail.com",
+      "password": "123123",
+      "category": "admin",
+      "image": null
+   },
+   {
+      "id": 2,
+      "firstName": "Axel",
+      "lastName": "Michel",
+      "email": "axelmichel515@gmail.com",
+      "password": "123123",
+      "category": "admin",
+      "image": null
+   },
+   {
+      "id": 3,
+      "firstName": "Aldo",
+      "lastName": "Chalup",
+      "email": "aldoleonelchalup@gmail.com",
+      "password": "123123",
+      "category": "admin",
+      "image": null
+   },
+   {
+      "id": 4,
+      "firstName": "Sebastian",
+      "lastName": "Tapia",
+      "email": "sebastian.tapia35202@gmail.com",
+      "password": "123123",
+      "category": "admin",
+      "image": null
+   },
+   {
+      "id": "6f35f9cc-89db-4bf1-9e98-fbf655c71ed8",
+      "firstName": "Ricardo",
+      "lastName": "Fort",
+      "date": "1980-05-22T00:00:00.000Z",
+      "email": "miameee@gmail.com",
+      "password": "$2a$10$60fHsGp9UYIbccp/Jj0ubefZJGI/1p81ovr6Ddmd6CrcEXa75MZvK",
+      "category": "user",
+      "image": null
+   },
+   {
+      "id": "944d67c4-8e5a-4863-b138-0d8ac0537bf5",
+      "firstName": "Juan",
+      "lastName": "Perez",
+      "gender": "masculino",
+      "birthdate": "1984-07-22T00:00:00.000Z",
+      "email": "juan@hotmail.com",
+      "password": "$2a$10$gfESko2rskt/Oqv32iF/W.7WcrgEmkqOOUL2rU7urgBM2K87Czqa2",
+      "category": "user",
+      "image": null
+   },
+   {
+      "id": "92e20b16-2398-432d-b98c-6bfdc004b548",
+      "firstName": "Sharon",
+      "lastName": "Soto",
+      "birthdate": "2018-07-22T00:00:00.000Z",
+      "gender": "femenino",
+      "phone": "123123123",
+      "email": "sharon@gmail.com",
+      "password": "$2a$10$5esEQY66c09yi9arYigd9.CfPAwPQSvc64DAEI1QA9s8iREHL6umC",
+      "category": "user",
+      "image": null
+   },
+   {
+      "id": "f4d8ad63-db72-4928-9037-388f9ccad54d",
+      "firstName": "Ramon",
+      "lastName": "Valdez",
+      "birthdate": "1980-02-02T00:00:00.000Z",
+      "gender": "masculino",
+      "phone": "456456",
+      "email": "don_ramon@gmail.com",
+      "password": "$2a$10$xktTbTXOr9PPV96LXFoHvuS7SdsSAT.Zv.Xs9euAP5HuF8QlN6HG6",
+      "category": "user",
+      "image": null
+   }
 ]
