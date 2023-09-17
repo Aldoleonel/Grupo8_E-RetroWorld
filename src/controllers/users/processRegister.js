@@ -1,5 +1,5 @@
 const { validationResult } = require("express-validator");
-const { readJSON, writeJson } = require("../../data");
+const { readJSON, writeJson } = require("../../data/index");
 const User = require("../../data/User");
 
 module.exports = (req,res) => {
@@ -7,15 +7,18 @@ module.exports = (req,res) => {
     const errors = validationResult(req);
 
     if(errors.isEmpty()){
-        const users = readJSON('usersDB.json');
+        const users = readJSON('usersDB');
         const user = new User(req.body);
     
         users.push(user);
-        writeJson(users,'usersDB.json')
+        writeJson(users,'usersDB')
     
-        return res.redirect('/')
+        return res.redirect('/users/login')
     }else {
-        return res.send(errors.mapped())
+        return res.render('register',{
+            errors : errors.mapped(),
+            old : req.body
+        })
     }
     
  

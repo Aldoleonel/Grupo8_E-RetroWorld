@@ -1,6 +1,11 @@
 module.exports = {
-  register : require('./users/register'),
-  processLogin : require('./users/processLogin'),
-  login : require('./users/login')
-  
+    
+    processLogin : require('./users/processLogin'),
+    login : require('./users/login'),
+    register : (req,res) => {
+        return res.render('register')
+    },
+    processRegister: require('./users/processRegister')
+     
+    
 }

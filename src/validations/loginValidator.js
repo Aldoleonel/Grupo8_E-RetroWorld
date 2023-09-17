@@ -13,15 +13,15 @@ module.exports = [
         const user = users.find(user => user.email === req.body.email);
        
       console.log(user)
-   //     if(!user || !compareSync(value,user.password)){
-       //     return false
-       // }
-        //    return true
-        if(!user || (value !== user.password)){
-          return false
-        }else{
-          return true
+        if(!user || !compareSync(value,user.password)){
+            return false
         }
+            return true
+        // if(!user || (value !== user.password)){
+        //   return false
+        // }else{
+        //   return true
+        // }
         }).withMessage('Credenciales inválidas')         
 
 ];
