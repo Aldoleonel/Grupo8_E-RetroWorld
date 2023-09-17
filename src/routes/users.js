@@ -1,16 +1,13 @@
 const express = require('express');
-const usersController = require('../controllers/usersController');
+const { register, login, processLogin } = require('../controllers/usersController');
+const loginValidator = require('../validations/loginValidator');
+const notUserCheck = require('../middlewares/notUserCheck');
 const router = express.Router();
 
-/* GET users listing. */
-router.get('/',(req, res) => {
-  res.send('respond with a resource');
-});
-
-/*RUTAS PARA LOGIN Y REGISTRO*/
-
-router.get('/login',usersController.login);
-
-router.get('/register',usersController.register);
+/* /users */
+router
+  .get('/register', notUserCheck, register)
+  .get('/login', notUserCheck, login)
+  .post('/login',loginValidator, processLogin);
 
 module.exports = router;
