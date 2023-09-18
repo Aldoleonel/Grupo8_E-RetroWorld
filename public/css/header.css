@@ -17,6 +17,26 @@
 .header__top-login-shop span{
     display:none;
 }
+.header__top-login-shop .profile{
+    position: relative;
+}
+.header__top-login-shop .profile ul{
+    position: absolute;
+    top: 10px;
+    left: -40px;
+    display: none;
+}
+.header__top-login-shop .profile:hover  ul{
+    display: block;
+}
+.header__top-login-shop .profile ul li{
+    list-style: none;
+    cursor: pointer;
+    margin-top: 3px;
+}
+.header__top-login-shop .profile ul li a:hover{
+    color: rgba(242,126,202,1);
+}
 .header__top-login-shop i{
     display:flex;
     font-size:15px;
@@ -93,6 +113,14 @@ input::placeholder{
 
     }
     
+    .header__top-login-shop .profile ul{
+        top: 16px;
+        left: -40px;
+    }
+    .header__top-login-shop .profile ul li{
+        margin-top: 5px;
+    }
+
     .fa-solid.fa-bars{
         display:none;
     }
@@ -171,6 +199,10 @@ input::placeholder{
     left:67%;
     top:40%;
     z-index: 200;
+}
+.header__top-login-shop .profile ul{
+    top: 16px;
+    left: -10px;
 }
 
     .header__top-login-shop a{
