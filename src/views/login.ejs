@@ -1,100 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head',{
-    title:'Login'
-}) %>
-<body>
-    <%- include('partials/header') %>
-    <main class="login__main">
-        <div class="login__mi-cuenta">
-            <p>Mi Cuenta</p>
-        </div>
-        <div class="login-box">
-            <form action="/users/login" method="POST">
-                <p class="login__ingresar">ingresar</p>
-                <p class="login-correo-box">
-                    <label>Correo electronico: *</label>
-                    <input type="email" name="email">
-                </p>
-                <p class="login-contraseña-box">
-                    <label>Contraseña: *</label>
-                    <input type="password" name="password">
-                    <% if (locals.errors) { %>
-                        <small class="text-danger">Credenciales incorrectas !</small>
-                        <% } %>
-                </p>
-                <p class="login-olvido-contraseña">
-                    <a href="#">¿Ha olvidado su contraseña?</a>
-                </p>
-                <p class="login-registra-entrar">
-                    <a href="/users/register"><button type="button" class="login-button">Registra una cuenta</button></a>
-                    <button type="submit" class="login-button">Entrar</button>
-                </p>
+<%- include('partials/head',{ title:'Login' }) %>
 
-
-            </form>
-
-        </div>
-    </main>
-    <footer>
-        <div class="footer-logo">
-            <a href="/"> <img src="/img/Logo.png" alt="logo"></a>
-        </div>
-        <div class="footer__iconos">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-        <div class="footer__secciones">
-            <div class="footer-columna">
-                <h3>SECCIONES</h3>
-                <ul>
-                    <li><a href="#"> Favoritos </a></li>
-                    <li><a href="#">Ofertas</a></li>
-                </ul>
-            </div>
-            <div class="footer-columna">
-                <h3>NEWSLETTER</h3>
-                <p>Suscríbase a nuestro boletín para recibir las últimas noticias en su bandeja de entrada.</p>
-                <input type="email" placeholder="Ingrese su correo electrónico">
-                <button>Enviar</button>
-            </div>
-            <div class="footer-columna">
-                <h3>ACERCA DE</h3>
-                <ul>
-                    <li><a href="#">Informacion</a></li>
-                    <li><a href="#">Pareguntas frecientes</a></li>
-                    <li><a href="#">consultas@e-retroworld.com</a></li>
-
-                </ul>
-            </div>
-            <div class="footer-columna">
-                <h3>MEDIOS DE PAGO</h3>
-                <div class="footer__box-iconos-de-pago">
-                <div class="footer__iconos-de-pago">
-                    <a href=""><img src="/img/americanexpress.png" alt="american-express"></a>
-                    <a href=""><img src="/img/mastercard.png" alt="mastercard"></a>
-                    <a href=""><img src="/img/mercadopago.png" alt="mercadopago"></a>
-                    <a href=""><img src="/img/pagofacil.png" alt="pagofacil"></a>
-                    <a href=""><img src="/img/visa.png" alt="visa"></a>
-                    <a href=""><img src="/img/rapipago.png" alt="rapipago"></a>
+    <body>
+        <%- include('partials/header') %>
+            <main class="login__main">
+                <div class="login__mi-cuenta">
+                    <p>Mi Cuenta</p>
                 </div>
-            </div>
-            </div>
-        </div>
-        <div class="footer__ultimo">
-            <div class="links">
-                <a href="#">Términos y condiciones</a>
-                <span>|</span>
-                <a href="#">Política de privacidad</a>
-            </div>
-            <p>&copy; 2023 - E-retroworld - Todos los derechos reservados</p>
-        </div>
-    </footer>
+                <div class="login-box">
+                    <form action="/users/login" method="POST">
+                        <p class="login__ingresar">ingresar</p>
+                        <p class="login-correo-box">
+                            <label>Correo electronico: *</label>
+                            <input type="email" name="email">
+                        </p>
+                        <p class="login-contraseña-box">
+                            <label>Contraseña: *</label>
+                            <input type="password" name="password">
+                            <% if (locals.errors) { %>
+                                <small class="text-danger">Credenciales incorrectas !</small>
+                                <% } %>
+                        </p>
+                       
+                        <div class="login-box2">
+                            <input type="checkbox" id="remember" name="remember" value="">
+                            <label for="remember">  Recordarme</label>
+                        </div>
+                    
+                            <a href="#">¿Ha olvidado su contraseña?</a>
+                        </p>
+                        <p class="login-registra-entrar">
+                            <a href="/users/register"><button type="button" class="login-button">Registra una
+                                    cuenta</button></a>
+                            <button type="submit" class="login-button">Entrar</button>
+                        </p>
+
+
+                    </form>
+
+                </div>
+            </main>
+            <footer>
+                <div class="footer-logo">
+                    <a href="/"> <img src="/img/Logo.png" alt="logo"></a>
+                </div>
+                <div class="footer__iconos">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer__secciones">
+                    <div class="footer-columna">
+                        <h3>SECCIONES</h3>
+                        <ul>
+                            <li><a href="#"> Favoritos </a></li>
+                            <li><a href="#">Ofertas</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-columna">
+                        <h3>NEWSLETTER</h3>
+                        <p>Suscríbase a nuestro boletín para recibir las últimas noticias en su bandeja de entrada.</p>
+                        <input type="email" placeholder="Ingrese su correo electrónico">
+                        <button>Enviar</button>
+                    </div>
+                    <div class="footer-columna">
+                        <h3>ACERCA DE</h3>
+                        <ul>
+                            <li><a href="#">Informacion</a></li>
+                            <li><a href="#">Pareguntas frecientes</a></li>
+                            <li><a href="#">consultas@e-retroworld.com</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-columna">
+                        <h3>MEDIOS DE PAGO</h3>
+                        <div class="footer__box-iconos-de-pago">
+                            <div class="footer__iconos-de-pago">
+                                <a href=""><img src="/img/americanexpress.png" alt="american-express"></a>
+                                <a href=""><img src="/img/mastercard.png" alt="mastercard"></a>
+                                <a href=""><img src="/img/mercadopago.png" alt="mercadopago"></a>
+                                <a href=""><img src="/img/pagofacil.png" alt="pagofacil"></a>
+                                <a href=""><img src="/img/visa.png" alt="visa"></a>
+                                <a href=""><img src="/img/rapipago.png" alt="rapipago"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__ultimo">
+                    <div class="links">
+                        <a href="#">Términos y condiciones</a>
+                        <span>|</span>
+                        <a href="#">Política de privacidad</a>
+                    </div>
+                    <p>&copy; 2023 - E-retroworld - Todos los derechos reservados</p>
+                </div>
+            </footer>
 
 
 
-</body>
+    </body>
 
 </html>
