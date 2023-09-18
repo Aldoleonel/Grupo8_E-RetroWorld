@@ -20,6 +20,9 @@
                 <p class="login-contraseña-box">
                     <label>Contraseña: *</label>
                     <input type="password" name="password">
+                    <% if (locals.errors) { %>
+                        <small class="text-danger">Credenciales incorrectas !</small>
+                        <% } %>
                 </p>
                 <p class="login-olvido-contraseña">
                     <a href="#">¿Ha olvidado su contraseña?</a>

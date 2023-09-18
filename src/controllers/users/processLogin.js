@@ -23,7 +23,10 @@ module.exports = (req,res) => {
         
         return res.redirect('/')
     }else {
-        return res.send(errors.mapped())
+        return res.render('login',{
+            errors : errors.mapped(),
+            
+        })
     }
 
   
