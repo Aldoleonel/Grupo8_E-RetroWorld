@@ -5,7 +5,17 @@
         <i class="fa-solid fa-bars"></i>
         <a href="/"><img src="/img/Logo.png" alt="logo-retroWorld"></a>
         <div class="header__top-login-shop">  
-          <a href="/users/login"><i class="fa-regular fa-user"></i><span>Login</span></a>
+          <% if (locals.userLogin) { %>
+            <div class="profile">
+              <a href="#"><i class="fa-regular fa-user"></i><span><%= userLogin.firstName %></span></a>
+              <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="/users/logout">Salir</a></li>
+              </ul>
+            </div>
+          <% } else {%>
+            <a href="/users/login"><i class="fa-regular fa-user"></i><span>Login</span></a>
+          <% } %>
           <a href="/cart"><i class="fa-solid fa-cart-shopping"></i><span>Mi Carrito</span></a> 
         </div> 
       </div> 
@@ -21,7 +31,9 @@
     <p><a href="/">Inicio</a></p>
     <p><a href="/products/products">Productos</a></p>      
     <p><a href="/products/consoles">Consolas</a></p>
-    <p><a href="/admin">Admin</a></p>
+    <% if (locals.userLogin && userLogin.category == 'admin') { %>
+      <p><a href="/admin">Admin</a></p>
+    <% } %>
     <p><a href="/products/accessories">Repuestos y accesorios</a></p>
   </div>
 </header>

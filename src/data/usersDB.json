@@ -1,41 +1,5 @@
 [
    {
-      "id": 1,
-      "firstName": "Andony",
-      "lastName": "Sanchez",
-      "email": "1010andony@gmail.com",
-      "password": "123123",
-      "category": "admin",
-      "image": null
-   },
-   {
-      "id": 2,
-      "firstName": "Axel",
-      "lastName": "Michel",
-      "email": "axelmichel515@gmail.com",
-      "password": "123123",
-      "category": "admin",
-      "image": null
-   },
-   {
-      "id": 3,
-      "firstName": "Aldo",
-      "lastName": "Chalup",
-      "email": "aldoleonelchalup@gmail.com",
-      "password": "123123",
-      "category": "admin",
-      "image": null
-   },
-   {
-      "id": 4,
-      "firstName": "Sebastian",
-      "lastName": "Tapia",
-      "email": "sebastian.tapia35202@gmail.com",
-      "password": "123123",
-      "category": "admin",
-      "image": null
-   },
-   {
       "id": "6f35f9cc-89db-4bf1-9e98-fbf655c71ed8",
       "firstName": "Ricardo",
       "lastName": "Fort",
@@ -89,7 +53,19 @@
       "phone": "03885223626",
       "email": "aldochalup@gmail.com",
       "password": "$2a$10$.gr3uo9gr2F45MaHkNBuZOCFz6IXLJhPcJPBigrMvqg7VwH9fgqe.",
-      "category": "user",
+      "category": "admin",
+      "image": null
+   },
+   {
+      "id": "0521fdc9-0a1b-4975-b10f-c08857df8a86",
+      "firstName": "andony",
+      "lastName": "sanchez",
+      "birthdate": "2018-07-22T00:00:00.000Z",
+      "gender": "masculino",
+      "phone": "3517707484",
+      "email": "1010andonysan@gmail.com",
+      "password": "$2a$10$Px1b8xl781G4UHQX2.iZCe/DGyX5zS6ad5O5VAaAXzjVF7B4oCyZW",
+      "category": "admin",
       "image": null
    }
 ]

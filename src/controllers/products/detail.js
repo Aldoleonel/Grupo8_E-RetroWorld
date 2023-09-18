@@ -8,5 +8,5 @@ module.exports=(req,res)=>{
     return res.render('detalleDeProducto',{
         ...product,
         toThousand
-    })
+    });
 }

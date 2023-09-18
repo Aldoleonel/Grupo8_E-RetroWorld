@@ -7,13 +7,12 @@ module.exports = (req,res) => {
     console.log(req.session.userLogin);
     if(errors.isEmpty()){
         const users = readJSON('usersDB')
-        const {id,name,role} = users.find(user => user.email === req.body.email)
+        const {id,firstName,category} = users.find(user => user.email === req.body.email)
         
         req.session.userLogin = {
             id,
-            name,
-            
-            role
+            firstName,
+            category
         }
 
         req.body.remember !== undefined && res.cookie('secretaso',req.session.userLogin,{
