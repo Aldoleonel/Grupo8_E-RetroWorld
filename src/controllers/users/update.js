@@ -14,7 +14,16 @@ module.exports = (req, res) => {
         email,
     } = req.body
    
-        let users = readJSON('usersDB')
+    let errors=validationResult(req)
+    if (errors.isEmpty()) {
+        res.redirect('/')
+    }else{
+        return res.render('userProfile',{
+            errors : errors.mapped(),
+            old : req.body
+        })
+    }
+        /* let users = readJSON('usersDB')
         users.forEach(user => {
             if (user.id == req.params.id) {
                 user.firstName = firstName
@@ -27,6 +36,6 @@ module.exports = (req, res) => {
             }
         })
         writeJson(users, 'usersDB')
-        res.redirect('/')
+        res.redirect('/') */
   
 }

@@ -79,5 +79,17 @@
       "password": "$2a$10$pElVmZdEfmnf7iTLPtWp/u74ZhqUFXApYrddo.IzyeAFO5sm04KR.",
       "category": "admin",
       "image": null
+   },
+   {
+      "id": "cfc96038-9f5a-403e-9083-e8852536f5a1",
+      "firstName": "x",
+      "lastName": "Tapia",
+      "birthdate": "2018-07-22",
+      "gender": "masculino",
+      "phone": "01128866725",
+      "email": "fuhlt@hotmail.com",
+      "password": "$2a$10$K0/pP2P0q5qXKQstF7dYUOEq4Se2TZLI4/a2bnuMQivDTU.gDuIZa",
+      "category": "user",
+      "image": null
    }
 ]

@@ -4,6 +4,7 @@ const registerValidator = require('../validations/registerValidator');
 const router = express.Router();
 const notUserCheck = require('../middlewares/notUserCheck')
 const loginValidator = require('../validations/loginValidator');
+const updateValidator = require('../validations/updateValidator');
 
 
 
@@ -15,6 +16,6 @@ router
   .post('/register',registerValidator, processRegister)
   .get('/logout', logout)
   .get('/userProfile', userProfile)
-  .put('/userProfile/:id',update)
+  .put('/userProfile/',updateValidator,update)
 
 module.exports = router;
