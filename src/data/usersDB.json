@@ -91,5 +91,29 @@
       "password": "$2a$10$K0/pP2P0q5qXKQstF7dYUOEq4Se2TZLI4/a2bnuMQivDTU.gDuIZa",
       "category": "user",
       "image": null
+   },
+   {
+      "id": "d89e655e-e6f9-4a3b-8d0f-9bd04eeb0da3",
+      "firstName": "Ricardo",
+      "lastName": "Gonzales",
+      "birthdate": "2018-07-22T00:00:00.000Z",
+      "gender": "masculino",
+      "phone": "45654896546",
+      "email": "ricardo66@hotmail.com",
+      "password": "$2a$10$JfxDgMqA7B4d7koBwYwfM.no/kIp41yV4vk7XIr2bL8cdqlyGAt.i",
+      "category": "user",
+      "image": null
+   },
+   {
+      "id": "4dd9d70d-7818-4d02-94a3-484ab4083e94",
+      "firstName": "Ricardo",
+      "lastName": "Gomez Garcia",
+      "birthdate": "2018-07-22T00:00:00.000Z",
+      "gender": "masculino",
+      "phone": "1242345523345",
+      "email": "ricardo_gomez@gmail.com",
+      "password": "$2a$10$wbLk9OlMaN/BdFB7dq0hjevna5Pi9A4LT8v1SdXIcr9zTr0ghoCJy",
+      "category": "user",
+      "image": null
    }
 ]
