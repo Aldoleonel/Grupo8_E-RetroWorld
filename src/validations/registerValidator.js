@@ -6,14 +6,14 @@ module.exports = [
       min: 2,
     })
     .withMessage("Por favor ingrese su nombre")
-    .isAlpha("es-ES")
+    .isAlpha("es-ES", {ignore: ' '})
     .withMessage("Por favor sólo letras"),
   body("lastName")
     .isLength({
       min: 2,
     })
     .withMessage("Por favor ingrese su apellido")
-    .isAlpha("es-ES")
+    .isAlpha("es-ES", {ignore: ' '})
     .withMessage("Por favor sólo letras"),
   body("phone")
     .notEmpty()
