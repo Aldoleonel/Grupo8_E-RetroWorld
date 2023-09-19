@@ -77,19 +77,7 @@
       "phone": "01128866725",
       "email": "sebastian.tapia35202@gmail.com",
       "password": "$2a$10$pElVmZdEfmnf7iTLPtWp/u74ZhqUFXApYrddo.IzyeAFO5sm04KR.",
-      "category": "user",
-      "image": null
-   },
-   {
-      "id": "f9feec7e-b3b3-4d07-9793-22c48b83ae8c",
-      "firstName": "Sebastian",
-      "lastName": "Tapiaaa",
-      "birthdate": "2018-07-22T00:00:00.000Z",
-      "gender": "masculino",
-      "phone": "01128866725",
-      "email": "fuhlt@hotmail.com",
-      "password": "$2a$10$4/NYE39533A/SAq79w3jEeLSb.TLsr.QhjlXsICJqtwjGLcTB1NgS",
-      "category": "user",
+      "category": "admin",
       "image": null
    }
 ]

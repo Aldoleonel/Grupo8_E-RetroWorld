@@ -3,7 +3,8 @@ const {login,processLogin,register,processRegister, logout, userProfile, update}
 const registerValidator = require('../validations/registerValidator');
 const router = express.Router();
 const notUserCheck = require('../middlewares/notUserCheck')
-const loginValidator = require('../validations/loginValidator')
+const loginValidator = require('../validations/loginValidator');
+
 
 
 /* /users */
