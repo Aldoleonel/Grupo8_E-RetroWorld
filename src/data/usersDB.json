@@ -33,27 +33,27 @@
       "image": null
    },
    {
-      "id": "f4d8ad63-db72-4928-9037-388f9ccad54d",
+      "id": "1a9ab553-9831-4e4b-9841-41c45851fb08",
       "firstName": "Ramon",
       "lastName": "Valdez",
-      "birthdate": "1980-02-02T00:00:00.000Z",
+      "birthdate": "2018-07-22T00:00:00.000Z",
       "gender": "masculino",
       "phone": "456456",
       "email": "don_ramon@gmail.com",
-      "password": "$2a$10$xktTbTXOr9PPV96LXFoHvuS7SdsSAT.Zv.Xs9euAP5HuF8QlN6HG6",
+      "password": "$2a$10$qXecsrb6osf12.pvqtGxqe7LQauBcnU4FJF0riNy.NF19h740gBH.",
       "category": "user",
       "image": null
    },
    {
-      "id": "27d94886-6477-4156-a3c3-e0553fb87f2e",
-      "firstName": "Aldo",
+      "id": "622213dd-de8d-4b9b-be0f-ff9103f75324",
+      "firstName": "Rolando",
       "lastName": "Chalup",
       "birthdate": "2018-07-22T00:00:00.000Z",
       "gender": "masculino",
       "phone": "03885223626",
       "email": "aldochalup@gmail.com",
-      "password": "$2a$10$.gr3uo9gr2F45MaHkNBuZOCFz6IXLJhPcJPBigrMvqg7VwH9fgqe.",
-      "category": "admin",
+      "password": "$2a$10$9QdHFxZ9/bwcFTyAx57BjOwl8XfMNUET0xzf.azEKKHgalnJ9qr6e",
+      "category": "user",
       "image": null
    },
    {

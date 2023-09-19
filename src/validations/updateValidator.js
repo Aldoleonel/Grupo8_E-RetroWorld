@@ -12,9 +12,7 @@ module.exports = [
       .isLength({
         min: 2,
       })
-      .withMessage("Por favor ingrese su apellido")
-      .isAlpha("es-ES")
-      .withMessage("Por favor sólo letras"),
+      .withMessage("Por favor ingrese su apellido"),
     body("phone")
       .notEmpty()
       .withMessage("Por favor ingrese un numero de teléfono")
@@ -35,9 +33,7 @@ module.exports = [
               return false
           }
           return true
-      }).withMessage('Las contraseñas no coinciden'),
-      body('acceptTerms')
-      .notEmpty()
-      .withMessage('Por favor acepte los términos y condiciones')
+      }).withMessage('Las contraseñas no coinciden')
+      
   ];
   

@@ -12,14 +12,14 @@
                 <form action="/users/userProfile/?_method=PUT" method="POST">
                     <div class="form-input">
                         <label for="firstName">Nombre:</label>
-                        <input type="text" id="firstName" class="form-control <%= locals.errors && (errors.firstName && 'is-invalid') %>"  name="firstName" value="<%= locals.old && (old.firstName && old.firstName )  %>" >
+                        <input type="text" id="firstName" class="form-control <%= locals.errors && (errors.firstName && 'is-invalid') %>"  name="firstName" value="<%= locals.old? old.firstName && old.firstName :  firstName %>" >
                         <small class="text-danger ms-2">
                             <%= locals.errors && (errors.firstName && errors.firstName.msg) %>
                           </small>
                     </div>
                     <div class="form-input">
                         <label for="lastName">Apellido:</label>
-                        <input type="text" id="lastName" class="form-control <%= locals.errors && (errors.lastName && 'is-invalid') %>"  name="lastName" value="<%= locals.old && (old.lastName && old.lastName )  %>" >
+                        <input type="text" id="lastName" class="form-control <%= locals.errors && (errors.lastName && 'is-invalid') %>"  name="lastName" value="<%= locals.old? old.lastName && old.lastName :  lastName %>" >
                         
                         <small class="text-danger ms-2">
                             <%= locals.errors && (errors.lastName && errors.lastName.msg) %>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-input">
                         <label for="birthdate">Fecha de nacimiento:</label>
-                        <input type="date" id="birthdate" name="birthdate" value="2018-07-22" min="1980-01-01" max="2030-12-31" value="<%= locals.old && (old.birthdate && old.birthdate   ) %>">
+                        <input type="date" id="birthdate" name="birthdate" value="2018-07-22" min="1980-01-01" max="2030-12-31" value="<%= locals.old? old.birthdate&& old.birthdate:  birthdate %>">
 
                     </div>
                     <div class="form-input">
@@ -39,14 +39,14 @@
                     </div>
                     <div class="form-input">
                         <label for="phone">Teléfono:</label>
-                        <input type="text" id="phone" class="form-control <%= locals.errors && (errors.phone && 'is-invalid') %>"  name="phone" value="<%= locals.old && (old.phone && old.phone )  %>" >
+                        <input type="text" id="phone" class="form-control <%= locals.errors && (errors.phone && 'is-invalid') %>"  name="phone" value="<%= locals.old? old.phone && old.phone :  phone %>" >
                         <small class="text-danger ms-2">
                             <%= locals.errors && (errors.phone && errors.phone.msg) %>
                           </small>
                     </div>
                     <div class="form-input">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" class="form-control <%= locals.errors && (errors.email && 'is-invalid') %>"  name="email" value="<%= locals.old && (old.email && old.email )   %>">  
+                        <input type="email" id="email" class="form-control <%= locals.errors && (errors.email && 'is-invalid') %>"  name="email" value="<%= locals.old? old.email && old.email :  email %>">  
                          
                         <small class="text-danger ms-2">
                             <%= locals.errors && (errors.email && errors.email.msg) %>

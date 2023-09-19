@@ -2,7 +2,8 @@ const { validationResult } = require("express-validator");
 const {
     readJSON,
     writeJson
-} = require("../../data")
+} = require("../../data");
+const User = require("../../data/User");
 
 module.exports = (req, res) => {
     const {
@@ -16,7 +17,24 @@ module.exports = (req, res) => {
    
     let errors=validationResult(req)
     if (errors.isEmpty()) {
-        res.redirect('/')
+        const users = readJSON('usersDB')
+        const updateUser = new User(req.body);
+
+        const updateUsers = users.map(user =>{
+            if(user.id === req.session.userLogin.id){
+                user = updateUser;
+                req.session.userLogin.firstName = user.id;
+                req.session.userLogin.firstName = user.firstName
+                // console.log(user);
+            }
+            return user
+        })
+        
+        req.cookies.secretaso = req.session.userLogin;
+        console.log(req.session.userLogin.firstName);
+        console.log(req.cookies.secretaso);
+        writeJson(updateUsers,'usersDB');
+        return res.redirect('/');
     }else{
         return res.render('userProfile',{
             errors : errors.mapped(),

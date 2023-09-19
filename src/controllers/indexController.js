@@ -10,6 +10,7 @@ const users = readJSON('usersDB');
 
 module.exports = {
     index : (req,res)=> {
+        const users = readJSON('usersDB');
         return res.render('index',{
 			productsVisited : products.filter(product => product.estado === "visited"),
 			productsSale : products.filter(product => product.estado === "in-sale"),
