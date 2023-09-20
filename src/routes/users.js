@@ -5,6 +5,9 @@ const router = express.Router();
 const notUserCheck = require('../middlewares/notUserCheck')
 const loginValidator = require('../validations/loginValidator');
 const updateValidator = require('../validations/updateValidator');
+const avatarMulter = require('../middlewares/avatarMulter');
+const userCheck = require('../middlewares/userCheck');
+
 
 
 
@@ -15,7 +18,7 @@ router
   .get('/register', notUserCheck, register)
   .post('/register',registerValidator, processRegister)
   .get('/logout', logout)
-  .get('/userProfile', userProfile)
-  .put('/userProfile/',updateValidator,update)
+  .get('/userProfile',userCheck, userProfile)
+  .put('/userProfile/',avatarMulter.single('image'),updateValidator,update)
 
 module.exports = router;

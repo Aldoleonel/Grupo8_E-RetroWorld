@@ -117,15 +117,15 @@
       "image": null
    },
    {
-      "id": "c95308fe-bc5c-4cfd-ac4d-c5a4adec4fef",
+      "id": "10cc23c4-9d85-44d6-9c58-14633c7cc52c",
       "firstName": "Aldo",
       "lastName": "Chalup",
-      "birthdate": "2018-07-22T00:00:00.000Z",
+      "birthdate": "2018-07-22",
       "gender": "masculino",
-      "phone": "038852236233",
+      "phone": "03885223626",
       "email": "aldoleonelchalup@gmail.com",
-      "password": "$2a$10$mi1cgRrYjBeY.Q62Ct9BXe/J6ZAfxhfwfuiUuXvvQlCuhKfpPNwWO",
+      "password": "$2a$10$utmrtq3MkCF4.6oWl697xurUqrL8n87YUvg/98wkFUSwMOjBF4fiW",
       "category": "user",
-      "image": null
+      "image": "1695191265162_avatar_.avif"
    }
 ]
