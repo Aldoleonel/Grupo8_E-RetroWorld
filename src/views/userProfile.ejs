@@ -6,16 +6,21 @@
         <%- include('partials/head',{ title: 'Perfil' }) %>
     <body>
         <%- include('partials/header') %>
+        <img class="avatar" src="/img/avatar/<%= locals.errors ? user.image : image %> ">
         <section class="form__registro">
             <div class="form-box">
                 <h2>Editar Perfil</h2>
-                <form action="/users/userProfile/?_method=PUT" method="POST">
+                <form action="/users/userProfile/?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="form-input">
                         <label for="firstName">Nombre:</label>
                         <input type="text" id="firstName" class="form-control <%= locals.errors && (errors.firstName && 'is-invalid') %>"  name="firstName" value="<%= locals.old? old.firstName && old.firstName :  firstName %>" >
                         <small class="text-danger ms-2">
                             <%= locals.errors && (errors.firstName && errors.firstName.msg) %>
                           </small>
+                    </div>
+                    <div class="form-foto" >
+                        <label for="image" class="form-boton-foto" >Subi tu foto</label>
+                        <input hidden type="file"  name="image" id="image">
                     </div>
                     <div class="form-input">
                         <label for="lastName">Apellido:</label>
@@ -27,14 +32,14 @@
                     </div>
                     <div class="form-input">
                         <label for="birthdate">Fecha de nacimiento:</label>
-                        <input type="date" id="birthdate" name="birthdate" value="2018-07-22" min="1980-01-01" max="2030-12-31" value="<%= locals.old? old.birthdate&& old.birthdate:  birthdate %>">
+                        <input type="date" id="birthdate" name="birthdate" min="1980-01-01" max="2030-12-31" value="<%= locals.old? old.birthdate&& old.birthdate:  birthdate %>">
 
                     </div>
                     <div class="form-input">
                         <label for="gender">Género:</label>
                         <select id="gender" name="gender" >
-                            <option value="masculino">Masculino</option>
-                            <option value="femenino">Femenino</option>
+                            <option value="masculino" <%= locals.old? (old.gender && old.gender === "masculino" && 'selected') : gender === 'masculio' && 'selected' %>>Masculino</option>
+                            <option value="femenino" <%= locals.old? (old.gender && old.gender === "femenino" && 'selected') : gender === 'femenino' && 'selected'%>>Femenino</option>
                         </select>
                     </div>
                     <div class="form-input">
@@ -44,7 +49,7 @@
                             <%= locals.errors && (errors.phone && errors.phone.msg) %>
                           </small>
                     </div>
-                    <div class="form-input">
+                    <!-- <div class="form-input">
                         <label for="email">E-mail</label>
                         <input type="email" id="email" class="form-control <%= locals.errors && (errors.email && 'is-invalid') %>"  name="email" value="<%= locals.old? old.email && old.email :  email %>">  
                          
@@ -68,15 +73,16 @@
                         <small class="text-danger ms-2">
                             <%= locals.errors && (errors.password2 && errors.password2.msg) %>
                           </small>                  
-                    </div>
+                    </div> -->
                     
-                    
-                    <div class="form-submit-button">
+                    <div class="botones">
+                    <div class="form-submit-button1">
                         <button type="submit">Actualizar Datos</button>
                     </div>
-                    <div class="form-submit-button">
-                        <a href="/">  Cancelar</a>
+                    <div class="form-submit-button1">
+                        <a  href="/" class="cancel" >Cancelar</a>
                     </div>
+                </div>
                 </form>
                 
             </div>

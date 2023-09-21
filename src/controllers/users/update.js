@@ -13,47 +13,43 @@ module.exports = (req, res) => {
         gender,
         phone,
         email,
+        
     } = req.body
-   
+    
     let errors=validationResult(req)
+    
     if (errors.isEmpty()) {
-        const users = readJSON('usersDB')
-        const updateUser = new User(req.body);
 
+        const users = readJSON('usersDB')
+        
         const updateUsers = users.map(user =>{
             if(user.id === req.session.userLogin.id){
-                user = updateUser;
-                req.session.userLogin.firstName = user.id;
-                req.session.userLogin.firstName = user.firstName
-                // console.log(user);
+                user.image = req.file ? req.file.filename : user.image;
+                user.firstName = firstName;
+                user.lastName = lastName;
+                user.birthdate = birthdate;
+                user.gender = gender;
+                user.phone = phone;
+                req.session.userLogin.firstName = firstName;
             }
             return user
         })
-        
-        req.cookies.secretaso = req.session.userLogin;
-        console.log(req.session.userLogin.firstName);
-        console.log(req.cookies.secretaso);
         writeJson(updateUsers,'usersDB');
+        if(req.cookies.secretaso){
+            res.cookie('secretaso',req.session.userLogin);
+        }else{
+            res.locals.userLogin.firstName = firstName;
+        }
         return res.redirect('/');
     }else{
+        const users = readJSON('usersDB')
+        const user = users.find(user => user.id === req.session.userLogin.id)
         return res.render('userProfile',{
             errors : errors.mapped(),
-            old : req.body
+            old : req.body,
+            user
+
+
         })
     }
-        /* let users = readJSON('usersDB')
-        users.forEach(user => {
-            if (user.id == req.params.id) {
-                user.firstName = firstName
-                user.lastName = lastName
-                user.birthdate = birthdate
-                user.gender = gender
-                user.phone = phone
-                user.email = email
-
-            }
-        })
-        writeJson(users, 'usersDB')
-        res.redirect('/') */
-  
 }

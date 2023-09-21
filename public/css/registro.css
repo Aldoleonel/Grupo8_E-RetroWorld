@@ -14,7 +14,7 @@
     
 }
 
-.form-box {
+.form-box  {
     margin: 50px;
     display: flex;
     flex-direction: column;
@@ -87,11 +87,11 @@
     margin-right: 10px;
 }
 
-.form-box .form-submit-button {
+.form-box .form-submit-button, a.cancel {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-   
+    
 }
 #fichero {
     display: none;
@@ -121,7 +121,7 @@
     flex-direction: column;
 }
 
-.form-box button {
+.form-box button, a.cancel {
     padding: 10px 20px;
     background-color: transparent;
     color: blueviolet;
@@ -135,12 +135,13 @@
 
    
 }
-.form-box button:hover {
+.form-box button:hover,a.cancel:hover {
     
     background-color: blueviolet;
     color: white;     
         
 }
+
 
 
 .form-box .form-link {
@@ -192,5 +193,20 @@
         display: flex;
         width: 48%;
         margin-top: 18px;
+    }
+    .botones {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .form-submit-button1{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin:0;
+        align-items: end;
+    }
+    a.cancel {
+        margin-top: 8px;
     }
 }
