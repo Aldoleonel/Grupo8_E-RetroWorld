@@ -57,18 +57,6 @@
       "image": null
    },
    {
-      "id": "0521fdc9-0a1b-4975-b10f-c08857df8a86",
-      "firstName": "andony",
-      "lastName": "sanchez",
-      "birthdate": "2018-07-22T00:00:00.000Z",
-      "gender": "masculino",
-      "phone": "3517707484",
-      "email": "1010andonysan@gmail.com",
-      "password": "$2a$10$Px1b8xl781G4UHQX2.iZCe/DGyX5zS6ad5O5VAaAXzjVF7B4oCyZW",
-      "category": "admin",
-      "image": null
-   },
-   {
       "id": "2e62b590-7a68-41e1-97cb-418db00aac2f",
       "firstName": "Sebastian",
       "lastName": "Tapia",
@@ -127,5 +115,17 @@
       "password": "$2a$10$utmrtq3MkCF4.6oWl697xurUqrL8n87YUvg/98wkFUSwMOjBF4fiW",
       "category": "user",
       "image": "1695191265162_avatar_.avif"
+   },
+   {
+      "id": "937b32bd-e3a0-43f6-967f-338ff8c6625d",
+      "firstName": "Neyser",
+      "lastName": "Sanchez",
+      "birthdate": "1998-07-03",
+      "gender": "masculino",
+      "phone": "3517707484",
+      "email": "1010andony@gmail.com",
+      "password": "$2a$10$MSegsMPddBWdzj12PS1XtuE9SIIfV8vfNe2sw2Yh1mR0GihWbjKeG",
+      "category": "admin",
+      "image": null
    }
 ]

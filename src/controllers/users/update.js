@@ -21,40 +21,25 @@ module.exports = (req, res) => {
     if (errors.isEmpty()) {
 
         const users = readJSON('usersDB')
-       
-        req.session.userLogin = {
-            
-            firstName,
-            
-        }
-
-        // req.body.remember !== undefined && res.cookie('secretaso',req.session.userLogin,{
-        //     maxAge : 1000 * 60 * 5
-        // })
         
         const updateUsers = users.map(user =>{
             if(user.id === req.session.userLogin.id){
-                
-                
                 user.image = req.file ? req.file.filename : user.image;
                 user.firstName = firstName;
                 user.lastName = lastName;
                 user.birthdate = birthdate;
                 user.gender = gender;
                 user.phone = phone;
-                user.email = email;
-                image = user.image;
-
-                
-                //console.log(req.file.filename);
-                 
+                req.session.userLogin.firstName = firstName;
             }
             return user
         })
-        
-        
-        
         writeJson(updateUsers,'usersDB');
+        if(req.cookies.secretaso){
+            res.cookie('secretaso',req.session.userLogin);
+        }else{
+            res.locals.userLogin.firstName = firstName;
+        }
         return res.redirect('/');
     }else{
         const users = readJSON('usersDB')
@@ -67,19 +52,4 @@ module.exports = (req, res) => {
 
         })
     }
-        /* let users = readJSON('usersDB')
-        users.forEach(user => {
-            if (user.id == req.params.id) {
-                user.firstName = firstName
-                user.lastName = lastName
-                user.birthdate = birthdate
-                user.gender = gender
-                user.phone = phone
-                user.email = email
-
-            }
-        })
-        writeJson(users, 'usersDB')
-        res.redirect('/') */
-  
 }

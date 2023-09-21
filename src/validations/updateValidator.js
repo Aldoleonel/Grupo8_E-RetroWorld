@@ -17,7 +17,10 @@ module.exports = [
       .notEmpty()
       .withMessage("Por favor ingrese un numero de teléfono")
       .isNumeric({min:4})  
-      .withMessage("Por favor sólo números"),
+      .withMessage("Por favor sólo números")
+  ];
+  /*
+  ,
     body("email")
       .notEmpty()
       .withMessage("Por favor ingrese su email")
@@ -35,5 +38,4 @@ module.exports = [
           return true
       }).withMessage('Las contraseñas no coinciden')
       
-  ];
-  
+  */
