@@ -47,6 +47,11 @@ module.exports = {
                 image: null
             }
         ]
+        /*HAY QUE VOLVER A LEER LA BASE DE DATOS DENTRO DEL METODO ADMIIN
+         CONST PRODUCTS=READJSON de abajo 
+         */
+
+        const products=readJSON('products')
         products.forEach(producto => {
             category.forEach(categ =>{
                 if(producto.category === categ.name){
