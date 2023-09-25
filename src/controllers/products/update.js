@@ -11,7 +11,7 @@ module.exports=(req,res)=>{
 		// console.log(req.file.filename)
 		const productsModify = products.map(product => {
 
-			if (product.id === +req.params.id) {
+			if (product.id === req.params.id) {
 				req.file && existsSync(`./public/img/products/${product.image}`) && unlinkSync(`./public/img/products/${product.image}`)
 				product.name = name.trim();				
 				product.price = +price;
