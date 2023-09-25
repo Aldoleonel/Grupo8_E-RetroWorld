@@ -22,6 +22,6 @@
     "uuidv4": "^6.2.13"
   },
   "nodemonConfig": {
-    "ignore": ["src/data/*.json", "public/data/*.js"]
+    "ignore": ["src/data/*.json"]
   }
 }
