@@ -127,5 +127,17 @@
       "password": "$2a$10$MSegsMPddBWdzj12PS1XtuE9SIIfV8vfNe2sw2Yh1mR0GihWbjKeG",
       "category": "admin",
       "image": null
+   },
+   {
+      "id": "ec308894-421c-47df-a5de-879d35888612",
+      "firstName": "Axel",
+      "lastName": "Michel",
+      "birthdate": "2018-07-22T00:00:00.000Z",
+      "gender": "masculino",
+      "phone": "5465484536155",
+      "email": "axelmichel515@hotmail.com",
+      "password": "$2a$10$Qp56GBrSoDJOHeYqCTS5Z.tqmgUbh7ZdmeWhLFw2WIkJRcKwn3Vze",
+      "category": "admin",
+      "image": null
    }
 ]

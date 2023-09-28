@@ -10,29 +10,40 @@
         <section class="form__registro">
             <div class="form-box2">
                 <h2>Agregar Producto</h2>
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="/products/add" method="POST" enctype="multipart/form-data">
                     <div class="form-input">
                         <label for="name">Titulo:</label>
-                        <input type="text" id="titulo" placeholder="Titulo del producto" name="name">
+                        <input type="text" id="name" placeholder="Titulo del producto" name="name" class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>"  value="<%= locals.old && (old.name && old.name ) %>" >
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && (errors.name && errors.name.msg) %>
+                          </small>
                     </div>
                     <div class="form-input">
                         <label for="category">Categoria:</label>
-                        <select id="categoria" name="category" required>
-                            <option selected hidden>Seleccione...</option>
+                        <select class="form-select  <%= locals.errors && (errors.category && 'is-invalid') %>"
+                            aria-label="Default select example" name="category" id="category">
+                            
+                            <option selected hidden>Seleccione...</option> 
                             <option value="arcade">Arcade</option>
                             <option value="playstation">Playstation</option>
                             <option value="xbox">Xbox</option>
                             <option value="nintendo">Nintendo</option>
                         </select>
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && (errors.category && errors.category.msg) %>
+                          </small>
 
                     </div>
                     <div class="form-input">
-                        <label for="tipo">Estado:</label>
-                        <select id="tipo" name="estado" required>
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
                             <option selected hidden>Seleccione...</option>
                             <option value="in-sale">En Oferta</option>
                             <option value="visited">Ultima visita</option>
                         </select>
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && (errors.estado && errors.estado.msg) %>
+                          </small>
                     </div>
                   <!--   <div class="form-foto" >
                         <label for="type" class="form-boton-foto" >Subi tu foto</label>
@@ -41,15 +52,22 @@
 
                     <div class="form-input">
                         <label for="type">Type:</label>
-                        <select id="type" name="type" required>
+                        <select id="type" name="type">
                             <option selected hidden>Seleccione...</option>
                             <option value="repuesto">Repuesto</option>
                             <option value="consola">Consola</option>
+                            <small class="text-danger ms-2">
+                                <%= locals.errors && (errors.type && errors.type.msg) %>
+                              </small>
                         </select>
+                        
                     </div>
                     <div class="form-input">
                         <label for="price">Precio:</label>
-                        <input type="number" id="price" placeholder="$ 0.00" name="price">
+                        <input type="number" id="price" placeholder="$ 0.00" name="price" class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>"  value="<%= locals.old && (old.price && old.price ) %>" >
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && (errors.price && errors.price.msg) %>
+                          </small>
                     </div>
                     <div class="form-input">
                         <label for="discount">Descuento:</label>
@@ -61,7 +79,12 @@
                     </div>
                     <div class="form-input-textArea">
                         <label for="description">Descripcion:</label>
-                        <textarea id="description" rows="4" cols="50" placeholder="Describe tu producto..." name="description"></textarea>
+                        <textarea name="description" id="description"
+                      class="form-control <%= locals.errors && (errors.description && 'is-invalid') %>"
+                      style="resize: none"><%= locals.old && (old.description && old.description ) %></textarea>
+                    <small class="text-danger ms-2">
+                      <%= locals.errors && (errors.description && errors.description.msg) %>
+                    </small>
                         
                     </div>
                     <div class="form-submit-button2">

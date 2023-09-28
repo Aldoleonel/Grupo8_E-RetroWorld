@@ -6,7 +6,7 @@ const products= readJSON('products')
 
 module.exports=(req,res)=>{
     
-		const productDetail = products.find(product => product.id === +req.params.id)
+		const productDetail = products.find(product => product.id === req.params.id)
         
 		return res.render('productEdit', {
 			productDetail
