@@ -101,6 +101,9 @@
     top: 50%;
     transform: translate(-50%, -50%) rotate(0deg);
 }
+.card--imageConteiner{
+    width: 100%;
+}
 
 .card:hover .card__img {
     top: 24%;

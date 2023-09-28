@@ -16,13 +16,13 @@
         <div class="home--productosTitulo">
             <h2 >Todos los resultados de : <%= keywords %></h2>
         </div>
-        <div class="home__productos">
+        <div class="main">
 
             <% if (results.length) { %>
             
             <% results.forEach(product => { %>
 				
-                <%- include('partials/productCard',{
+                <%- include('partials/cardtest',{
                     ...product,
                     toThousand
                 })%>
