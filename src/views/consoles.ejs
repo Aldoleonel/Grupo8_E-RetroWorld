@@ -16,11 +16,11 @@
         <div class="home--productosTitulo">
             <h2 c>Todas las consolas</h2>
         </div>
-        <div class="home__productos">
+        <div class="main">
             
             <% consoles.forEach(product => { %>
 				
-                <%- include('partials/productCard',{
+                <%- include('partials/cardtest',{
                     ...product,
                     toThousand
                 })%>

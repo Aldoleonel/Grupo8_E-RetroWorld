@@ -1,12 +1,19 @@
 <article class="home__main--article">
 
     <div class='card'>
-        <a href="/products/detail/<%= id %>">
-            <img src="/img/products/<%= image || 'default-img.png' %>" class='card__img'>
-        </a>
-        <h5 class='card__title'><%= name %></h5>
+      
+            <div class="card--imageConteiner">
+                
+                     <img src="/img/products/<%= image || 'default-img.png' %>" class='card__img'> 
+                
+            </div>
+      
+        <h5 class='card__title'>
+            <%= name %>
+        </h5>
         <div class='card__content'>
-            <h3 class='card__precio'>$<%= toThousand((price).toFixed(0)) %></h3>
+            <h3 class='card__precio'>$<%= toThousand((price).toFixed(0)) %>
+            </h3>
         </div>
         <a href='#' class='card__link'>Agregar al carrito</a>
     </div>
