@@ -11,7 +11,23 @@
     align-items: center;
     min-height: 100vh;
     background : radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.avatar2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+   
+}
+.avatar {
+    width: 100px;
+    border-radius: 50%;
     
+    top: 150px;
+    margin-bottom: 15px;
 }
 
 .form-box  {
@@ -23,6 +39,7 @@
     padding: 20px;
     width: 100%;
     box-shadow: inset 0px 0px 3px #fff, inset 0px 0px 20px #3D1673, 0px 0px 3px #fff;
+    
     
 }
 
@@ -129,7 +146,7 @@
     border-radius: 5px;
     cursor: pointer;
     border: 1px solid blueviolet;
-    max-width: 300px;
+   
     width: 100%;
     transition: all 1s ease;
 
@@ -153,6 +170,12 @@
     font-size: 17px;
     font-weight: bold;
 }
+.botones{
+    width: 100%;
+}
+.form-submit-button1{
+    width: 100%;
+}
 
 
 @media (min-width: 481px) {
@@ -167,6 +190,11 @@
         box-shadow: inset 0px 0px 3px #fff, inset 0px 0px 20px #3D1673, 0px 0px 3px #fff;
         
     }
+    
+    .avatar{
+        width: 170px;
+        margin-top: 15px;
+    }
 }
 
 @media (min-width: 769px) {
@@ -174,20 +202,10 @@
         display: flex;
         flex-direction: row;
     }
-    .form-box .form-submit-button {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        position: relative;
-        left: 30%;
-        max-width: 300px;
-        width: 100%;
-    }
+    
     .form-box {
-        
         max-width: 800px;
-        
-        
+                
     }
     .form-foto {
         display: flex;
@@ -197,16 +215,22 @@
     .botones {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 97%;
+        justify-content: center;
+        align-items: center;
+        
     }
-    .form-submit-button1{
-        width: 100%;
+    form-submit-button1 {
         display: flex;
-        justify-content: space-around;
-        margin:0;
-        align-items: end;
+        align-items: center;
     }
+    
     a.cancel {
         margin-top: 8px;
+    }
+    .avatar{
+        top: 265px;
+        width: 200px;
+        top: 180px;
     }
 }
