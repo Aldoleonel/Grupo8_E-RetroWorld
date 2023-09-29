@@ -286,41 +286,5 @@
       "description": "boton pulsador arcade color a eleccion rojo, blanco, negro , amarillo ,azul y verde",
       "image": "botonesArcade.png",
       "stock": 0
-   },
-   {
-      "id": "77727774-45ac-4cd4-9da9-c06697ebf6a8",
-      "name": "zapatilla",
-      "price": 25000,
-      "discount": 25,
-      "category": "arcade",
-      "type": "consola",
-      "estado": "visited",
-      "description": "Este es un producto de prueba, para ver  si las validaciones funcionan como corresponden",
-      "image": null,
-      "stock": 0
-   },
-   {
-      "id": "784942ab-9525-4ce0-b8a0-a9c45d25f9f3",
-      "name": "ANDONY",
-      "price": 12,
-      "discount": 0,
-      "category": "playstation",
-      "type": "repuesto",
-      "estado": "visited",
-      "description": "ASDADADADADADADA",
-      "image": null,
-      "stock": 0
-   },
-   {
-      "id": "1a5c1ac2-0745-4067-888c-7781f140e9be",
-      "name": "axel",
-      "price": 5678,
-      "discount": 0,
-      "category": "playstation",
-      "type": "repuesto",
-      "estado": "visited",
-      "description": "DGFAGDGGGDASDADA",
-      "image": null,
-      "stock": 0
    }
 ]
