@@ -1,14 +1,14 @@
 [
    {
-      "id": 2,
-      "name": "Nintendo Game&Watch-Edición donkey kong 2",
-      "price": 75000,
+      "id": 3,
+      "name": "Atari",
+      "price": 67600,
       "discount": 0,
       "category": "nintendo",
       "estado": "in-sale",
-      "description": "-Made in japan , funciona con pulas LR44, contiene relog digital,vuelve al pasado y disfruta esta gran consola ",
-      "image": "Game&watch-donkey-kong-2.png",
-      "stock": 0
+      "description": "Nintendo 64 es la cuarta videoconsola de sobremesa descontinuada producida por Nintendo, desarrollada para suceder a la Super Nintendo. Fue la primera consola concebida para dar el salto del 2D al 3D.",
+      "image": "atari-8.png",
+      "stock": true
    },
    {
       "id": 3,

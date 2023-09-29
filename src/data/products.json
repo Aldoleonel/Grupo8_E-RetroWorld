@@ -97,7 +97,7 @@
    },
    {
       "id": "ec419e4c-95b3-4010-af10-71b4b7a947e9",
-      "name": "Nintendo Switch  ",
+      "name": "Nintendo Switch",
       "price": 366.33,
       "discount": 5,
       "category": "nintendo",
@@ -164,7 +164,7 @@
       "type": "consola",
       "estado": "visited",
       "description": " Se conectan a la pantalla por cable HDMI y un eliminador de corriente ya incluidos.Incluye cable usb para conectarse entre ambos tableros.16,000 Juegos",
-      "image": "tablero4.jpg",
+      "image": "tablero4.png",
       "stock": 0
    },
    {
