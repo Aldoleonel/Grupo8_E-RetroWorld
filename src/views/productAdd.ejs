@@ -23,11 +23,11 @@
                         <select class="form-select  <%= locals.errors && (errors.category && 'is-invalid') %>"
                             aria-label="Default select example" name="category" id="category">
                             
-                            <option selected hidden>Seleccione...</option> 
-                            <option value="arcade">Arcade</option>
-                            <option value="playstation">Playstation</option>
-                            <option value="xbox">Xbox</option>
-                            <option value="nintendo">Nintendo</option>
+                            <option value="" selected hidden>Seleccione...</option> 
+                            <option value="arcade" <%= locals.errors && (old.category == 'arcade' && 'selected') %> >Arcade</option>
+                            <option value="playstation" <%= locals.errors && (old.category == 'playstation' && 'selected') %> >Playstation</option>
+                            <option value="xbox" <%= locals.errors && (old.category == 'xbox' && 'selected') %> >Xbox</option>
+                            <option value="nintendo" <%= locals.errors && (old.category == 'nintendo' && 'selected') %> >Nintendo</option>
                         </select>
                         <small class="text-danger ms-2">
                             <%= locals.errors && (errors.category && errors.category.msg) %>
@@ -36,10 +36,10 @@
                     </div>
                     <div class="form-input">
                         <label for="estado">Estado:</label>
-                        <select id="estado" name="estado" required>
-                            <option selected hidden>Seleccione...</option>
-                            <option value="in-sale">En Oferta</option>
-                            <option value="visited">Ultima visita</option>
+                        <select id="estado" name="estado" >
+                            <option value="" selected hidden>Seleccione...</option>
+                            <option value="in-sale" <%= locals.errors && (old.estado == 'in-sale' && 'selected') %> >En Oferta</option>
+                            <option value="visited" <%= locals.errors && (old.estado == 'visited' && 'selected') %> >Ultima visita</option>
                         </select>
                         <small class="text-danger ms-2">
                             <%= locals.errors && (errors.estado && errors.estado.msg) %>
@@ -53,14 +53,13 @@
                     <div class="form-input">
                         <label for="type">Type:</label>
                         <select id="type" name="type">
-                            <option selected hidden>Seleccione...</option>
-                            <option value="repuesto">Repuesto</option>
-                            <option value="consola">Consola</option>
-                            <small class="text-danger ms-2">
-                                <%= locals.errors && (errors.type && errors.type.msg) %>
-                              </small>
+                            <option value="" selected hidden>Seleccione...</option>
+                            <option value="repuesto" <%= locals.errors && (old.type == 'repuesto' && 'selected') %> >Repuesto</option>
+                            <option value="consola" <%= locals.errors && (old.type == 'consola' && 'selected') %> >Consola</option>
                         </select>
-                        
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && (errors.type && errors.type.msg) %>
+                        </small>
                     </div>
                     <div class="form-input">
                         <label for="price">Precio:</label>
@@ -71,7 +70,7 @@
                     </div>
                     <div class="form-input">
                         <label for="discount">Descuento:</label>
-                        <input type="number" id="discount" placeholder="% 0" name="discount">
+                        <input type="number" id="discount" placeholder="% 0" name="discount" value="<%= locals.errors && (old.discount && old.discount) %>">
                     </div>
                     <div class="form-foto" >
                         <label for="image" class="form-boton-foto" >Subir imagen de producto</label>

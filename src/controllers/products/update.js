@@ -1,12 +1,15 @@
 const {existsSync,unlinkSync} = require('fs')
 const { readJSON,writeJson } = require("../../data/index");
+const {validationResult} = require('express-validator')
 
 const products= readJSON('products')
 
 
 //Falta Editar Imagen
 module.exports=(req,res)=>{
-    
+
+	let errors = validationResult(req);
+	if(errors.isEmpty()){
 		const { name, price, discount, description, category } = req.body;
 		// console.log(req.file.filename)
 		const productsModify = products.map(product => {
@@ -22,9 +25,17 @@ module.exports=(req,res)=>{
 			}
 			return product;
 		});
-       
-        
-	
 		writeJson(products,'products')
 		return res.redirect('/')
+	}else{
+		// return res.send(errors);
+		const productDetail = products.find(product => product.id === req.params.id);
+		// return res.send(productDetail);
+		res.render('productEdit',{
+			errors: errors.mapped(),
+			old: req.body,
+			productDetail
+		})
+	}
+	
 	}

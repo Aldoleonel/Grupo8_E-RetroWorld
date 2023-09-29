@@ -7,6 +7,7 @@ const { readJSON,writeJson } = require("../../data");
 module.exports = (req, res) => {
 
     const errors = validationResult(req);
+    
     if(errors.isEmpty()){
 
         const products= readJSON('products')
@@ -17,7 +18,7 @@ module.exports = (req, res) => {
         
         return res.redirect('/admin')
     }else {
-        
+        // return res.send(errors);
         return res.render('productAdd',{
             errors : errors.mapped(),
             old : req.body
