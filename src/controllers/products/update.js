@@ -29,12 +29,12 @@ module.exports=(req,res)=>{
 		return res.redirect('/')
 	}else{
 		// return res.send(errors);
-		const productDetail = products.find(product => product.id === req.params.id);
+		const productEdit = products.find(product => product.id === req.params.id);
 		// return res.send(productDetail);
 		res.render('productEdit',{
 			errors: errors.mapped(),
 			old: req.body,
-			productDetail
+			productEdit
 		})
 	}
 	

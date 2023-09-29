@@ -23,8 +23,10 @@
     "mysql2": "^3.6.1",
     "uuid": "^9.0.1",
     "uuidv4": "^6.2.13"
+  },
+  "nodemonConfig": {
+    "ignore": ["src/data/*.json"]
   }
-
   
  
 }
