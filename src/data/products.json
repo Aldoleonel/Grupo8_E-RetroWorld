@@ -300,14 +300,26 @@
       "stock": 0
    },
    {
-      "id": "9c015db6-16a4-47c1-8096-f63905ce5ceb",
-      "name": "andony",
-      "price": 15132,
+      "id": "784942ab-9525-4ce0-b8a0-a9c45d25f9f3",
+      "name": "ANDONY",
+      "price": 12,
       "discount": 0,
       "category": "playstation",
-      "type": "consola",
+      "type": "repuesto",
       "estado": "visited",
-      "description": "fsdfngnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn",
+      "description": "ASDADADADADADADA",
+      "image": null,
+      "stock": 0
+   },
+   {
+      "id": "1a5c1ac2-0745-4067-888c-7781f140e9be",
+      "name": "axel",
+      "price": 5678,
+      "discount": 0,
+      "category": "playstation",
+      "type": "repuesto",
+      "estado": "visited",
+      "description": "DGFAGDGGGDASDADA",
       "image": null,
       "stock": 0
    }
