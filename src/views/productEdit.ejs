@@ -10,7 +10,7 @@
         <section class="form__registro">
             <div class="form-box">
                 <h2>Editar Producto</h2>
-                <form action="/products/edit/<%= locals.errors? productEdit.id : productDetail.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form action="/products/edit/<%= productDetail.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="form-input">
                         <label for="name">Titulo:</label>
                         <input type="text" id="name" placeholder="" name="name" value="<%= locals.errors? old.name && old.name : productDetail.name  %>">

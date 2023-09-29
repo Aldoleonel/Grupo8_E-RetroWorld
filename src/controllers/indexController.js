@@ -11,7 +11,7 @@ const users = readJSON('usersDB');
 module.exports = {
     index : (req,res)=> {
         const users = readJSON('usersDB');
-      
+        const products = readJSON('products');
         return res.render('index',{
 			productsVisited : products.filter(product => product.estado === "visited"),
 			productsSale : products.filter(product => product.estado === "in-sale"),
@@ -77,7 +77,7 @@ module.exports = {
         });
     },
     search: (req, res) => {
-
+        const products = readJSON('products');
         const results = products.filter(product => product.name.toLowerCase().includes(req.query.keywords.toLowerCase()))
         return res.render('results',{
 			results,
