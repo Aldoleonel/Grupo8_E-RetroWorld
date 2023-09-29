@@ -10,47 +10,68 @@
         <section class="form__registro">
             <div class="form-box">
                 <h2>Editar Producto</h2>
-                <form action="/products/edit/<%= productDetail.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form action="/products/edit/<%= locals.errors? productEdit.id : productDetail.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="form-input">
-                        <label for="titulo">Titulo:</label>
-                        <input type="text" id="titulo" placeholder="" name="name" value="<%= productDetail.name %>">
+                        <label for="name">Titulo:</label>
+                        <input type="text" id="name" placeholder="" name="name" value="<%= locals.errors? old.name && old.name : productDetail.name  %>">
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && (errors.name && errors.name.msg) %>
+                        </small>
                     </div>
                     <div class="form-input">
                         <label for="categoria">Categoria:</label>
-                        <select id="categoria" name="category" required>
-                            <option selected hidden>Seleccione...</option>
-                            <option value="arcade"<%= productDetail.category ==='arcade' && 'selected' %>>Arcade</option>
-							<option value="playstation"<%= productDetail.category ==='playstation' && 'selected' %>>Playstation</option>
-                            <option value="xbox"<%= productDetail.category ==='xbox' && 'selected' %>>Xbox</option>
-							<option value="Nintendo"<%= productDetail.category ==='Nintendo' && 'selected' %>>Nintendo</option>
-                            
+                        <select id="categoria" name="category" >
+                            <option value="" selected hidden>Seleccione...</option>
+                            <option value="arcade"<%= locals.errors? old.category ==='arcade' && 'selected' : productDetail.category == 'arcade' && 'selected' %>>Arcade</option>
+							<option value="playstation"<%= locals.errors? old.category ==='playstation' && 'selected' : productDetail.category == 'playstation' && 'selected' %>>Playstation</option>
+                            <option value="xbox"<%= locals.errors? old.category ==='xbox' && 'selected' : productDetail.category == 'xbox' && 'selected' %>>Xbox</option>
+							<option value="nintendo"<%= locals.errors? old.category ==='nintendo' && 'selected' : productDetail.category == 'nintendo' && 'selected' %>>Nintendo</option>
                         </select>
-
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && (errors.category && errors.category.msg) %>
+                        </small>
                     </div>
                     <div class="form-input">
-                        <label for="tipo">Tipo de Producto:</label>
-                        <select id="tipo" name="tipo" required>
-                            <option selected hidden>Seleccione...</option>
-                            <option value="retro"<%= productDetail.category ==='retro' && 'selected' %>>Retro</option>
-							<option value="actual"<%= productDetail.category ==='actual' && 'selected' %>>Actual</option>
-                            
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" >
+                            <option value="" selected hidden>Seleccione...</option>
+                            <option value="in-sale" <%= locals.errors? old.estado='in-sale' && 'selected' : productDetail.estado == 'in-sale' && 'selected' %> >En Oferta</option>
+                            <option value="visited" <%= locals.errors? old.estado ==='visited' && 'selected' : productDetail.estado == 'visited' && 'selected' %> >Ultima visita</option>
                         </select>
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && (errors.estado && errors.estado.msg) %>
+                        </small>
                     </div>
-                    <div class="form-foto" >
-                        <label for="image" class="form-boton-foto" >Subi tu foto</label>
-                        <input hidden type="file"  name="image" id="image">
+                    <div class="form-input">
+                        <label for="type">Type:</label>
+                        <select id="type" name="type">
+                            <option value="" selected hidden>Seleccione...</option>
+                            <option value="repuesto" <%= locals.errors? old.type ==='repuesto' && 'selected' : productDetail.type == 'repuesto' && 'selected' %> >Repuesto</option>
+                            <option value="consola" <%= locals.errors? old.type ==='consola' && 'selected' : productDetail.type == 'consola' && 'selected' %> >Consola</option>
+                        </select>
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && (errors.type && errors.type.msg) %>
+                        </small>
                     </div>
+                    
                     <div class="form-input">
                         <label for="precio">Precio:</label>
-                        <input type="number" id="precio" placeholder="$ 0.00" name="price" value="<%= productDetail.price %>">
+                        <input type="number" id="precio" placeholder="$ 0.00" name="price" value="<%= locals.errors? old.price && old.price : productDetail.price %>" >
+                        <small class="text-danger ms-2">
+                            <%= locals.errors && (errors.price && errors.price.msg) %>
+                        </small>
                     </div>
                     <div class="form-input">
-                        <label for="promo">Precio promocional:</label>
-                        <input type="number" id="promo" placeholder="$ 0.00" name="discount" value="<%= productDetail.discount %>">
+                        <label for="promo">Descuento:</label>
+                        <input type="number" id="promo" placeholder="$ 0.00" name="discount" value="<%= locals.errors? old.discount && old.discount : productDetail.discount %>">
+                    </div>
+                    <div class="form-foto mb-2" >
+                        <label for="image" class="form-boton-foto" >Cargar imagen del producto</label>
+                        <input hidden type="file"  name="image" id="image">
                     </div>
                     <div class="form-input-textArea">
                         <label for="descripcion">Descripcion:</label>
-                        <textarea id="descripcion" rows="4" cols="50" placeholder="Describe tu producto..." name="description"><%= productDetail.description %></textarea>
+                        <textarea id="descripcion" rows="4" cols="50" placeholder="Describe tu producto..." name="description"><%= locals.errors? old.description && old.description : productDetail.description  %></textarea>
                         
                     </div>
                 

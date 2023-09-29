@@ -5,9 +5,7 @@
   "scripts": {
     "start": "node ./src/bin/www"
   },
-  "engines": {
-    "node": ">=16.14"
-  },
+  
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
@@ -23,8 +21,10 @@
     "mysql2": "^3.6.1",
     "uuid": "^9.0.1",
     "uuidv4": "^6.2.13"
+  },
+  "nodemonConfig": {
+    "ignore": ["src/data/*.json"]
   }
-
   
  
 }

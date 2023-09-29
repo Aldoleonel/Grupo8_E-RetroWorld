@@ -1,10 +1,10 @@
 [
    {
       "id": "a1d189a1-9aaa-46bb-aca7-6401397cf551",
-      "name": "Xbox",
-      "price": 50000,
+      "name": "fhakdha",
+      "price": 1315,
       "discount": 0,
-      "category": "xbox",
+      "category": "playstation",
       "type": "consola",
       "estado": "in-sale",
       "description": "Xbox es una videoconsola doméstica de 32 bits y la primera de la serie de videoconsolas Xbox fabricada por Microsoft.",
@@ -26,9 +26,9 @@
    {
       "id": "b084b473-c35d-4a31-b435-2c02401fa9e5",
       "name": "Nintendo 64",
-      "price": 67600,
-      "discount": 0,
-      "category": "nintendo",
+      "price": 155156,
+      "discount": 545,
+      "category": "playstation",
       "type": "consola",
       "estado": "in-sale",
       "description": "Nintendo 64 es la cuarta videoconsola de sobremesa descontinuada producida por Nintendo, desarrollada para suceder a la Super Nintendo. Fue la primera consola concebida para dar el salto del 2D al 3D.",
@@ -285,6 +285,30 @@
       "estado": "visited",
       "description": "boton pulsador arcade color a eleccion rojo, blanco, negro , amarillo ,azul y verde",
       "image": "botonesArcade.png",
+      "stock": 0
+   },
+   {
+      "id": "77727774-45ac-4cd4-9da9-c06697ebf6a8",
+      "name": "zapatilla",
+      "price": 25000,
+      "discount": 25,
+      "category": "arcade",
+      "type": "consola",
+      "estado": "visited",
+      "description": "Este es un producto de prueba, para ver  si las validaciones funcionan como corresponden",
+      "image": null,
+      "stock": 0
+   },
+   {
+      "id": "9c015db6-16a4-47c1-8096-f63905ce5ceb",
+      "name": "andony",
+      "price": 15132,
+      "discount": 0,
+      "category": "playstation",
+      "type": "consola",
+      "estado": "visited",
+      "description": "fsdfngnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn",
+      "image": null,
       "stock": 0
    }
 ]
