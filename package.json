@@ -26,7 +26,7 @@
     "ignore": ["src/data/*.json"]
   },
   "engines": {
-    "node": ">=14 <15"
+    "node": ">=14 <17"
   }
  
 }
