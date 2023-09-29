@@ -7,6 +7,7 @@ const products= readJSON('products')
 
 //Falta Editar Imagen
 module.exports=(req,res)=>{
+	const products= readJSON('products')
 
 	let errors = validationResult(req);
 	if(errors.isEmpty()){

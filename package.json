@@ -24,7 +24,9 @@
   },
   "nodemonConfig": {
     "ignore": ["src/data/*.json"]
+  },
+  "engines": {
+    "node": ">=14 <17"
   }
-  
  
 }

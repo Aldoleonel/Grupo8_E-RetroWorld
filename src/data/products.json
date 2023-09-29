@@ -286,5 +286,29 @@
       "description": "boton pulsador arcade color a eleccion rojo, blanco, negro , amarillo ,azul y verde",
       "image": "botonesArcade.png",
       "stock": 0
+   },
+   {
+      "id": "9a5c3986-b843-4a35-b4cf-b354111471af",
+      "name": "Andony",
+      "price": 1000,
+      "discount": 0,
+      "category": "arcade",
+      "type": "repuesto",
+      "estado": "in-sale",
+      "description": "ghfhfhfhfgfhfhfjggjgjgjhgjgjhg",
+      "image": null,
+      "stock": 0
+   },
+   {
+      "id": "99548027-09f3-4eae-b566-0777a30b8170",
+      "name": "Andony",
+      "price": 45000000,
+      "discount": 10,
+      "category": "arcade",
+      "type": "consola",
+      "estado": "in-sale",
+      "description": "dfadljfañdfajdljfaldjña",
+      "image": null,
+      "stock": 0
    }
 ]
