@@ -5,20 +5,32 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
+const db = require('../database/models')
 const users = readJSON('usersDB');
 
 module.exports = {
-    index : (req,res)=> {
-        const users = readJSON('usersDB');
-        const products = readJSON('products');
-        return res.render('index',{
-			productsVisited : products.filter(product => product.estado === "visited"),
-			productsSale : products.filter(product => product.estado === "in-sale"),
-		    toThousand,
-            ...users
-		});
-    },
+    index : (req,res) => {
+        db.Product.findAll()
+        .then(products => {
+            console.log(products);
+            return res.render('index',{
+                        productsVisited : products.filter(product => product.sectionId === 2),
+                        productsSale : products.filter(product => product.sectionId === 1),
+                        toThousand,
+                        ...users
+            });
+        })
+
+    // index : (req,res)=> {
+    //     const users = readJSON('usersDB');
+    //     const products = readJSON('products');
+    //     return res.render('index',{
+	// 		productsVisited : products.filter(product => product.estado === "visited"),
+	// 		productsSale : products.filter(product => product.estado === "in-sale"),
+	// 	    toThousand,
+    //         ...users
+	// 	});
+     },
     admin : (req,res) => {
         // console.log(products);
         const category = [

@@ -22,7 +22,7 @@
                 
 				
 					<%- include('partials/cardtest',{
-						...product,
+						...product.dataValues,
                         toThousand
 					})%>
 				
@@ -41,7 +41,7 @@
         <% productsVisited.forEach(product => { %>
 				
 					<%- include('partials/cardtest',{
-						...product,
+						...product.dataValues,
                         toThousand
 					})%>
 				
