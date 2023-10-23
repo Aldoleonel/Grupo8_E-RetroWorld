@@ -1,12 +1,31 @@
 const { validationResult } = require("express-validator");
-const Product = require("../../data/Product");
-const { readJSON,writeJson } = require("../../data");
+const db = require('../../database/models');
 
 //const products= readJSON('products')
 
 module.exports = (req, res) => {
 
-    const errors = validationResult(req);
+    const { name, categoryId, sectionId, typeId, price, discount,image, description,stock } = req.body
+   
+    
+   
+    db.Product.create({
+        name,
+         categoryId,
+         sectionId,
+         typeId,
+         price,
+         discount:discount || 0,
+         image:req.file?req.file.filename:'default-image.png',
+         description,
+        stock
+    })
+        .then(product=>{
+            res.send(product)
+        }).catch(error=>console.log(error))
+
+
+    /* const errors = validationResult(req);
     
     if(errors.isEmpty()){
 
@@ -24,7 +43,7 @@ module.exports = (req, res) => {
             old : req.body
         })
         
-    }
-    
+    } */
+
 }
 

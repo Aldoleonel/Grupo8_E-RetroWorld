@@ -19,15 +19,17 @@
                           </small>
                     </div>
                     <div class="form-input">
-                        <label for="category">Categoria:</label>
+                        <label for="categoryId">Categoria:</label>
                         <select class="form-select  <%= locals.errors && (errors.category && 'is-invalid') %>"
-                            aria-label="Default select example" name="category" id="category">
+                            aria-label="Default select example" name="categoryId" id="categoryId">
                             
                             <option value="" selected hidden>Seleccione...</option> 
-                            <option value="arcade" <%= locals.errors && (old.category == 'arcade' && 'selected') %> >Arcade</option>
-                            <option value="playstation" <%= locals.errors && (old.category == 'playstation' && 'selected') %> >Playstation</option>
-                            <option value="xbox" <%= locals.errors && (old.category == 'xbox' && 'selected') %> >Xbox</option>
-                            <option value="nintendo" <%= locals.errors && (old.category == 'nintendo' && 'selected') %> >Nintendo</option>
+                            <% categories.forEach(category=> { %>
+                                <option value="<%= category.id %>" <%=locals.old && (locals.old.categoryId===categoryId.id 
+                                  && 'selected') %>>
+                                  <%= category.name %>
+                                </option>
+                                <% }) %>
                         </select>
                         <small class="text-danger ms-2">
                             <%= locals.errors && (errors.category && errors.category.msg) %>
@@ -36,10 +38,14 @@
                     </div>
                     <div class="form-input">
                         <label for="estado">Estado:</label>
-                        <select id="estado" name="estado" >
+                        <select id="sectionId" name="sectionId" >
                             <option value="" selected hidden>Seleccione...</option>
-                            <option value="in-sale" <%= locals.errors && (old.estado == 'in-sale' && 'selected') %> >En Oferta</option>
-                            <option value="visited" <%= locals.errors && (old.estado == 'visited' && 'selected') %> >Ultima visita</option>
+                            <% sections.forEach(section=> { %>
+                                <option value="<%= section.id %>" <%=locals.old && (locals.old.sectionId===section.id 
+                                  && 'selected') %>>
+                                  <%= section.name %>
+                                </option>
+                                <% }) %>
                         </select>
                         <small class="text-danger ms-2">
                             <%= locals.errors && (errors.estado && errors.estado.msg) %>
@@ -51,11 +57,15 @@
                     </div> -->
 
                     <div class="form-input">
-                        <label for="type">Type:</label>
-                        <select id="type" name="type">
+                        <label for="typeId">Type:</label>
+                        <select id="typeId" name="typeId">
                             <option value="" selected hidden>Seleccione...</option>
-                            <option value="repuesto" <%= locals.errors && (old.type == 'repuesto' && 'selected') %> >Repuesto</option>
-                            <option value="consola" <%= locals.errors && (old.type == 'consola' && 'selected') %> >Consola</option>
+                            <% types.forEach(type=> { %>
+                                <option value="<%= type.id %>" <%=locals.old && (locals.old.typeId===type.id 
+                                  && 'selected') %>>
+                                  <%= type.name %>
+                                </option>
+                                <% }) %>
                         </select>
                         <small class="text-danger ms-2">
                             <%= locals.errors && (errors.type && errors.type.msg) %>
@@ -70,7 +80,7 @@
                     </div>
                     <div class="form-input">
                         <label for="discount">Descuento:</label>
-                        <input type="number" id="discount" placeholder="% 0" name="discount" value="<%= locals.errors && (old.discount && old.discount) %>">
+                        <input type="number" id="discount"  name="discount" value="<%= locals.errors && (old.discount && old.discount) %>">
                     </div>
                     <div class="form-foto" >
                         <label for="image" class="form-boton-foto" >Subir imagen de producto</label>

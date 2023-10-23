@@ -31,7 +31,7 @@ module.exports = {
       },
       stock: {
         type: Sequelize.TINYINT,
-        allowNull : false
+        allowNull : true
       },
       sectionId: {
         type: Sequelize.INTEGER,
