@@ -1,6 +1,10 @@
+const db = require('../database/models');
+
 const { check, body } = require("express-validator");
 const { readJSON } = require("../data");
 const { compareSync } = require("bcryptjs");
+
+
 module.exports = [
   check("email")
     .notEmpty()
@@ -9,19 +13,21 @@ module.exports = [
     .withMessage("Formato inválido"),
   body("password")
     .custom((value, {req}) => {
-        const users = readJSON('usersDB');
-        const user = users.find(user => user.email === req.body.email);
-       
-      console.log(user)
-        if(!user || !compareSync(value,user.password)){
-            return false
-        }
-            return true
-        // if(!user || (value !== user.password)){
-        //   return false
-        // }else{
-        //   return true
-        // }
-        }).withMessage('Credenciales inválidas')         
+
+        return db.User.findOne({
+          where:{
+            email: req.body.email
+          }
+        })
+        .then(user => {
+          console.log(user)
+          if(!user || !compareSync(value,user.password)){
+            console.log('hola llegue hasta acá')
+            return Promise.reject()
+          }
+        })
+        .catch(() => Promise.reject('Credenciales inválidas'))
+        
+        })      
 
 ];

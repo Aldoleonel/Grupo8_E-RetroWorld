@@ -1,4 +1,5 @@
 const { readJSON } = require('../data/index');
+const db = require('../database/models')
 
 const fs = require('fs');
 const path = require('path');
@@ -21,49 +22,22 @@ module.exports = {
     },
     admin : (req,res) => {
         // console.log(products);
-        const category = [
-            {
-                id: 1,
-                name: 'playstation',
-                cant: 0,
-                image: null
-            },
-            {
-                id: 2,
-                name: 'xbox',
-                cant: 0,
-                image: null
-            },
-            {
-                id: 3,
-                name: 'nintendo',
-                cant: 0,
-                image: null
-            },
-            {
-                id: 4,
-                name: 'retro',
-                cant: 0,
-                image: null
-            }
-        ]
-        /*HAY QUE VOLVER A LEER LA BASE DE DATOS DENTRO DEL METODO ADMIIN
-         CONST PRODUCTS=READJSON de abajo 
-         */
+        const categories = db.Category.findAll();
+        const products = db.Product.findAll();
+        const users = db.User.findAll();
 
-        const products=readJSON('products')
-        products.forEach(producto => {
-            category.forEach(categ =>{
-                if(producto.category === categ.name){
-                    categ.cant = categ.cant + 1;
-                }
+        Promise.all([categories, products, users])
+            .then(([categories,products, users]) => {
+                // return res.send(users);
+                return res.render('admin',{
+                    products,
+                    category: categories,
+                    users
+                })
             })
-        });
-        return res.render('admin',{
-            products,
-            category,
-            users
-        })
+            .catch(error => console.log(error))
+
+        
     },
 
     /*Controlador de Carrito de Compras*/

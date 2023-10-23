@@ -7,7 +7,7 @@
         
             <section class="form__registro">
                 <div class="avatar2">
-                    <img class="avatar" src="/img/avatar/<%= locals.errors ? user.image : image %> ">
+                    <img class="avatar" src="/img/avatar/<%= image || 'default_avatar_.png' %> ">
                 </div>
                 <div class="form-box">
                     <h2>Editar Perfil</h2>
@@ -38,16 +38,20 @@
                         <div class="form-input">
                             <label for="birthdate">Fecha de nacimiento:</label>
                             <input type="date" id="birthdate" name="birthdate" min="1980-01-01" max="2030-12-31"
-                                value="<%= locals.old? old.birthdate&& old.birthdate:  birthdate %>">
+                                value="<%= locals.old? old.birthdate&& old.birthdate:  moment(birthdate).format("YYYY-MM-DD") %>">
 
                         </div>
                         <div class="form-input">
-                            <label for="gender">Género:</label>
-                            <select id="gender" name="gender">
-                                <option value="masculino" <%=locals.old? (old.gender && old.gender==="masculino"
-                                    && 'selected' ) : gender==='masculio' && 'selected' %>>Masculino</option>
-                                <option value="femenino" <%=locals.old? (old.gender && old.gender==="femenino"
-                                    && 'selected' ) : gender==='femenino' && 'selected' %>>Femenino</option>
+                            <label for="genreId">Género:</label>
+                            <select id="genreId" name="genreId" class="">
+                                <% genres.forEach(genre => { %>
+                                    <option value="<%= genre.id %>" <%=locals.old? (old.genreId && old.genreId==="masculino"
+                                    && 'selected' ) : genreId==='masculio' && 'selected' %>>Masculino</option>
+                                <% }) %>
+                                
+                                <small class="text-danger ms-2">
+                                    <%= locals.errors && (errors.genreId && errors.genreId.msg) %>
+                                </small>
                             </select>
                         </div>
                         <div class="form-input">
