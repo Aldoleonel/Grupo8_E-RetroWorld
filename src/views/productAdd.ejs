@@ -20,19 +20,19 @@
                     </div>
                     <div class="form-input">
                         <label for="categoryId">Categoria:</label>
-                        <select class="form-select  <%= locals.errors && (errors.category && 'is-invalid') %>"
+                        <select class="form-select  <%= locals.errors && (errors.categoryId && 'is-invalid') %>"
                             aria-label="Default select example" name="categoryId" id="categoryId">
                             
                             <option value="" selected hidden>Seleccione...</option> 
                             <% categories.forEach(category=> { %>
-                                <option value="<%= category.id %>" <%=locals.old && (locals.old.categoryId===categoryId.id 
+                                <option value="<%= category.id %>" <%=locals.old && (locals.old.categoryId===category.id 
                                   && 'selected') %>>
                                   <%= category.name %>
                                 </option>
                                 <% }) %>
                         </select>
                         <small class="text-danger ms-2">
-                            <%= locals.errors && (errors.category && errors.category.msg) %>
+                            <%= locals.errors && (errors.categoryId && errors.categoryId.msg) %>
                           </small>
 
                     </div>
@@ -48,7 +48,7 @@
                                 <% }) %>
                         </select>
                         <small class="text-danger ms-2">
-                            <%= locals.errors && (errors.estado && errors.estado.msg) %>
+                            <%= locals.errors && (errors.sectionId && errors.sectionId.msg) %>
                           </small>
                     </div>
                   <!--   <div class="form-foto" >
@@ -68,7 +68,7 @@
                                 <% }) %>
                         </select>
                         <small class="text-danger ms-2">
-                            <%= locals.errors && (errors.type && errors.type.msg) %>
+                            <%= locals.errors && (errors.typeId && errors.typeId.msg) %>
                         </small>
                     </div>
                     <div class="form-input">
