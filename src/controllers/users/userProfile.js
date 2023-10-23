@@ -1,12 +1,18 @@
-const { readJSON } = require("../../data");
-const users = readJSON('usersDB')
+const moment = require('moment')
+const db = require('../../database/models')
 
 module.exports = (req,res)=>{
-    const users = readJSON('usersDB')
-    const user = users.find(user => user.id === req.session.userLogin.id);
-    console.log(user);
-    
-    return res.render('userProfile',{
-        ...user
-    })//,{userFind})
+    const {id} = req.session.userLogin
+    const genres = db.Genre.findAll();
+    const user = db.User.findByPk(id)
+
+    Promise.all([genres, user])
+        .then(([genres, user]) => {
+            // return res.send(user)
+            return res.render('userProfile',{
+                ...user.dataValues,
+                genres,
+                moment
+            })
+        })
 }

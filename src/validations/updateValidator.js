@@ -17,7 +17,10 @@ module.exports = [
       .notEmpty()
       .withMessage("Por favor ingrese un numero de teléfono")
       .isNumeric({min:4})  
-      .withMessage("Por favor sólo números")
+      .withMessage("Por favor sólo números"),
+    body("genreId")
+      .notEmpty()
+      .withMessage("Por  favor selecciona un genero")
   ];
   /*
   ,

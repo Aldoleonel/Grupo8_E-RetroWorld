@@ -1,42 +1,68 @@
-const {existsSync,unlinkSync} = require('fs')
-const { readJSON,writeJson } = require("../../data/index");
-const {validationResult} = require('express-validator')
+const {existsSync,unlinkSync} = require('fs');
+const {validationResult} = require('express-validator');
 
-const products= readJSON('products')
+const db = require('../../database/models')
 
 
 //Falta Editar Imagen
 module.exports=(req,res)=>{
-	const products= readJSON('products')
+	// const products= readJSON('products')
 
 	let errors = validationResult(req);
 	if(errors.isEmpty()){
-		const { name, price, discount, description, category } = req.body;
-		// console.log(req.file.filename)
-		const productsModify = products.map(product => {
+		const { name, price, discount, image, description, categoryId, sectionId, typeId} = req.body;
+		// return res.send(req.file);
+		db.Product.findByPk(req.params.id)
+			.then(product => {
+				db.Product.update(
+					{
+						name: name.trim(),
+						price,
+						discount,
+						image : req.file ? req.file.filename : product.image,
+						description: description.trim(),
+						categoryId,
+						sectionId, 
+						typeId
+					},
+					{
+						where:{
+							id: req.params.id
+						}
+					}
+				)
+				.then(() => {
+					// return res.send(response);
+					// return res.send(req.file)
+					if(req.file){
+						req.file && existsSync(`./public/img/products/${product.image}`) && unlinkSync(`./public/img/products/${product.image}`)
+					}
+					return res.redirect('/admin');
+				})
+			})
+			.catch(error => console.log(error))
 
-			if (product.id === req.params.id) {
-				req.file && existsSync(`./public/img/products/${product.image}`) && unlinkSync(`./public/img/products/${product.image}`)
-				product.name = name.trim();				
-				product.price = +price;
-				product.discount = +discount;
-				product.category = category;
-				product.description = description.trim();
-                product.image = req.file ? req.file.filename : product.image;
-			}
-			return product;
-		});
-		writeJson(products,'products')
-		return res.redirect('/')
 	}else{
 		// return res.send(errors);
-		const productEdit = products.find(product => product.id === req.params.id);
-		// return res.send(productDetail);
-		res.render('productEdit',{
-			errors: errors.mapped(),
-			old: req.body,
-			productEdit
-		})
-	}
+		const {id} = req.params;
+
+		const categories = db.Category.findAll();
+		const types = db.Type.findAll();
+		const sections = db.Section.findAll();
+		const product = db.Product.findByPk(id);
+
+		Promise.all([categories, types, sections,product])
+			.then(([categories, types, sections, product]) => {
+				// return res.send(req.body)
+				return res.render('productEdit', {
+					...product.dataValues,
+					categories,
+					sections,
+					types,
+					errors: errors.mapped(),
+					old: req.body
+				})
+			})
+		}
 	
 	}
