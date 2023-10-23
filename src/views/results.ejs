@@ -20,10 +20,10 @@
 
             <% if (results.length) { %>
             
-            <% results.forEach(product => { %>
+            <% results.forEach(products => { %>
 				
                 <%- include('partials/cardtest',{
-                    ...product,
+                    ...products.dataValues,
                     toThousand
                 })%>
             

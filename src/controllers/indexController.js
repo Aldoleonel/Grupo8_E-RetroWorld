@@ -3,7 +3,7 @@ const { readJSON } = require('../data/index');
 const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../database/models')
 const users = readJSON('usersDB');
@@ -21,18 +21,9 @@ module.exports = {
             });
         })
 
-    // index : (req,res)=> {
-    //     const users = readJSON('usersDB');
-    //     const products = readJSON('products');
-    //     return res.render('index',{
-	// 		productsVisited : products.filter(product => product.estado === "visited"),
-	// 		productsSale : products.filter(product => product.estado === "in-sale"),
-	// 	    toThousand,
-    //         ...users
-	// 	});
+    
      },
     admin : (req,res) => {
-        // console.log(products);
         const category = [
             {
                 id: 1,
@@ -58,25 +49,22 @@ module.exports = {
                 cant: 0,
                 image: null
             }
+        
         ]
-        /*HAY QUE VOLVER A LEER LA BASE DE DATOS DENTRO DEL METODO ADMIIN
-         CONST PRODUCTS=READJSON de abajo 
-         */
+       const products = db.Product.findAll()
+       
+       const users = db.User.findAll()
+       Promise.all([products,users])
+        .then(([products,users])=> {
 
-        const products=readJSON('products')
-        products.forEach(producto => {
-            category.forEach(categ =>{
-                if(producto.category === categ.name){
-                    categ.cant = categ.cant + 1;
-                }
+            return res.render('admin',{
+                products,
+                category,
+                users
+            
             })
-        });
-        return res.render('admin',{
-            products,
-            category,
-            users
-        })
-    },
+    })
+},
 
     /*Controlador de Carrito de Compras*/
     cart: (req,res)=>{
@@ -89,12 +77,30 @@ module.exports = {
         });
     },
     search: (req, res) => {
-        const products = readJSON('products');
-        const results = products.filter(product => product.name.toLowerCase().includes(req.query.keywords.toLowerCase()))
-        return res.render('results',{
-			results,
-			toThousand,
-			keywords:req.query.keywords
-		})
-	}
+        db.Product.findAll()
+            .then(products => {
+                const results = products.filter(product => product.name.toLowerCase().includes(req.query.keywords.toLowerCase()));
+                console.log(results);
+                return res.render('results', {
+                    results,
+                    toThousand,
+                    keywords: req.query.keywords
+                });
+            })
+            .catch(error => {
+                console.error(error);
+                return res.status(500).send("Error en la búsqueda de productos.");
+            });
+    }
+        
+        // const products = readJSON('products');
+        //  const results = products.filter(product => product.name.toLowerCase().includes(req.query.keywords.toLowerCase()))
+        //  return res.render('results',{
+		// 	results,
+		// 	toThousand,
+		//  	keywords:req.query.keywords
+		 
+        
+	
+    
 }
