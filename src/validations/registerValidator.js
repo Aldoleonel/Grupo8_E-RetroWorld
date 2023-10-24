@@ -45,12 +45,12 @@ module.exports = [
     .withMessage("Por favor ingrese una contraseña con entre 6 y 12 caracteres"),
 
     body('password2')
-    .custom((value, { req }) => {
-      if (value !== req.body.password) {
-        console.log('Contraseñas no coinciden:', value, req.body.password);
-        return Promise.reject("Las contraseñas no coinciden");
-      }
-    }),
+    .custom((value,{req}) => {
+        if(value !== req.body.password){
+            return false
+        }
+        return true
+    }).withMessage('Las contraseñas no coinciden'),
 
   body('acceptTerms')
     .notEmpty()
