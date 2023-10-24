@@ -9,15 +9,15 @@ module.exports = [
       max : 80
     }).withMessage('El nombre del producto debe tener al menos 3 caracteres y no puede superar los 80 caracteres'),
 
-  check("category")
+  check("categoryId")
     .notEmpty()
     .withMessage("Por favor seleccione una categoria"),
     
-  check("estado")
+  check("sectionId")
   .notEmpty()
   .withMessage("Por favor seleccione un estado de producto"),
 
-  check("type")
+  check("typeId")
   .notEmpty()
   .withMessage("Por favor seleccione el tipo de producto"),
     

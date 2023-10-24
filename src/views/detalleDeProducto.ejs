@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head',{
-        title: 'Detalle de Producto : '+name 
+        title: 'Detalle de Producto : '+producto.name
 }) %>
 <body class="detalleProducto">
     <%- include('partials/header') %>
@@ -10,24 +10,24 @@
             <div class="detalleProducto__container--box-nav">
                 <a href="/">Inicio</a>
                 <i class="fa-solid fa-angle-right"></i>
-                <a href="/products/detail"><%= category %></a>
+                <a href="/products/detail"><%= producto.category %></a>
                 <div class="nav-line"></div>
             </div>
             <div class="detalleProducto__container--box-product">
                 <div class="box-product-img">
-                    <img src="/img/products/<%= image || 'default-img.png' %>" width="400">
+                    <img src="/img/products/<%= producto.image || 'default-img.png' %>" width="400">
                 </div>
                 <h2>
-                    <%= name %>
+                    <%= producto.name %>
                 </h2>
                 <div class="box-product-info">
                     <div class="product-info-stock">
                         <span>Stock</span>
-                        <span><%= !stock? 'No disponible' : 'Disponible' %></span>
+                        <span><%= !producto.stock? 'No disponible' : 'Disponible' %></span>
                     </div>
                     <div class="product-info-price">
-                        <p>$ <%= toThousand((price).toFixed(0))%></p>
-                        <p>o 6 x $<%=toThousand((price / 6).toFixed(0))  %> <span>c/iva</span></p>
+                        <p>$ <%= producto.price %></p>
+                        <p>o 6 x $<%= producto.price / 6 %> <span>c/iva</span></p>
                     </div>
                 </div>
             </div>
@@ -38,11 +38,11 @@
                     <table>
                         <tr>
                             <td>Categoría</td>
-                            <td><%= category %></td>
+                            <td><%= producto.category %></td>
                         </tr>
                         <tr>
                             <td>Código</td>
-                            <td><%= id %></td>
+                            <td><%= producto.id %></td>
                         </tr>
                     </table>
                 </div>
@@ -88,9 +88,9 @@
                 </div>
             </div>
             <div class="detalleProducto__container--box-description">
-                <h4>Descripción del Producto : <%= name %> </h4>
+                <h4>Descripción del Producto : <%= producto.name %> </h4>
                 <p>
-                    <%= description %>
+                    <%= producto.description %>
                 </p>
             </div>
         </div>

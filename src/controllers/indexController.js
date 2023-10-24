@@ -1,8 +1,9 @@
 const { readJSON } = require('../data/index');
 
+
 const fs = require('fs');
 const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/products.json');
+//const productsFilePath = path.join(__dirname, '../data/products.json');
 //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../database/models')
@@ -24,47 +25,24 @@ module.exports = {
     
      },
     admin : (req,res) => {
-        const category = [
-            {
-                id: 1,
-                name: 'playstation',
-                cant: 0,
-                image: null
-            },
-            {
-                id: 2,
-                name: 'xbox',
-                cant: 0,
-                image: null
-            },
-            {
-                id: 3,
-                name: 'nintendo',
-                cant: 0,
-                image: null
-            },
-            {
-                id: 4,
-                name: 'retro',
-                cant: 0,
-                image: null
-            }
-        
-        ]
-       const products = db.Product.findAll()
-       
-       const users = db.User.findAll()
-       Promise.all([products,users])
-        .then(([products,users])=> {
+        // console.log(products);
+        const categories = db.Category.findAll();
+        const products = db.Product.findAll();
+        const users = db.User.findAll();
 
-            return res.render('admin',{
-                products,
-                category,
-                users
-            
+        Promise.all([categories, products, users])
+            .then(([categories,products, users]) => {
+                // return res.send(users);
+                return res.render('admin',{
+                    products,
+                    category: categories,
+                    users
+                })
             })
-    })
-},
+            .catch(error => console.log(error))
+
+        
+    },
 
     /*Controlador de Carrito de Compras*/
     cart: (req,res)=>{
