@@ -47,6 +47,7 @@ module.exports = [
     body('password2')
     .custom((value, { req }) => {
       if (value !== req.body.password) {
+        console.log('Contraseñas no coinciden:', value, req.body.password);
         return Promise.reject("Las contraseñas no coinciden");
       }
     }),

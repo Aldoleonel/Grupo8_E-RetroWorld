@@ -15,9 +15,9 @@ module.exports = (req, res) => {
             birthdate,
             gender,
             phone,
-            password2,
+            password2: bcrypt.hashSync(req.body.password2, 10),
             acceptTerms,
-            password 
+            password: bcrypt.hashSync(req.body.password, 10)
         })
             .then(usuario => {
                 res.redirect('/users/login');
