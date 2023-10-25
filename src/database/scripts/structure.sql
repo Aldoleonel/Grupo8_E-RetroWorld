@@ -107,7 +107,7 @@ CREATE TABLE `products` (
   `discount` int DEFAULT '0',
   `description` text NOT NULL,
   `image` varchar(255) DEFAULT NULL,
-  `stock` tinyint NOT NULL,
+  `stock` tinyint DEFAULT NULL,
   `sectionId` int DEFAULT NULL,
   `categoryId` int DEFAULT NULL,
   `typeId` int DEFAULT NULL,
@@ -121,7 +121,7 @@ CREATE TABLE `products` (
   CONSTRAINT `products_ibfk_1` FOREIGN KEY (`sectionId`) REFERENCES `sections` (`id`),
   CONSTRAINT `products_ibfk_2` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`),
   CONSTRAINT `products_ibfk_3` FOREIGN KEY (`typeId`) REFERENCES `types` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -216,10 +216,10 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `birthdate` datetime DEFAULT NULL,
-  `phone` int NOT NULL,
+  `phone` varchar(255) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
-  `roleId` int DEFAULT NULL,
-  `genreId` int DEFAULT NULL,
+  `roleId` int DEFAULT '2',
+  `genreId` int DEFAULT '1',
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`),
@@ -228,7 +228,7 @@ CREATE TABLE `users` (
   KEY `genreId` (`genreId`),
   CONSTRAINT `users_ibfk_1` FOREIGN KEY (`roleId`) REFERENCES `roles` (`id`),
   CONSTRAINT `users_ibfk_2` FOREIGN KEY (`genreId`) REFERENCES `genres` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -240,4 +240,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-19  3:57:05
+-- Dump completed on 2023-10-25  2:35:57

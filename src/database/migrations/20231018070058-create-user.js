@@ -39,6 +39,7 @@ module.exports = {
       },
       roleId: {
         type: Sequelize.INTEGER,
+        defaultValue : 2,
         references : {
           model : {
             tableName : 'Roles'
@@ -47,6 +48,7 @@ module.exports = {
       },
       genreId: {
         type: Sequelize.INTEGER,
+        defaultValue : 1,
         references : {
           model : {
             tableName : 'Genres'
