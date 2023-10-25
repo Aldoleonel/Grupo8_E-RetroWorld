@@ -14,7 +14,7 @@
                     <div class="form-input">
                         <label for="firstName">Nombre:</label>
                         <input type="text" id="firstName" class="form-control <%= locals.errors && (errors.firstName && 'is-invalid') %>"  name="firstName" value="<%= locals.old && (old.firstName && old.firstName ) %>" >
-                        <small class="color: red">
+                        <small class="text-danger ms-2">
                             <%= locals.errors && (errors.firstName && errors.firstName.msg) %>
                           </small>
                     </div>
