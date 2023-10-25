@@ -12,5 +12,5 @@ module.exports=(req,res)=>{
                         toThousand
                         
             });
-    });
+    }).catch(error=>console.log(error));
 }

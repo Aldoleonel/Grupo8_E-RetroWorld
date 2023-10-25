@@ -13,5 +13,5 @@ module.exports=(req,res)=>{
             consoles,
             toThousand
         });
-    })
+    }).catch(error=>console.log(error))
 }

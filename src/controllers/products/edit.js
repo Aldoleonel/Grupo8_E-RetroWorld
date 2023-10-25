@@ -20,7 +20,7 @@ module.exports=(req,res)=>{
 				sections,
 				types
 			})
-		})
+		}).catch(error=>console.log(error));
         
 	}
    

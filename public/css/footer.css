@@ -89,19 +89,24 @@ footer {
     padding: 5px 10px;
     cursor: pointer;
 }
+.footer__box-iconos-de-pago {
+    width: 100%;
+    
+}
 
 .footer__iconos-de-pago  {
     display: flex;
     max-width: 200px;
     flex-direction: norow;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer__iconos-de-pago img {
     display: flex;
     
     margin-right: 5px;
-    width: 15px;
+    width: 41px;
 }
 
 .footer__ultimo {
