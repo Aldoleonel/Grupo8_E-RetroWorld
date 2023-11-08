@@ -48,17 +48,17 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
-                                        <div class="modal-body">
-                                            <div class="card mb-3" style="max-width: 540px;">
+                                        <div class="modal-body d-flex justify-content-center">
+                                            <div class="card mb-3" >
                                                 <div class="row g-0">
-                                                    <div class="col-md-4">
-                                                        <img src="/img/products/<%= image %>" class="img-fluid rounded-start" alt="...">
+                                                    <div class="card--imageConteiner">
+                                                        <img src="/img/products/<%= image %>" class="card__img" alt="...">
                                                     </div>
-                                                    <div class="col-md-8">
+                                                    <!-- <h5 class="card__title text-white"><%= name %></h5> -->
+                                                    <div class="card__content">
                                                         <div class="card-body">
-                                                            <h5 class="card-title"><%= name %></h5>
-                                                            <p class="card-text"><%= description %></p>
-                                                            <p class="card-text"><small class="text-body-secondary">Last
+                                                            <p class="card-text text-white"><%= description %></p>
+                                                            <p class="card-text text-white"><small class="">Last
                                                                     updated 3 mins ago</small></p>
                                                         </div>
                                                     </div>
