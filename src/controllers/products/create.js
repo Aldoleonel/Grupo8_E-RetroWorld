@@ -14,7 +14,7 @@ module.exports = (req, res) => {
          typeId,
          price,
          discount:discount || 0,
-         image:req.file?req.file.filename:'default-image.png',
+         image:req.file?req.file.filename:'default-img.png',
          description,
         stock
     })
