@@ -10,11 +10,16 @@
         <section class="form__registro">
             <div class="form-box2">
                 <h2>Agregar Producto</h2>
-                <form action="/products/add" method="POST" enctype="multipart/form-data">
+                <div class="col-12 col-md-4">
+                  <div class="d-flex flex-column">
+                    <img class="img-fluid rounded" id="imgMain" src="" alt="">
+                  </div>
+                </div>
+                <form action="/products/add" method="POST" enctype="multipart/form-data" id="formAdd" class="form">
                     <div class="form-input">
                         <label for="name">Titulo:</label>
                         <input type="text" id="name" placeholder="Titulo del producto" name="name" class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>"  value="<%= locals.old && (old.name && old.name ) %>" >
-                        <small class="text-danger ms-2">
+                        <small class="text-danger ms-2" id="msgError-name">
                             <%= locals.errors && (errors.name && errors.name.msg) %>
                           </small>
                     </div>
@@ -31,14 +36,14 @@
                                 </option>
                                 <% }) %>
                         </select>
-                        <small class="text-danger ms-2">
+                        <small class="text-danger ms-2" id="msgError-categoryId">
                             <%= locals.errors && (errors.categoryId && errors.categoryId.msg) %>
                           </small>
 
                     </div>
                     <div class="form-input">
                         <label for="estado">Estado:</label>
-                        <select id="sectionId" name="sectionId" >
+                        <select id="sectionId" name="sectionId" class="form-select <%= locals.errors && (errors.sectionId && 'is-invalid') %>" >
                             <option value="" selected hidden>Seleccione...</option>
                             <% sections.forEach(section=> { %>
                                 <option value="<%= section.id %>" <%=locals.old && (locals.old.sectionId===section.id 
@@ -47,7 +52,7 @@
                                 </option>
                                 <% }) %>
                         </select>
-                        <small class="text-danger ms-2">
+                        <small class="text-danger ms-2" id="msgError-sectionId">
                             <%= locals.errors && (errors.sectionId && errors.sectionId.msg) %>
                           </small>
                     </div>
@@ -58,7 +63,7 @@
 
                     <div class="form-input">
                         <label for="typeId">Type:</label>
-                        <select id="typeId" name="typeId">
+                        <select id="typeId" name="typeId" class="form-select <%= locals.errors && (errors.typeId && 'is-invalid') %>">
                             <option value="" selected hidden>Seleccione...</option>
                             <% types.forEach(type=> { %>
                                 <option value="<%= type.id %>" <%=locals.old && (locals.old.typeId===type.id 
@@ -67,14 +72,14 @@
                                 </option>
                                 <% }) %>
                         </select>
-                        <small class="text-danger ms-2">
+                        <small class="text-danger ms-2" id="msgError-typeId">
                             <%= locals.errors && (errors.typeId && errors.typeId.msg) %>
                         </small>
                     </div>
                     <div class="form-input">
                         <label for="price">Precio:</label>
                         <input type="number" id="price" placeholder="$ 0.00" name="price" class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>"  value="<%= locals.old && (old.price && old.price ) %>" >
-                        <small class="text-danger ms-2">
+                        <small class="text-danger ms-2" id="msgError-price">
                             <%= locals.errors && (errors.price && errors.price.msg) %>
                           </small>
                     </div>
@@ -91,10 +96,15 @@
                         <textarea name="description" id="description"
                       class="form-control <%= locals.errors && (errors.description && 'is-invalid') %>"
                       style="resize: none"><%= locals.old && (old.description && old.description ) %></textarea>
-                    <small class="text-danger ms-2">
+                    <small class="text-danger ms-2" id="msgError-description">
                       <%= locals.errors && (errors.description && errors.description.msg) %>
                     </small>
                         
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                           
+                        <small class="text-danger ms-2" id="msgError-empty" %>
+                          </small>
                     </div>
                     <div class="form-submit-button2">
                         <button type="reset">Cancelar</button>
@@ -107,8 +117,10 @@
             </div>
         </section>
     </main>
-    <footer>
+    
         <%- include('partials/footer')%>
+        <script src="/js/productAddValidation.js"></script>
+        <script src="/js/productAddImg.js"></script>
 
 </body>
 
