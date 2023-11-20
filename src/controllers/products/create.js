@@ -14,9 +14,9 @@ module.exports = (req, res) => {
          typeId,
          price,
          discount:discount || 0,
-         image:req.file?req.file.filename:'default-img.png',
+         image:req.file?req.file.filename: null,
          description,
-        stock
+        stock : 1
     })
         .then(product=>{
             
@@ -24,7 +24,7 @@ module.exports = (req, res) => {
         }).catch(error=>console.log(error))
     }else {
       
-        (req.file && existsSync(`./public/img/products/${req.file.filename}`)) && unlinkSync(`./public/img/products/${req.file.filename}`);
+        (req.file && existsSync(`/img/products/${req.file.filename}`)) && unlinkSync(`/img/products/${req.file.filename}`);
 
         
         const categories = db.Category.findAll({

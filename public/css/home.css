@@ -15,6 +15,12 @@
     background-color: #202324;
 }
 
+.homeBodyRetro {
+    background: linear-gradient(190deg, rgba(23,18,166,1) 0%, rgba(148,48,191,1) 50%, rgba(242,126,202,1) 100%);
+    
+}
+
+
 
 /* !ICONOS DE CONSOLAS */
 
@@ -74,9 +80,6 @@
     transition-delay: 0.1s;
     cursor: pointer;
 }
-
-
-
 
 
 /* !SECCION OFERTAS */

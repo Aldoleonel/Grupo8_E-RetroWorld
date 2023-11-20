@@ -14,6 +14,7 @@ module.exports=(req,res)=>{
     Promise.all([categories,sections,types])
         .then(([categories,sections,types])=>{
             return res.render('productAdd',{
+               
                 categories,
                 sections,
                 types

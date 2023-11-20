@@ -2,7 +2,7 @@
   <div class="header__top">
     <div class="header__top-box">
       <div class="header__top--line"> 
-        <i class="fa-solid fa-bars"></i>
+        <i id="burguerMenu" class="fa-solid fa-bars"></i>
         <a href="/"><img src="/img/Logo.png" alt="logo-retroWorld"></a>
         <div class="header__top-login-shop">  
           <% if (locals.userLogin) { %>
@@ -21,13 +21,13 @@
       </div> 
     </div>  
     <div class="header__bar-search">
-      <form action="/search" method="GET">
+      <form action="/search" method="GET" id="formSearch">
         <button type="submit" class="search-form_button"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
-        <input type="text" name="keywords" placeholder="Buscar producto...">
+        <input type="search" name="keywords" placeholder="Buscar producto..." id="inputSearch">
       </form>
     </div>
   </div>
-  <div class="header__links">
+  <div id="linksMenu" class="header__links">
     <p><a href="/">Inicio</a></p>
     <p><a href="/products/products">Productos</a></p>      
     <p><a href="/products/consoles">Consolas</a></p>
@@ -35,5 +35,9 @@
       <p><a href="/admin">Admin</a></p>
     <% } %>
     <p><a href="/products/accessories">Repuestos y accesorios</a></p>
+    
   </div>
+
+  <script src="/js/searchValidation.js"></script>
+  <script src="/js/burguerMenu.js"></script>
 </header>
