@@ -10,81 +10,96 @@
         <section class="form__registro">
             <div class="form-box">
                 <h2>Editar Producto</h2>
-                <form action="/products/edit/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form id="formEdit" action="/products/edit/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="form-input">
                         <label for="name">Titulo:</label>
-                        <input type="text" id="name" placeholder="" name="name" value="<%= locals.errors? old.name && old.name : name  %>">
-                        <small class="text-danger ms-2">
+                        <input class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>" type="text" id="name" placeholder="" name="name" value="<%= locals.errors? old.name && old.name : name  %>">
+                        <small class="text-danger ms-2" id="msgError-name">
                             <%= locals.errors && (errors.name && errors.name.msg) %>
                         </small>
                     </div>
                     <div class="form-input">
                         <label for="categoryId">Category:</label>
-                        <select id="categoryId" name="categoryId" >
-                            <option value="" selected hidden>Seleccione...</option>
+                        <select class="form-select"  id="categoryId" name="categoryId" >
+                            <option value="0" selected hidden>Seleccione...</option>
                             <% categories.forEach(category => { %>
                                 <option value="<%= category.id %>"<%= locals.errors? old.categoryId == category.id && 'selected' : categoryId == category.id && 'selected' %>><%= category.name %></option>
                             <% }) %>
                         </select>
-                        <small class="text-danger ms-2">
+                        <small class="text-danger ms-2" id="msgError-category">
                             <%= locals.errors && (errors.category && errors.category.msg) %>
                         </small>
                     </div>
                     <div class="form-input">
                         <label for="sectionId">Section:</label>
-                        <select id="sectionId" name="sectionId" >
-                            <option value="" selected hidden>Seleccione...</option>
+                        <select class="form-select"  id="sectionId" name="sectionId" >
+                            <option value="0" selected hidden>Seleccione...</option>
                             <% sections.forEach(section => { %>
                                 <option value="<%= section.id %>" <%= locals.errors? old.sectionId == section.id && 'selected' : sectionId == section.id && 'selected' %> ><%= section.name %></option>
                             <% }) %>
                         </select>
-                        <small class="text-danger ms-2">
+                        <small class="text-danger ms-2" id="msgError-section">
                             <%= locals.errors && (errors.estado && errors.estado.msg) %>
                         </small>
                     </div>
                     <div class="form-input">
                         <label for="typeId">Type:</label>
-                        <select id="typeId" name="typeId">
-                            <option value="" selected hidden>Seleccione...</option>
+                        <select class="form-select" id="typeId" name="typeId">
+                            <option value="0" selected hidden>Seleccione...</option>
                             <% types.forEach(type => { %>
                                 <option value="<%= type.id %>" <%= locals.errors? old.typeId == type.id && 'selected' : typeId == type.id && 'selected' %> ><%= type.name %></option>
                             <% }) %>
                         </select>
-                        <small class="text-danger ms-2">
+                        <small class="text-danger ms-2" id="msgError-type">
                             <%= locals.errors && (errors.type && errors.type.msg) %>
                         </small>
                     </div>
                     
                     <div class="form-input">
                         <label for="precio">Precio:</label>
-                        <input type="number" id="precio" placeholder="$ 0.00" name="price" value="<%= locals.errors? old.price && old.price : price %>" >
-                        <small class="text-danger ms-2">
+                        <input class="form-control" type="number" id="precio" placeholder="$ 0.00" name="price" value="<%= locals.errors? old.price && old.price : price %>" >
+                        <small class="text-danger ms-2" id="msgError-precio">
                             <%= locals.errors && (errors.price && errors.price.msg) %>
                         </small>
                     </div>
                     <div class="form-input">
                         <label for="promo">Descuento:</label>
-                        <input type="number" id="promo" placeholder="$ 0.00" name="discount" value="<%= locals.errors? old.discount && old.discount : discount %>">
+                        <input class="form-control" type="number" id="promo" placeholder="$ 0.00" name="discount" value="<%= locals.errors? old.discount && old.discount : discount %>">
+                        <small class="text-danger ms-2" id="msgError-promo">
+                        </small>
                     </div>
-                    <div class="form-foto mb-2" >
+                    
+                    <div class="form-input-textArea">
+                        <label for="description">Descripcion:</label>
+                        <textarea class="form-control" id="description" rows="4" cols="50" placeholder="Describe tu producto..." name="description"><%= locals.errors? old.description && old.description : description  %></textarea>
+                        <small class="text-danger ms-2" id="msgError-description">
+                            <%= locals.errors && (errors.description && errors.description.msg) %>
+                        </small>
+                    </div>
+                    
+                    <!-- <div class="form-foto mb-2" >
                         <label for="image" class="form-boton-foto" >Cargar imagen del producto</label>
                         <input hidden type="file"  name="image" id="image">
+                    </div> -->
+
+                    <div class=" col-12 d-flex justify-content-between">
+                            <div class="form-foto mb-2" >
+                                <label for="image" class="form-boton-foto" >Cargar imagen del producto</label>
+                                <input hidden type="file"  name="image" id="image">
+                            </div>
+                            <div class="form-submit-button">
+                                <button type="submit">Editar producto</button>
+                            </div>
                     </div>
-                    <div class="form-input-textArea">
-                        <label for="descripcion">Descripcion:</label>
-                        <textarea id="descripcion" rows="4" cols="50" placeholder="Describe tu producto..." name="description"><%= locals.errors? old.description && old.description : description  %></textarea>
-                        
-                    </div>
-                
-                    
-                    <div class="form-submit-button">
-                        <button type="submit">Editar producto</button>
+                    <div class="col-12 text-center mt-2">
+                        <small class="text-danger ms-2 text-center" id="msgError-empty" %>
+                        </small>
                     </div>
                 </form>
             </div>
         </section>
     </main>
-  
+    <script src="/js/productEdit.js"></script>
     <%- include('partials/footer') %>
 </body>
 
