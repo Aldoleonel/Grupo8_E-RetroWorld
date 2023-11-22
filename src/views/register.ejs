@@ -40,7 +40,7 @@
                     </div>
                     <div class="form-input">
                         <label for="phone">Teléfono:</label>
-                        <input type="text" id="phone" class="form-control <%= locals.errors && (errors.phone && 'is-invalid') %>"  name="phone" value="<%= locals.old && (old.phone && old.phone ) %>" >
+                        <input type="text" id="phone" class="form-control <%= locals.errors && (errormsgError-names.phone && 'is-invalid') %>"  name="phone" value="<%= locals.old && (old.phone && old.phone ) %>" >
                         <small class="text-danger ms-2">
                             <%= locals.errors && (errors.phone && errors.phone.msg) %>
                           </small>

@@ -9,44 +9,52 @@
                 <div class="avatar2">
                     <img class="avatar" src="/img/avatar/<%= image || 'default_avatar_.png' %> ">
                 </div>
+                
                 <div class="form-box">
                     <h2>Editar Perfil</h2>
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid rounded w-50" id="imgMain" src="" alt="">
+                      </div>
                     <form action="/users/userProfile/?_method=PUT" method="POST" enctype="multipart/form-data">
                         <div class="form-input">
                             <label for="firstName">Nombre:</label>
-                            <input type="text" id="firstName"
+                            <input  type="text" id="firstName"
                                 class="form-control <%= locals.errors && (errors.firstName && 'is-invalid') %>"
                                 name="firstName" value="<%= locals.old? old.firstName && old.firstName :  firstName %>">
-                            <small class="text-danger ms-2">
+                            <small class="text-danger ms-2" id="msgError-name">
                                 <%= locals.errors && (errors.firstName && errors.firstName.msg) %>
                             </small>
                         </div>
+                        
                         <div class="form-foto">
+                            
                             <label for="image" class="form-boton-foto">Subi tu foto</label>
                             <input hidden type="file" name="image" id="image">
                         </div>
                         <div class="form-input">
                             <label for="lastName">Apellido:</label>
-                            <input type="text" id="lastName"
+                            <input  type="text" id="lastName"
                                 class="form-control <%= locals.errors && (errors.lastName && 'is-invalid') %>"
                                 name="lastName" value="<%= locals.old? old.lastName && old.lastName :  lastName %>">
 
-                            <small class="text-danger ms-2">
+                            <small class="text-danger ms-2" id="msgError-surname">
                                 <%= locals.errors && (errors.lastName && errors.lastName.msg) %>
                             </small>
                         </div>
                         <div class="form-input">
                             <label for="birthdate">Fecha de nacimiento:</label>
-                            <input type="date" id="birthdate" name="birthdate" min="1980-01-01" max="2030-12-31"
+                            <input class="form-control" type="date" id="birthdate" name="birthdate" min="1980-01-01" max="2030-12-31"
                                 value="<%= locals.old? old.birthdate&& old.birthdate:  moment(birthdate).format("YYYY-MM-DD") %>">
-
+                                <small class="text-danger ms-2" id="msgError-birthday">
+                                    <%= locals.errors && (errors.birthdate && errors.birthday.msg) %>
+                                  </small>
                         </div>
                         <div class="form-input">
                             <label for="genreId">Género:</label>
                             <select id="genreId" name="genreId" class="">
                                 <% genres.forEach(genre => { %>
                                     <option value="<%= genre.id %>" <%=locals.old? (old.genreId && old.genreId==="masculino"
-                                    && 'selected' ) : genreId==='masculio' && 'selected' %>>Masculino</option>
+                                    && 'selected' ) : genreId==='masculino' && 'selected' %>>Masculino</option>
                                 <% }) %>
                                 
                                 <small class="text-danger ms-2">
@@ -57,9 +65,10 @@
                         <div class="form-input">
                             <label for="phone">Teléfono:</label>
                             <input type="text" id="phone"
-                                class="form-control <%= locals.errors && (errors.phone && 'is-invalid') %>" name="phone"
-                                value="<%= locals.old? old.phone && old.phone :  phone %>">
-                            <small class="text-danger ms-2">
+                                class="form-control <%= locals.errors && (errors.phone && 'is-invalid') %>"
+                                name="phone"
+                                value="<%= locals.old ? (old.phone ? old.phone : '') : phone %>">
+                            <small class="text-danger ms-2" id="msgError-phone">
                                 <%= locals.errors && (errors.phone && errors.phone.msg) %>
                             </small>
                         </div>
@@ -105,6 +114,10 @@
 
                 
             </main>
+            <script src="/js/profile.js"></script>
+            <script src="/js/productAddImg.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
     </body>
 
 </html>

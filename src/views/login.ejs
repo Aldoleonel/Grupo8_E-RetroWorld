@@ -10,17 +10,23 @@
                     <p>Mi Cuenta</p>
                 </div>
                 <div class="login-box">
-                    <form action="/users/login" method="POST">
+                    <form action="/users/login" method="POST" id="formAdd">
                         <p class="login__ingresar">ingresar</p>
                         <p class="login-correo-box">
                             <label>Correo electronico: *</label>
-                            <input type="email" name="email">
+                            <div>
+                            <input class="form-control" type="email" name="email" id="email">
+                            <small class="text-danger" name="email" id="msgError-email-text"></small>
+                            </div>
+                         
+                                
                         </p>
                         <p class="login-contraseña-box">
                             <label>Contraseña: *</label>
-                            <input type="password" name="password">
+                            <input class="form-control" type="password" name="password" id="password">
+                            <small class="text-danger" id="msgError-password"></small>
                             <% if (locals.errors) { %>
-                                <small class="text-danger">Credenciales incorrectas !</small>
+                                <small class="text-danger" >Credenciales incorrectas !</small>
                                 <% } %>
                         </p>
                        
@@ -98,7 +104,7 @@
                 </div>
             </footer>
 
-
+            <script src="/js/login.js"></script>
 
     </body>
 
