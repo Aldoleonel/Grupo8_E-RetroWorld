@@ -97,8 +97,41 @@ window.onload = async function (e) {
             break;
     }
 });
+$('image').addEventListener("change",function(e) {
+  switch (true) {
+      case !(/.(gif|jpeg|jpg|png)$/i.test(this.value)):
+          $('msgError-image').innerHTML = "Error, los formatos de imagenes aceptados son (gif | jpeg | jpg | png)";
+              this.classList.add("is-invalid")
+        break;
+  default:
+          $('msgError-image').innerHTML = null;
+          this.classList.remove("is-invalid");
+          this.classList.add("is-valid");
+          break;
+          
+  }
+  
+})
 
+$('formProfile').addEventListener('submit', function(e){
+  console.log('exito!!!!')
+  e.preventDefault();
 
+  const elementsForm = $('formProfile').elements;
+  // console.log(elementsForm)
+  let error = false
 
-    
-};
+  for (let i = 0; i < elementsForm.length - 2; i++) {
+      
+      if(!elementsForm[i].value.trim() || elementsForm[i].classList.contains('is-invalid')){
+          elementsForm[i].classList.add('is-invalid')
+          console.log(elementsForm[i]);
+          $('msgError-empty').innerHTML = "Hay errores al actualizar los datos"
+          error = true
+      }
+  }
+  console.log(error)
+  !error && this.submit()
+  })
+
+}

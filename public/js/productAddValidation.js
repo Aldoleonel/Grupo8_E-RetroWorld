@@ -99,6 +99,24 @@ window.onload = function () {
                 break;
         }
     });
+    $('image').addEventListener("change",function(e) {
+        switch (true) {
+            case !(/.(gif|jpeg|jpg|png)$/i.test(this.value)):
+                $('msgError-image').innerHTML = "Error, los formatos de imagenes aceptados son (gif | jpeg | jpg | png)";
+                    this.classList.add("is-invalid");
+                break;
+            
+        default:
+                $('msgError-image').innerHTML = null;
+                this.classList.remove("is-invalid");
+                this.classList.add("is-valid");
+                break;
+                
+        }
+        
+    })
+    
+        
     
     $('formAdd').addEventListener('submit', function(e){
            e.preventDefault();
@@ -115,8 +133,7 @@ const msgErrors = []
            
             const elementInput = elementsForm[i];
             if (
-                elementInput.id === 'discount' ||
-                elementInput.type === 'file'
+                elementInput.id === 'discount'
             ) {
                 continue;
             }
