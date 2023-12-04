@@ -56,11 +56,11 @@
 }
 
 .form-box .form-input {
-    flex-basis: 48%; 
+    flex-basis: 47%; 
     margin-bottom: 15px;
     margin-right: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 
@@ -179,6 +179,11 @@
 
 
 @media (min-width: 481px) {
+    .form-box form {
+        display: flex;
+        flex-direction: row;
+    }
+    
     .form-box {
         margin: 50px;
         display: flex;
