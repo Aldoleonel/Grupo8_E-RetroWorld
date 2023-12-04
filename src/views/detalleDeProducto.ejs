@@ -27,7 +27,7 @@
                     </div>
                     <div class="product-info-price">
                         <p>$ <%= producto.price %></p>
-                        <p>o 6 x $<%= producto.price / 6 %> <span>c/iva</span></p>
+                        <p>o 6 x $<%= toThousand((producto.price / 6).toFixed(0)) %> <span>c/iva</span></p>
                     </div>
                 </div>
             </div>

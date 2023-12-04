@@ -11,7 +11,7 @@
             </tr>
         </thead>
         <tbody>
-            <% products.forEach(({id,name, price, discount, description, image}, index)=> { %>
+            <% products.forEach(({id,name, price, discount, description, image,updatedAt}, index)=> { %>
                 <tr>
                     <th scope="row">
                         <%= index + 1 %>
@@ -58,8 +58,7 @@
                                                     <div class="card__content">
                                                         <div class="card-body">
                                                             <p class="card-text text-white"><%= description %></p>
-                                                            <p class="card-text text-white"><small class="">Last
-                                                                    updated 3 mins ago</small></p>
+                                                            <p class="card-text text-white">Última actualización: <br> <%= moment(updatedAt).format('DD-MM-YYYY');  %></p>
                                                         </div>
                                                     </div>
                                                 </div>

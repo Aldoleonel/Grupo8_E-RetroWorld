@@ -8,6 +8,7 @@ const path = require('path');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../database/models')
 const users = readJSON('usersDB');
+const moment = require('moment')
 
 module.exports = {
     index : (req,res) => {
@@ -36,7 +37,8 @@ module.exports = {
                 return res.render('admin',{
                     products,
                     category: categories,
-                    users
+                    users,
+                    moment 
                 })
             })
             .catch(error => console.log(error))

@@ -7,7 +7,7 @@
         
             <section class="form__registro">
                 <div class="avatar2">
-                    <img class="avatar" src="/img/avatar/<%= image || 'default_avatar_.png' %> ">
+                    <img class="avatar" id="imgAvatar" src="/img/avatar/<%= image || 'default_avatar_.png' %> ">
                 </div>
                 
                 <div class="form-box">
@@ -15,7 +15,7 @@
                     <div class="d-flex flex-column">
                         <img class="img-fluid rounded w-50" id="imgMain" src="" alt="">
                       </div>
-                    <form action="/users/userProfile/?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <form id="formProfile" action="/users/userProfile/?_method=PUT" method="POST" enctype="multipart/form-data">
                         <div class="form-input">
                             <label for="firstName">Nombre:</label>
                             <input  type="text" id="firstName"
@@ -26,10 +26,13 @@
                             </small>
                         </div>
                         
-                        <div class="form-foto">
+                        <div class="form-foto d-flex flex-column">
                             
                             <label for="image" class="form-boton-foto">Subi tu foto</label>
                             <input hidden type="file" name="image" id="image">
+                            <small class="text-danger m-3" id="msgError-image">
+                                <%= locals.errors && (errors.image && errors.image.msg) %>
+                              </small>
                         </div>
                         <div class="form-input">
                             <label for="lastName">Apellido:</label>
@@ -47,14 +50,15 @@
                                 value="<%= locals.old? old.birthdate&& old.birthdate:  moment(birthdate).format("YYYY-MM-DD") %>">
                                 <small class="text-danger ms-2" id="msgError-birthday">
                                     <%= locals.errors && (errors.birthdate && errors.birthday.msg) %>
+                                    
                                   </small>
                         </div>
                         <div class="form-input">
                             <label for="genreId">Género:</label>
                             <select id="genreId" name="genreId" class="">
+                                <option value="0" selected hidden>Seleccione...</option>
                                 <% genres.forEach(genre => { %>
-                                    <option value="<%= genre.id %>" <%=locals.old? (old.genreId && old.genreId==="masculino"
-                                    && 'selected' ) : genreId==='masculino' && 'selected' %>>Masculino</option>
+                                    <option value="<%= genre.id %>"<%= locals.errors? old.genreId == genre.id && 'selected' : genreId == genre.id && 'selected' %>><%= genre.name %></option>
                                 <% }) %>
                                 
                                 <small class="text-danger ms-2">
@@ -115,7 +119,7 @@
                 
             </main>
             <script src="/js/profile.js"></script>
-            <script src="/js/productAddImg.js"></script>
+            <script src="/js/profileImage.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
     </body>

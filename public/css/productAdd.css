@@ -153,8 +153,12 @@
     font-size: 17px;
     font-weight: bold;
 }
-
-
+#imgMain{
+    display: flex;
+    justify-content: center;
+    align-self:center;
+    max-width: 50%;
+}
 @media (min-width: 481px) {
     .form-box2 {
         margin: 50px;
@@ -191,6 +195,7 @@
         
         
     }
+    
     .form-foto {
         display: flex;
         width: 48%;

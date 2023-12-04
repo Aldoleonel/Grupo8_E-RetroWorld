@@ -5,11 +5,13 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
 const methodOverride = require('method-override');
+const paginate = require('express-paginate');
 
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
+const apiRouter = require('./routes/apis.routes')
 
 const cookieCheck = require('./middlewares/cookieCheck');
 const userSessionCheck = require('./middlewares/userSessionCheck');
@@ -21,6 +23,8 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -28,6 +32,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'..','public')));
 
 app.use(methodOverride('_method'));
+
+/*api paginate*/ 
+app.use(paginate.middleware(8,50));
+/**/
+
 app.use(session({
   secret: 'secretaso',
   resave: false,
@@ -37,10 +46,11 @@ app.use(session({
 app.use(cookieCheck);
 app.use(userSessionCheck);
 
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products',productsRouter);
-
+app.use('/api',apiRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

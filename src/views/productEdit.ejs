@@ -10,6 +10,9 @@
         <section class="form__registro">
             <div class="form-box">
                 <h2>Editar Producto</h2>
+                <div class="d-flex flex-column">
+                    <img class="img-fluid rounded" id="imgMain" src="" alt="">
+                  </div>
                 <form id="formEdit" action="/products/edit/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="form-input">
                         <label for="name">Titulo:</label>
@@ -83,9 +86,12 @@
                     </div> -->
 
                     <div class=" col-12 d-flex justify-content-between">
-                            <div class="form-foto mb-2" >
+                            <div class="form-foto mb-2 d-flex flex-column" >
                                 <label for="image" class="form-boton-foto" >Cargar imagen del producto</label>
                                 <input hidden type="file"  name="image" id="image">
+                                <small class="text-danger m-3" id="msgError-image">
+                                    <%= locals.errors && (errors.image && errors.image.msg) %>
+                                  </small>
                             </div>
                             <div class="form-submit-button">
                                 <button type="submit">Editar producto</button>
@@ -100,6 +106,7 @@
         </section>
     </main>
     <script src="/js/productEdit.js"></script>
+    <script src="/js/productAddImg.js"></script>
     <%- include('partials/footer') %>
 </body>
 
