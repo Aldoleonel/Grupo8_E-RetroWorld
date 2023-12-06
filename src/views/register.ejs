@@ -11,7 +11,7 @@
         <section class="form__registro">
             <div class="form-box">
                 <h2>Crea tu cuenta</h2>
-                <form action="/users/register" method="POST" id="form-register">
+                <form class="form" action="/users/register" method="POST" id="form-register">
                     <div class="form-input">
                         <label for="firstName">Nombre:</label>
                         <input type="text" id="firstName" class="form-control <%= locals.errors && (errors.firstName && 'is-invalid') %>"  name="firstName" value="<%= locals.old && (old.firstName && old.firstName ) %>" >
@@ -81,15 +81,21 @@
                             <%= locals.errors && (errors.acceptTerms && errors.acceptTerms.msg) %>
                           </small>
                     </div>
-                    <small class="text-danger ms-2" id="msgError-empty" %>
-                    </small>
-                    <div class="form-submit-button">
+                    <div class="form-submit-button d-flex flex-column">
+                        
+                        <div>
                         <button type="submit">Crear cuenta</button>
+                        </div>
+
                     </div>
+                    
                 </form>
                 <div class="form-link">
-                    <a class="form__link" href="#">¿Ya tienes cuenta? Ingresa</a>
+                    <a class="form__link" href="/users/login">¿Ya tienes cuenta? Ingresa aqui</a>
                 </div>
+                <div>
+                    <small class="text-danger ms-2" id="msgError-empty" %></small>
+                    </div>
             </div>
         </section>
     </main>

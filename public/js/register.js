@@ -176,21 +176,30 @@ window.onload = function () {
 
     $('form-register').addEventListener('submit', function(e){
         e.preventDefault();
+        const formregister = document.querySelector('.form')
+        const elementsForm = formregister.elements; 
 
-        const elementsForm = $('form-register').elements;
-        let error = false
+     let error = false
 
-        for (let i = 0; i < elementsForm.length - 1; i++) {
-            
-            if(!elementsForm[i].value.trim() || elementsForm[i].classList.contains('is-invalid')){
-                elementsForm[i].classList.add('is-invalid')
-                $('msgError-empty').innerHTML = "Hay errores en la carga de datos"
-                error = true
-            }
-        }
+     
 
-        !error && this.submit()
-    
+const msgErrors = []
 
-    })
+     for (let i = 0; i < elementsForm.length - 2; i++) {
+        
+         
+         
+         if(!elementsForm[i].value || elementsForm[i].classList.contains('is-invalid')){
+             elementsForm[i].classList.add('is-invalid')
+             $('msgError-empty').innerHTML = "<h6>los campos no pueden estar vacios</h6>"
+             error = true
+             msgErrors.push(`El campo ${elementsForm[i].name} no puede quedar vacio`)
+         }
+       
+      }
+      console.log(msgErrors)
+      !error && this.submit()
+ 
+
+ })
 }

@@ -171,6 +171,10 @@
         box-shadow: inset 0px 0px 3px #fff, inset 0px 0px 20px #3D1673, 0px 0px 3px #fff;
         
     }
+    .form-foto {
+        width: 48%;
+        margin-top: 25px;
+    }
 }
 
 @media (min-width: 769px) {

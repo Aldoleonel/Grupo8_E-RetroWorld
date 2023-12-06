@@ -2,8 +2,8 @@ const $ = id => document.getElementById(id);
 
 window.onload = function () {
     console.log('login.js success!!');
-
-    $('email').focus();    
+    
+      
     $('email').addEventListener('blur', function(e) {
         switch (true) {
             case !this.value.trim():
@@ -40,7 +40,37 @@ window.onload = function () {
         $('msgError-password').innerHTML = null;
         this.classList.remove("is-invalid");
     });
+    
+    $('login').addEventListener('submit', function(e){
+        e.preventDefault();
+        const login = document.querySelector('.form')
+        const elementsForm = login.elements; 
 
+     let error = false
+
+     
+
+const msgErrors = []
+
+     for (let i = 0; i < elementsForm.length - 2; i++) {
+        
+         
+         
+        
+         
+         if(!elementsForm[i].value || elementsForm[i].classList.contains('is-invalid')){
+             elementsForm[i].classList.add('is-invalid')
+             $('msgError-empty').innerHTML = "<h6>Los campos no pueden estar vacios!!</h6>"
+             error = true
+             msgErrors.push(`El campo ${elementsForm[i].name} no puede quedar vacio`)
+         }
+       
+      }
+      console.log(msgErrors)
+      !error && this.submit()
+ 
+
+ })
 
     
 

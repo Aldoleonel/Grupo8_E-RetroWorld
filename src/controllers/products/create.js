@@ -20,7 +20,7 @@ module.exports = (req, res) => {
     })
         .then(product=>{
             
-            res.redirect('products')
+            res.redirect('/admin')
         }).catch(error=>console.log(error))
     }else {
       

@@ -23,8 +23,8 @@
    
 }
 .avatar {
-    height:100px;
-    width: 100px;
+    height:160px;
+    width: 160px;
     border-radius: 50%;
     
     top: 150px;
@@ -198,9 +198,10 @@
     }
     
     .avatar{
-        width: 170px;
+        width: 183px;
         margin-top: 15px;
     }
+    
 }
 
 @media (min-width: 769px) {
