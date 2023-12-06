@@ -55,6 +55,12 @@
                     <button type="button">comprar</button>
                 </div>
             </div>
+            <div class="detalleProducto__container--box-description">
+                <h4>Descripción del Producto : <%= producto.name %> </h4>
+                <p>
+                    <%= producto.description %>
+                </p>
+            </div>
             <div class="detalleProducto__container--box-delivery">
                 <h4>Metodos de envío y retiro</h4>
                 <div class="box-delivery box-delivery-detail">
@@ -73,7 +79,7 @@
                     <i class="fa-solid fa-store"></i>
                     <div class="box-delivery-points-text">
                         <p>Retiro en nuestro local</p>
-                        <span>Retira tu compra en uno de nuestros locales</span>
+                        <p>Retira tu compra en uno de nuestros locales</p>
                         <a href="#">ver sucursales</a>
                     </div>
                 </div>
@@ -87,12 +93,7 @@
                     <a href="#"><img src="/img/whatsapp-icon.png" alt=""></a>
                 </div>
             </div>
-            <div class="detalleProducto__container--box-description">
-                <h4>Descripción del Producto : <%= producto.name %> </h4>
-                <p>
-                    <%= producto.description %>
-                </p>
-            </div>
+            
         </div>
     </main>
     <%- include('partials/footer') %>
