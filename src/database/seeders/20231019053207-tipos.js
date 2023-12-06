@@ -7,14 +7,14 @@ module.exports = {
       
       await queryInterface.bulkInsert('Types', [{
         name: "Consola",
-        createdAt: new Date,
-        updatedAt: new Date
+        createdAt: new Date(),
+        updatedAt: new Date()
         
       },
       {
         name: "Repuesto",
-        createdAt: new Date,
-        updatedAt: new Date
+        createdAt: new Date(),
+        updatedAt: new Date()
         
       }
       

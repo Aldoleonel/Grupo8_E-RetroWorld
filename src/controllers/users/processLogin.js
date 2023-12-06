@@ -25,6 +25,12 @@ module.exports = (req,res) => {
 
             req.body.remember !== undefined && res.cookie('secretaso',req.session.userLogin,{
                 maxAge : 1000 * 60 * 5
+            });
+            db.Order.findOne({
+                where : {
+                    userId : user.id,
+                    statusId : 1
+                }
             })
             
             

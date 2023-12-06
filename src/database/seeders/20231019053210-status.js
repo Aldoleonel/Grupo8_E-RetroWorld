@@ -7,13 +7,13 @@ module.exports = {
       [
         {
           name : 'open',
-          createdAt : new Date,
-          updatedAt : new Date
+          createdAt : new Date(),
+          updatedAt : new Date()
         },
         {
           name : 'close',
-          createdAt : new Date,
-          updatedAt : new Date
+          createdAt : new Date(),
+          updatedAt : new Date()
         }
       ],
       {}

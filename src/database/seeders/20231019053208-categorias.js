@@ -3,8 +3,8 @@ const categorias = ["Playstation","Xbox","Nintendo","Arcade"];
 const categoriasDB = categorias.map(categoria => {
   return {
     name : categoria,
-    createdAt : new Date,
-    updatedAt : new Date,
+    createdAt : new Date(),
+    updatedAt : new Date(),
   }
   }
 )
