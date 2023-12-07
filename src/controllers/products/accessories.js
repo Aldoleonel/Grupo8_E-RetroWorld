@@ -8,7 +8,7 @@ module.exports=(req,res)=>{
         where: { typeId: '2' }
     })
     .then(consoles => {
-        console.log(consoles);
+        
         return res.render('consoles', {
             consoles,
             toThousand

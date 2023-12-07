@@ -14,7 +14,7 @@ module.exports = {
     index : (req,res) => {
         db.Product.findAll()
         .then(products => {
-            console.log(products);
+            //console.log(products);
             return res.render('index',{
                         productsVisited : products.filter(product => product.sectionId === 2),
                         productsSale : products.filter(product => product.sectionId === 1),

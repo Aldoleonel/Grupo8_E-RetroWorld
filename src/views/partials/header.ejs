@@ -16,7 +16,14 @@
           <% } else {%>
             <a href="/users/login"><i class="fa-regular fa-user"></i><span>Login</span></a>
           <% } %>
-          <a href="/cart"><i class="fa-solid fa-cart-shopping"></i><span>Mi Carrito</span></a> 
+          <% if (locals.userLogin && userLogin.roleId == 1) { %>
+            <a href="#" id="btn-cart" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="fa-solid fa-cart-shopping"></i><span>Mi Carrito</span></a> 
+              <span id="show-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" hidden>
+                
+              </span>
+          <% } %>
+          
         </div> 
       </div> 
     </div>  
@@ -37,7 +44,48 @@
     <p><a href="/products/accessories">Repuestos y accesorios</a></p>
     
   </div>
-
+  
+  
   <script src="/js/searchValidation.js"></script>
   <script src="/js/burguerMenu.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </header>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de Compras</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div  class="modal-body">
+        <div id="cart-body">
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar comprando</button>
+        <button type="button"id="btn-clearCart" onclick="clearCart()" class="btn btn-danger">Vaciar carrito</button>
+        <button type="button" class="btn btn-primary">Finalizar compra</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+var x = document.getElementById("myTopnav");
+if (x.className === "topnav") {
+  x.className += " responsive";
+} else {
+  x.className = "topnav";
+}
+} 
+</script>
