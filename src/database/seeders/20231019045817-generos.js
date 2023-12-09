@@ -6,14 +6,14 @@ module.exports = {
    
       await queryInterface.bulkInsert('Genres', [{
         name: "Masculino",
-        createdAt: new Date,
-        updatedAt: new Date
+        createdAt: new Date(),
+        updatedAt: new Date()
        
       },
       {
         name: "Femenino",
-        createdAt: new Date,
-        updatedAt: new Date
+        createdAt: new Date(),
+        updatedAt: new Date()
        
       }
     ]

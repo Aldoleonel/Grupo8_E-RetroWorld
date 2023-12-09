@@ -14,8 +14,8 @@ module.exports = {
         password: "$2a$10$.gr3uo9gr2F45MaHkNBuZOCFz6IXLJhPcJPBigrMvqg7VwH9fgqe.",
         roleId: 1,
         image: null,
-        createdAt: new Date,
-        updatedAt: new Date
+        createdAt: new Date(),
+        updatedAt: new Date()
       
       },
       {
@@ -28,8 +28,8 @@ module.exports = {
         password: "$2a$10$.gr3uo9gr2F45MaHkNBuZOCFz6IXLJhPcJPBigrMvqg7VwH9fgqe.",
         roleId: 2,
         image: null,
-        createdAt: new Date,
-        updatedAt: new Date
+        createdAt: new Date(),
+        updatedAt: new Date()
       
       }
       ,
@@ -43,8 +43,8 @@ module.exports = {
         password: "$2a$10$3UQdqOGXcAXz2OsDDiWHVuDPlKWgxYfIOb3D9ZruuUDpY/7i/JO..",
         roleId: 1,
         image: null,
-        createdAt: new Date,
-        updatedAt: new Date
+        createdAt: new Date(),
+        updatedAt: new Date()
       
       }
       ,
@@ -58,8 +58,8 @@ module.exports = {
         password: "$2a$10$MSegsMPddBWdzj12PS1XtuE9SIIfV8vfNe2sw2Yh1mR0GihWbjKeG",
         roleId: 1,
         image: null,
-        createdAt: new Date,
-        updatedAt: new Date
+        createdAt: new Date(),
+        updatedAt: new Date()
       
       }
     ],

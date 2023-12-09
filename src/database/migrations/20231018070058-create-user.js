@@ -31,7 +31,7 @@ module.exports = {
         
       },
       phone: {
-        type: Sequelize.STRING(15),
+        type: Sequelize.STRING,
         allowNull : false
       },
       image: {
