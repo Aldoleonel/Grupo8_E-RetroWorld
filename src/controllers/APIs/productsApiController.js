@@ -1,5 +1,7 @@
+const createError = require('http-errors');
 const paginate = require('express-paginate')
-const {getAllProducts, getProductById} = require("../../services/products.services")
+const {getAllProducts, getProductById, createProduct, updateProduct, deleteProduct} = require("../../services/products.services");
+const { validationResult } = require('express-validator');
 
 module.exports = {
     listProducts : async (req,res) => {
@@ -64,24 +66,96 @@ module.exports = {
     },
     createProduct : async (req,res) => {
         try {
+           const errors = validationResult(req);
+
+           
+           if(!errors.isEmpty()){
+               let errorsMessages = {};
+               let objetErrors = errors.mapped()
+
+                for (const key in objetErrors) {
+                //  errorsMessages.push(objetErrors[key].msg)
+                    errorsMessages = {
+                        ...errorsMessages,
+                        [objetErrors[key]['path']]:objetErrors[key]['msg']
+
+                    }
+            }
+               let error = new Error()
+               error.status = 400
+               error.message = errorsMessages
+
+               throw error
+            }
+
+            const data = {
+                ...req.body,
+                image : req.file ? req.file.filename : null
+            }
+
+
+            const {id} = await createProduct(data);
+
+            const product = await getProductById(id)
+
+            return res.status(200).json({
+                ok : true,
+                data : {
+                    ...product.dataValues,
+                    image :`${req.protocol}://${req.get(`host`)}/img/products/${product.image}`
+                }
+            })
             
         } catch (error) {
-            
+            return res.status(error.status || 500).json({
+                ok: false,
+                status : error.status || 500,
+                error : error.message || 'Lo lamento,hubo un error'
+            })
+
         }
     },
     updateProduct : async (req,res) => {
         try {
-            
-        } catch (error) {
-            
-        }
+            const data = {
+                ...req.body,
+                image : req.file ? req.file.filename : null
+            }
+            const productUpdated = await updateProduct(req.params.id, data);
+             
+            return res.status(200).json({
+             ok : true,
+             message : 'Producto actualizado con éxito',
+             data : productUpdated
+         })
+ 
+         } catch (error) {
+             console.log(error)
+             return res.status(error.status || 500).json({
+                 ok : false,
+                 status :error.status || 500,
+                 error : error.message || 'Upss, hubo un error'
+             })
+         }
     },
     deleteProduct : async (req,res) => {
         try {
-            
-        } catch (error) {
-            
-        }
+            await deleteProduct(req.params.id);
+ 
+             return res.status(200).json({
+                 ok : true,
+                 message : 'Producto eliminado con éxito',
+                 
+             }) 
+             
+         } catch (error) {
+             console.log(error)
+             return res.status(error.status || 500).json({
+                 ok : false,
+                 status :error.status || 500,
+                 error : error.message || 'Upss, hubo un error'
+             })
+         }
     }
 
 }

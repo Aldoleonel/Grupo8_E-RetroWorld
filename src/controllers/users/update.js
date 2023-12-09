@@ -35,7 +35,7 @@ module.exports = (req, res) => {
                     }else{
                         res.locals.userLogin.firstName = firstName;
                     }
-                    return res.redirect('/');
+                    return res.redirect('/users/UserProfile');
                 })
             })
             .catch(error => console.log(error))

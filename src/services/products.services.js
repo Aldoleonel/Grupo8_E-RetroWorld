@@ -50,7 +50,17 @@ const getProductById = async (id) => {
         {
             association :'category',
             attributes : ['name']
-        }
+        },
+        {
+            association :'section',
+            attributes : ['name']
+        },
+        {
+            association :'type',
+            attributes : ['name']
+        },
+        
+
         ] 
        })
 
@@ -71,7 +81,114 @@ const getProductById = async (id) => {
         };
     }
 }
+
+const createProduct = async(data) => {
+    try {
+        
+        const newProduct = await db.Product.create(data)
+
+        return newProduct
+
+    } catch (error) {
+        console.log(error);
+        throw {
+            status: error.status || 500,
+            message : error.message || 'Error en el servicio de productos'
+        };
+    }
+}
+
+const updateProduct = async (id, dataProduct) => {
+    try {
+        const {name, price, description,image, sectionId, categoryId, typeId} = dataProduct
+
+        const product = await db.Product.findByPk(id,{
+            attributes : {
+                exclude : ["createdAt","updatedAt"]
+            },
+            include : [
+            {
+              association : 'section',
+              attributes : ['name']  
+            },
+            {
+                association : 'type',
+                attributes : ['name']  
+              },
+            {
+                association : 'category',
+                attributes : ['name']  
+              }
+  
+
+        ]
+        });
+
+        if (!product) {
+            throw {
+                status : 400,
+                message : 'No existe ningún producto con ese ID'
+            };
+        }
+        
+        
+        product.name = name?.trim()|| product.name;
+        product.prince = price || product.price;
+        product.description = description.trim()|| product.description;
+        product.image = image || product.image;
+        product.sectionId = sectionId || product.sectionId;
+        product.categoryId = categoryId || product.categoryId;
+        product.typeId = typeId || product.typeId;
+
+        await product.save();
+
+        return product
+
+    } catch (error) {
+        console.log(error);
+        throw {
+            status : error.status || 500,
+            message : error.message || 'ERROR en el servicio'
+        }
+    }
+}
+
+const deleteProduct = async (id) => {
+    try {
+        if (isNaN(id)) {
+            throw {
+                status : 400,
+                message : 'ID incorrecto'
+            };
+        }
+
+        const product = await db.Product.findByPk(id);
+        if (!product) {
+            throw {
+                status : 400,
+                message : 'No hay una ningún producto con ese ID'
+            };
+        }
+
+        await product.destroy()
+
+        return null
+
+
+        
+    } catch (error) {
+        console.log(error);
+        throw {
+            status : error.status || 500,
+            message : error.message || 'ERROR en el servicio'
+        }
+    }
+}
+
 module.exports = {
     getAllProducts,
-    getProductById
+    getProductById,
+    createProduct,
+    updateProduct,
+    deleteProduct
 }
