@@ -1,4 +1,5 @@
 const $ = (id) => document.getElementById(id);
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const showMessageInfo = (msg) => {
   const Toast = Swal.mixin({
@@ -86,7 +87,7 @@ const addItemToCart = async (quantity, product) => {
   } catch (error) {
     Swal.fire({
       title: "Upss",
-      text: error.message,
+      html: 'Debes <a href="/users/login" style="color: blue;">Iniciar sesión</a> para agregar este producto al carrito',
       icon: "error",
     });
   }
