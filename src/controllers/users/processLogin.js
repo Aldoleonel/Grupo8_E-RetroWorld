@@ -63,7 +63,7 @@ module.exports = (req,res) => {
                         total : 0,
                         userId : user.id,
                         status : 1
-                    }).then(oreder => {
+                    }).then(order => {
                         req.session.cart = {
                             orderId : order.id,
                             total : order.total,
