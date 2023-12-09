@@ -1,4 +1,6 @@
+const { unlinkSync, existsSync } = require("fs");
 const db = require('../database/models');
+const { execSync } = require("child_process");
 
 const getAllProducts = async(limit, offset) => {
     try {
@@ -170,7 +172,17 @@ const deleteProduct = async (id) => {
             };
         }
 
-        await product.destroy()
+        const imagePath = `./public/img/products/${product.image}`;
+        const imageExists = await existsSync(imagePath)
+
+        if (imageExists) {
+            await unlinkSync(imagePath);
+        }
+
+
+        await product.destroy({
+            
+        })
 
         return null
 
