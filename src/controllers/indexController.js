@@ -29,7 +29,9 @@ module.exports = {
         // console.log(products);
         const categories = db.Category.findAll();
         const products = db.Product.findAll();
-        const users = db.User.findAll();
+        const users = db.User.findAll({
+            include:['role']
+        });
 
         Promise.all([categories, products, users])
             .then(([categories,products, users]) => {

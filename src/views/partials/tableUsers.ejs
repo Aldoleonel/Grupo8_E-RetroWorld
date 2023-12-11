@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody>
-            <% users.forEach(({id, firstName, lastName, email, category, image}, index)=> { %>
+            <% users.forEach(({id, firstName, lastName, email, category, image, role}, index)=> { %>
                 <tr>
                     <th scope="row">
                         <%= index + 1 %>
@@ -38,6 +38,10 @@
                                     class="fas fa-edit"></i></a>
                             <a class="btn btn-sm btn-danger" href="/categories/remove/<%= id %>"><i
                                     class="fas fa-trash"></i></a>
+                            <div class="form-check form-switch">
+                                        <input class="form-check-input" value="<%= role.name %>" type="checkbox" role="switch" id="flexSwitchCheckChecked<%= id %>" onclick="modifyState('flexSwitchCheckChecked<%= id %>', '<%=id%>')"   <%= role.name == 'Admin' && 'checked' %> >
+                                        <!-- <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label> -->
+                            </div>
                         </div>
                     </td>
                 </tr>
