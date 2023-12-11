@@ -31,7 +31,7 @@ const showProductInCart = (products, total) => {
   if (cartTable) {
     cartTable.innerHTML = ''; // Limpiar el contenido antes de actualizarlo
     products.forEach(({ id, image, name, price, quantity, discount }) => {
-      //console.log(id, 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
+      console.log(id, 'NNNNNNNNNNNNNNNNNNNNNNNNNNNNNN');
       cartTable.innerHTML += `
         <tr>
           <th scope="row"><img src="/img/products/${image}" alt="" width=100/></th>

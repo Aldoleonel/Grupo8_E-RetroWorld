@@ -1,5 +1,6 @@
 const express = require('express');
-const { checkEmail } = require('../controllers/APIs/usersApiController');
+const { checkEmail,getAllUsers, changeRole } = require('../controllers/APIs/usersApiController');
+
 const { listProducts, showProduct, createProduct, updateProduct, deleteProduct } = require('../controllers/APIs/productsApiController');
 const { getCart, addItemToCart, removeItemToCart, deleteItemToCart, clearCart } = require('../controllers/APIs/cartApisController');
 const { getAllCategory, totalProductInDB } = require('../controllers/APIs/productApisController');
@@ -19,9 +20,9 @@ router
     .delete('/cart',removeItemToCart)
     .delete('/cart/item', deleteItemToCart)
     .delete('/cart/all',clearCart)
-
+    .get('/users', getAllUsers)
     .get('/categories', getAllCategory)
-
+    .get('/users/:id', changeRole)
     .get('/products/count',totalProductInDB)
 
 

@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody>
-            <% users.forEach(({id, firstName, lastName, email, category, image}, index)=> { %>
+            <% users.forEach(({id, firstName, lastName, email, category, image, roleId}, index)=> { %>
                 <tr>
                     <th scope="row">
                         <%= index + 1 %>
@@ -33,11 +33,20 @@
                         <%= image %>
                     </td>
                     <td>
-                        <div class="d-flex gap-2">
-                            <a class="btn btn-sm btn-success" href="/categories/edit/<%= id %>"><i
-                                    class="fas fa-edit"></i></a>
-                            <a class="btn btn-sm btn-danger" href="/categories/remove/<%= id %>"><i
-                                    class="fas fa-trash"></i></a>
+                        <div class="switch">
+                            <input type="checkbox" id="switch-toggle" name="switch-toggle" class="switch-checkbox" />
+                            <label for="switch-toggle" class="switch-label">
+                              <span class="switch-inner"></span>
+                              <span class="switch-switch"></span>
+                            </label>
+                          </div>
+                          
+                          <form id="changeRoleForm" method="POST" action="/api/users/change-role">
+                            <!-- Aquí incluirías cualquier otro campo necesario -->
+                            <input type="hidden" name="userId" value="1" /> <!-- Valor de ejemplo, cambiar según tu lógica -->
+                            <input type="hidden" name="newRoleId" value="2" /> <!-- Valor de ejemplo, cambiar según tu lógica -->
+                            <button type="submit" id="submitBtn" style="display: none;">Cambiar Rol</button>
+                          </form>
                         </div>
                     </td>
                 </tr>
@@ -45,3 +54,11 @@
         </tbody>
     </table>
 </div>
+
+
+
+    
+    <script>
+        // JavaScript
+        
+        </script>
