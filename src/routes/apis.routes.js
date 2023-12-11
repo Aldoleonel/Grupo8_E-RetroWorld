@@ -19,7 +19,7 @@ router
     .delete('/cart',removeItemToCart)
     .delete('/cart/item', deleteItemToCart)
     .delete('/cart/all',clearCart)
-    .get('/users', getAllUsers)
+    // .get('/users', getAllUsers)
     .get('/categories', getAllCategory)
     .get('/users/:id', changeRole)
     .get('/products/count',totalProductInDB)
