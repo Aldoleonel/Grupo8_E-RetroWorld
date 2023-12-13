@@ -24,7 +24,7 @@ const getAllCategory = async () => {
        
         throw {
             status: error.status || 500,
-            message : error.message || 'Error en el servicio de categoría'
+            message : error.message || 'Error en el servicio de categorías'
         };
     }
 }
@@ -60,7 +60,7 @@ const getCategoryById = async (id) => {
         console.log(error);
         throw {
             status: error.status || 500,
-            message : error.message || 'Error en el servicio de categoría'
+            message : error.message || 'Error en el servicio de categorías'
         };
     }
 }

@@ -6,15 +6,28 @@ const { totalProductInDB } = require('../controllers/APIs/productApisController'
 const upload = require('../middlewares/upload');
 const productApiValidator = require('../validations/productApiValidator');
 const { listCategory, showCategory, createCategory, updateCategory, deleteCategory } = require('../controllers/APIs/categoryApiController');
+const { listTypes } = require('../controllers/APIs/typeProductApiController');
+const { listSections } = require('../controllers/APIs/sectionProductApiController');
 const router = express.Router();
 
 
 
-/* /apis/ */
+/* /APIS/ */
 
-/*Usuarios*/ 
+                /*USUARIOS*/ 
+
 router
+
     .get('/check-email',  checkEmail)
+    .get('/users/:id', changeRole)
+    .put('/changeRole/:id', changeRole)
+
+/*****************************************/ 
+
+                /*CARRITO*/
+
+router
+
     .get('/cart', getCart)
     .post('/cart', addItemToCart)
     .delete('/cart',removeItemToCart)
@@ -22,7 +35,12 @@ router
     .delete('/cart/all',clearCart)
     // .get('/users', getAllUsers)
 
-    /*Categorias*/ 
+/*****************************************/     
+
+
+               /*CATEGORÍAS*/ 
+
+router
 
     .get('/categories',listCategory)
     .get('/categories/:id', showCategory)
@@ -30,22 +48,39 @@ router
     .put('/categories/:id',updateCategory)
     .delete('/categories/:id', deleteCategory)
 
+/*****************************************/ 
 
-    /*------------*/
-    
-    
-    .get('/users/:id', changeRole)
-    .get('/products/count',totalProductInDB)
-    .put('/changeRole/:id', changeRole)
+ /*TIPOS DE PRODUCTOS*/ 
 
-/*Productos*/ 
+ router
+
+    .get('/types',listTypes)
+ 
+/*****************************************/ 
+
+
+/*SECCIÓN DE PRODUCTOS*/ 
+
 router
+
+    .get('/sections',listSections)
+
+/*****************************************/ 
+
+
+    
+               /*PRODUCTOS*/ 
+
+router
+
     .get('/products', listProducts)
     .get('/products/:id', showProduct)
+    .get('/products/count',totalProductInDB)
     .post('/products',upload.single('image'),productApiValidator,createProduct)
     .put('/products/:id',upload.single('image'),updateProduct)
     .delete('/products/:id', deleteProduct)
 
+/*****************************************/ 
 
 
 
