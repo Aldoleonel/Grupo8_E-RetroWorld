@@ -34,7 +34,7 @@ const showProductInCart = (products, total) => {
       console.log(id, 'NNNNNNNNNNNNNNNNNNNNNNNNNNNNNN');
       cartTable.innerHTML += `
         <tr>
-          <th scope="row"><img src="/img/products/${image}" alt="" width=100/></th>
+          <th scope="row"><a href="/products/detail/${id}"><img src="/img/products/${image}" alt="" width=100/></a></th>
           <td>${name}</td>
           <td>${(price - price * discount /100) * quantity}</td>
           <td>

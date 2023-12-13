@@ -135,7 +135,7 @@ const updateProduct = async (id, dataProduct) => {
         
         
         product.name = name?.trim()|| product.name;
-        product.prince = price || product.price;
+        product.price = price || product.price;
         product.description = description.trim()|| product.description;
         product.image = image || product.image;
         product.sectionId = sectionId || product.sectionId;
