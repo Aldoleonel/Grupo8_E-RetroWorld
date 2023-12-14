@@ -4,13 +4,13 @@ export const GenresInDb = () => {
 
   const [categories, setCategories] = useState([]);
 
-  const getCategories = async (endopoint = '/api/products') => {
+  const getCategories = async (endopoint = '/api/categories') => {
     try {
       // setLoading(true)
 
       const response = await fetch(`http://localhost:3000${endopoint}`);
       const result = await response.json();
-      console.log(result);
+      // console.log(result);
       
       // setLoading(false);
       setCategories(result.data);
@@ -25,7 +25,7 @@ export const GenresInDb = () => {
     // console.log(result);
   }, []);
   
-  console.log(categories);
+  console.log(categories, "holaaaaaaaaaaaaaa buenas!");
   return (
     <div className="col-lg-6 mb-4">
       <div className="card shadow mb-4">
@@ -36,10 +36,10 @@ export const GenresInDb = () => {
         </div>
         <div className="card-body">
           <div className="row">
-            {genres.map((genre, index) => (
+            {categories.map(({category}, index) => (
               <div key={index} className="col-lg-6 mb-4">
                 <div className="card bg-dark text-white shadow">
-                  <div className="card-body">{genre}</div>
+                  <div className="card-body">{category.name}</div>
                 </div>
               </div>
             ))}

@@ -13,7 +13,8 @@ module.exports = {
                   return {category,
                   url : `${req.protocol}://${req.get(`host`)}/api/categories/${category.id}`
                   }
-                })
+                }),
+                
                 
               })
             
