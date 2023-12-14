@@ -1,5 +1,5 @@
 const { readJSON } = require('../data/index');
-
+const paginate = require('express-paginate');
 
 const fs = require('fs');
 const path = require('path');
@@ -25,19 +25,38 @@ module.exports = {
 
     
      },
-    admin : (req,res) => {
+    admin : async(req,res) => {
         // console.log(products);
+
+
+
         const categories = db.Category.findAll();
-        const products = db.Product.findAll();
+        const response = await fetch('http://localhost:3000/api/products',{
+            method: "GET",
+            headers: {
+                "Content-Type": 'application/json'
+            }
+        })
+        const {ok, data, meta} = await response.json()
+      
+        // const products = db.Product.findAndCountAll({
+        //     limit: req.query.limit,
+        //     offset: req.skyp
+        // });
         const users = db.User.findAll({
             include:['role']
         });
 
-        Promise.all([categories, products, users])
-            .then(([categories,products, users]) => {
-                // return res.send(users);
+        Promise.all([categories, users])
+            .then(([categories, users]) => {
+                const {currentPage, pagesCount, pages} = meta;
+                console.log(pages)
                 return res.render('admin',{
-                    products,
+                    products:data,
+                    pages: paginate.getArrayPages(req)(pagesCount,pagesCount,currentPage),
+                    paginate,
+                    currentPage,
+                    pagesCount,
                     category: categories,
                     users,
                     moment 
