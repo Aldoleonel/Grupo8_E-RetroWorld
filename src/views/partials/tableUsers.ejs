@@ -40,7 +40,9 @@
                                     class="fas fa-trash"></i></a>
                             <div class="form-check form-switch">
                                         <input class="form-check-input" value="<%= role.name %>" type="checkbox" role="switch" id="flexSwitchCheckChecked<%= id %>" onclick="modifyState('flexSwitchCheckChecked<%= id %>', '<%=id%>')"   <%= role.name == 'Admin' && 'checked' %> >
-                                        <!-- <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label> -->
+                                        <% if (role.name === "Admin") { %>
+                                            <span>Admin</span>
+                                        <% } %><!-- <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label> -->
                             </div>
                         </div>
                     </td>

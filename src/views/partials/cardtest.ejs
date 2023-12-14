@@ -1,3 +1,4 @@
+
 <article class="home__main--article">
 
     <div class='card'>
@@ -5,13 +6,17 @@
             <div class="card--imageConteiner">
 
                     <a href="/products/detail/<%= id %>">  <img src="/img/products/<%= image || 'default-img.png' %>" class='card__img'> </a> 
-                
             </div>
       
         <h5 class='card__title'>
             <%= name %>
         </h5>
         <div class='card__content'>
+            <% if (discount) { %>
+                <div class="d-flex justify-content-center">
+                <h5 class='card__precio'> % <%= discount %></h5>
+                </div>
+            <% } %>
             <h3 class='card__precio'>$<%= toThousand((price).toFixed(0)) %>
             </h3>
         </div>
