@@ -114,7 +114,8 @@
     transition: top var(--transitionDuration);
     width: 100%;
     text-align: center;
-    color: #08BC08;/* TITULO DE LA CARTA*/
+    color: white;/* TITULO DE LA CARTA*/
+    text-shadow: -4px 2px 13px rgba(86,11,233,0.6);
     /* Position */
     position: absolute;
     left: 50%;
@@ -147,7 +148,8 @@
     justify-content: space-between;
 }
 .card__precio{
-    color:#08BC08;/* COLOR PRECIO */
+    color:var(--color3);/* COLOR PRECIO */
+    text-shadow: 1px 1px 6px rgba(0,255,33,1);
 }
 .card:hover .card__content {
     opacity: 100%;
@@ -176,7 +178,8 @@
 
 .card__link {
     background-color:#5b21a5;/* FONDO BOTON */
-    color: #08BC08;/* COLOR DE LETRAS  */
+    color: #fff;/* COLOR DE LETRAS  */
+    text-shadow: -4px 2px 13px rgba(86,11,233,0.6);
     padding: 13px 4px;
     text-decoration: none;
     font-weight: 600;
@@ -196,7 +199,7 @@
 }
 
 .card__link:hover {
-    background-color: var(--color3);
+    box-shadow: inset 0px 0px 62px 37px rgba(0, 2, 255, 0.3);
 }
 
 @media (min-width:481px) {
