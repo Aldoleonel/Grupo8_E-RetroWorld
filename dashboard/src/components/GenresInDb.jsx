@@ -25,7 +25,7 @@ export const GenresInDb = () => {
     // console.log(result);
   }, []);
   
-  console.log(categories, "holaaaaaaaaaaaaaa buenas!");
+  // console.log(categories, "holaaaaaaaaaaaaaa buenas!");
   return (
     <div className="col-lg-6 mb-4">
       <div className="card shadow mb-4">
