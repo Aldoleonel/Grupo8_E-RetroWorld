@@ -1,101 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head',{
-        title: 'Detalle de Producto : '+producto.name
-}) %>
-<body class="detalleProducto">
-    <%- include('partials/header') %>
-    <main class="main__detalleProducto">
-        <div class="main__detalleProducto__container">
-            <div class="detalleProducto__container--box-nav">
-                <a href="/">Inicio</a>
-                <i class="fa-solid fa-angle-right"></i>
-                <a href="/products/detail"><%= producto.category %></a>
-                <div class="nav-line"></div>
-            </div>
-            <div class="detalleProducto__container--box-product">
-                <div class="box-product-img">
-                    <img src="/img/products/<%= producto.image || 'default-img.png' %>" width="400">
-                </div>
-                <h2>
-                    <%= producto.name %>
-                </h2>
-                <div class="box-product-info">
-                    <div class="product-info-stock">
-                        <span>Stock</span>
-                        <span><%= !producto.stock? 'No disponible' : 'Disponible' %></span>
-                    </div>
-                    <div class="product-info-price">
-                        <p>$ <%= producto.price %></p>
-                        <p>o 6 x $<%= toThousand((producto.price / 6).toFixed(0)) %> <span>c/iva</span></p>
-                    </div>
-                </div>
-            </div>
+<%- include('partials/head',{ title: 'Detalle de Producto : ' +producto.name }) %>
 
-            <div class="detalleProducto__container--box-detail">
-                <div class=" box-detail-info">
-                    <h4>DETALLES</h4>
-                    <table>
-                        <tr>
-                            <td>Categoría</td>
-                            <td><%= name %></td>
-                        </tr>
-                        <tr>
-                            <td>Código</td>
-                            <td><%= producto.id %></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="box-detail-add">
-                    <input type="number" id="cantador" placeholder="">
-                    <div class="box-detail-angle">
-                        <a href="#"><i class="fa-solid fa-angle-up"></i></a>
-                        <a href="#"><i class="fa-solid fa-angle-down"></i></a>
+    <body class="detalleProducto">
+        <%- include('partials/header') %>
+            <main class="main__detalleProducto">
+                <div class="main__detalleProducto__container">
+                    <div class="detalleProducto__container--box-nav">
+                        <a href="/">Inicio</a>
+                        <i class="fa-solid fa-angle-right"></i>
+                        <a href="/products/detail">
+                            <%= producto.category %>
+                        </a>
+                        <div class="nav-line"></div>
                     </div>
-                    <button type="button">comprar</button>
-                </div>
-            </div>
-            <div class="detalleProducto__container--box-description">
-                <h4>Descripción del Producto : <%= producto.name %> </h4>
-                <p>
-                    <%= producto.description %>
-                </p>
-            </div>
-            <div class="detalleProducto__container--box-delivery">
-                <h4>Metodos de envío y retiro</h4>
-                <div class="box-delivery box-delivery-detail">
-                    <!-- <div class="box-delivery-points-icon">
+                    <div class="detalleProducto__container--box-product">
+                        <div class="box-product-img">
+                            <img src="/img/products/<%= producto.image || 'default-img.png' %>" width="400">
+                        </div>
+                        <h2>
+                            <%= producto.name %>
+                        </h2>
+                        <div class="box-product-info">
+                            <div class="product-info-stock">
+                                <span>Stock</span>
+                                <span>
+                                    <%= !producto.stock? 'No disponible' : 'Disponible' %>
+                                </span>
+                            </div>
+                            <div class="product-info-price">
+                                <p>$ <%= producto.price %>
+                                </p>
+                                <p>o 6 x $<%= toThousand((producto.price / 6).toFixed(0)) %> <span>c/iva</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detalleProducto__container--box-detail">
+                        <div class=" box-detail-info">
+                            <h4>DETALLES</h4>
+                            <table>
+                                <tr>
+                                    <td>Categoría</td>
+                                    <td>
+                                        <%= category.name %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Código</td>
+                                    <td>
+                                        <%= producto.id %>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="box-detail-add">
+                            <input type="number" id="cantador" placeholder="">
+                            <div class="box-detail-angle">
+                                <a href="#"><i class="fa-solid fa-angle-up"></i></a>
+                                <a href="#"><i class="fa-solid fa-angle-down"></i></a>
+                            </div>
+                            <button type="button">comprar</button>
+                        </div>
+                    </div>
+                    <div class="detalleProducto__container--box-description">
+                        <h4>Descripción del Producto : <%= producto.name %>
+                        </h4>
+                        <p>
+                            <%= producto.description %>
+                        </p>
+                    </div>
+                    <div class="detalleProducto__container--box-delivery">
+                        <h4>Metodos de envío y retiro</h4>
+                        <div class="box-delivery box-delivery-detail">
+                            <!-- <div class="box-delivery-points-icon">
                     </div> -->
-                    <i class="fa-solid fa-truck"></i>
-                    <div class="box-delivery-points-text">
-                        <p>Envíos gratis a partir de $50.000,00 (a todo el país)</p>
-                        <a href="#">ver más</a>
-                    </div>
-                </div>
-                <div class="box-delivery box-delivery-points">
-                    <!-- <i class="fa-solid fa-location-dot"></i> -->
-                    <!-- <div class="box-delivery-points-icon">
+                            <i class="fa-solid fa-truck"></i>
+                            <div class="box-delivery-points-text">
+                                <p>Envíos gratis a partir de $50.000,00 (a todo el país)</p>
+                                <a class="linksViews" href="#"><span>ver más</span></a>
+                            </div>
+                        </div>
+                        <div class="box-delivery box-delivery-points">
+                            <!-- <i class="fa-solid fa-location-dot"></i> -->
+                            <!-- <div class="box-delivery-points-icon">
                     </div> -->
-                    <i class="fa-solid fa-store"></i>
-                    <div class="box-delivery-points-text">
-                        <p>Retiro en nuestro local</p>
-                        <p>Retira tu compra en uno de nuestros locales</p>
-                        <a href="#">ver sucursales</a>
+                            <i class="fa-solid fa-store"></i>
+                            <div class="box-delivery-points-text">
+                                <p>Retiro en nuestro local</p>
+                                <p>Retira tu compra en uno de nuestros locales</p>
+                                <a class="linksViews" href="#"><span>ver sucursales</span></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="detalleProducto__container--box-link">
-                <h4>Compartí este producto en:</h4>
-                <!-- <div class="box-link-icon">
-                </div> -->
-                <div>
-                    <a href="#"><img src="/img/facebook-icon.png" alt=""></a>
-                    <a href="#"><img src="/img/whatsapp-icon.png" alt=""></a>
-                </div>
-            </div>
+
+
+                    <div class="container--box-related">
+                        <div class="d-flex justify-content-center gap-3 mt-5">
+                            <h3>PRODUCTOS</h3>
+                            <h3 class="neonFliker">RELACIONADOS</h3>
+                        </div>
+                            <div class="containerProducts">
+                                <div class="d-flex flex-row justify-content-sm-center flex-wrap gap-2">
+                                <% relatedProducts.forEach(relatedProduct=> { %>
+
+                                    <% if (relatedProduct.id !==producto.id) { %>
+
+                                        <a href="/products/detail/<%= relatedProduct.id %>"> <div class="cardRelatedProduct">
+                                            <img
+                                                class="imgRelatedProduct"  src="/img/products/<%= relatedProduct.image || 'default-img.png' %>"
+                                                    width="150">
+                                            <h5 class="nameRelatedProduct">
+                                                <%= relatedProduct.name %>
+                                            </h5>
+                                            <p class="priceRelatedProduct">$ <%= relatedProduct.price %>
+                                            </p>
+                                        </div>
+                                    </a>
+
+                                            <% } %>
+                                            <% }); %>
+                                        </div>
+                            </div>
             
-        </div>
-    </main>
-    <%- include('partials/footer') %>
-</body>
+                    </div>
+                    <div class="detalleProducto__container--box-link">
+                        <h4>Compartí este producto en:</h4>
+                        <!-- <div class="box-link-icon">
+                </div> -->
+                        <div>
+                            <a href="#"><img src="/img/facebook-icon.png" width="50px"></a>
+                            <a href="#"><img src="/img/whatsapp-icon.png" width="50px"></a>
+                            <a href="#"><img src="/img/instagram-icon.png" width="50px"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+            <%- include('partials/footer') %>
+    </body>
+
 </html>

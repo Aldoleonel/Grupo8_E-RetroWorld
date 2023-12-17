@@ -14,7 +14,8 @@
               </ul>
             </div>
           <% } else {%>
-            <a href="/users/login"><i class="fa-regular fa-user"></i><span>Login</span></a>
+            <a href="/users/login"><i class="fa-solid fa-right-to-bracket"></i><span>Login</span></a>
+            <a href="/users/register"><i class="fa-solid fa-user-plus"></i><span>Registrarse</span></a>
           <% } %>
           <% if (locals.userLogin && userLogin.roleId == 1) { %>
             <a href="#" id="btn-cart" data-bs-toggle="modal" data-bs-target="#exampleModal">

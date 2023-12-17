@@ -154,10 +154,10 @@ main.main__detalleProducto{
         border: 2px solid blueviolet;
 }
 .box-detail-add button:hover{
-        /* box-shadow: 0 0 8px #fff, 0 0 8px #fff, 0 0 8px #fff; */
-        /* background-color: violet; */
-        background-color: transparent;
-        color: blueviolet;
+        background-color: rgba(128,0,128,0.1);
+        box-shadow:0px 0px 10px white,0px 0px 10px white,0px 0px 15px #4b0082;
+        color: #fff;
+        text-shadow:0px 0px 10px white,0px 0px 10px white,0px 0px 15px #4b0082;
 }
 /* -------------------------------------------------- */
 .detalleProducto__container--box-delivery{
@@ -213,7 +213,7 @@ main.main__detalleProducto{
         width: 30%;
 }
 .detalleProducto__container--box-link img{ 
-        width: 100%;
+        width: 50px;
 }
 /* ----------------------------------------------------------- */
 .detalleProducto__container--box-description h4{
@@ -228,10 +228,107 @@ main.main__detalleProducto{
         font-size: 16px;
         color: #d9d9d9;
 }
-@media (min-width:481px) {
-        .box-product-img img{
-                /* width: none; */
+
+.container--box-related h3{
+        margin-bottom:30px;
+        color : #fff;
+        font-size: 6vw;
+        text-align: center;
+        font-family: 'Tilt Neon', sans-serif;
+        text-shadow : 0px 0px 10px #5cfaff,
+                      0px 0px 20px #5cfaff,
+                      0px 0px 40px #5cfaff,
+                      0px 0px 80px #5cfaff
+}
+.neonFliker{
+        
+        animation: blink infinite backwards;
+        animation-duration: 0.3s;
+        animation-delay: 2s;
+        animation-timing-function: ease-out;
+}
+
+@keyframes blink {
+        to {
+         color : silver;
+         text-shadow : 0px 0px 10px #5cfaff,
         }
+}
+.cardRelatedProduct{
+        height:350px;
+        width:250px;
+        background-color:transparent;
+        backdrop-filter:blur(15px);
+        border:5px solid #fff;
+        border-radius:20px;
+        box-shadow:0px 0px 10px white,0px 5px 10px red,0px 0px 15px blue;
+        margin:10px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        gap:15px;
+}
+.cardRelatedProduct:hover{
+        background: rgba(255, 255, 255, .3);
+ -webkit-backdrop-filter: blur(5px);
+ backdrop-filter: blur(5px);
+border:5px solid #fff;
+}
+
+.imgRelatedProduct {
+        height:150px;
+        margin:5px;
+        justify-content:center;
+}
+.nameRelatedProduct{
+        height:100px;
+        font-family: 'Tilt Neon', sans-serif;
+        color:white;
+        text-shadow : 0px 0px 10px #fff,
+                      0px 0px 20px #F40AF0,
+                      0px 0px 40px #F40A15,
+                      0px 0px 80px #0E0AF4;
+       
+        padding:2px 20px;
+        width:250px;
+        display:flex;
+        justify-content:center;
+
+}
+.priceRelatedProduct{
+        font-family: 'Tilt Neon', sans-serif;
+        font-size:20px;
+        color:white;
+        text-shadow : 0px 0px 10px #5cfaff,
+                      0px 0px 20px #5cfaff,
+                      0px 0px 40px #5cfaff,
+                      0px 0px 80px #5cfaff;
+        padding:5px;
+        width:250px;
+        padding-left:5px;
+        display:flex;
+        justify-content:center;
+
+}
+
+.linksViews{
+        background-color: rgba(128,0,128,0.1);
+        padding:3px;
+        border:1px solid blueviolet;
+        border-radius:50px;
+}
+.linksViews:hover{
+        background-color:blueviolet;
+        padding:3px;
+        border:1px solid silver;
+        border-radius:50px;
+}
+.linksViews span{
+        color:white;
+}
+@media (min-width:481px) {
+        
         .detalleProducto__container--box-nav a{
                 /* color: #d9d9d9; */
                 font-size: 1.5rem;
@@ -270,7 +367,7 @@ main.main__detalleProducto{
                 width: 20%;
         }
         .detalleProducto__container--box-link img{ 
-                width: 100%;
+                width: 50px;
                 /* background-color: red; */
                 /* background-color: #3a71ff; */
                 
@@ -278,6 +375,9 @@ main.main__detalleProducto{
         /* ------------------------------------------- */
         .detalleProducto__container--box-description p{
                 text-align: start;
+        }
+        .container--box-related h3{
+                font-size: 6vw;
         }
 }
 /* vista Desktop */
@@ -362,8 +462,11 @@ main.main__detalleProducto{
                 justify-content: start;
         }
         .detalleProducto__container--box-link div a img{ 
-                width: 100%;
+                width: 60px;
                 justify-content: start;
+        }
+        .container--box-related h3{
+                font-size: 4vw;
         }
 }
 

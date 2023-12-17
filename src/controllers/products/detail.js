@@ -9,15 +9,22 @@ module.exports = (req, res) => {
             // const productId = +req.params.id; // Convertir req.params.id a cadena
             // const producto = products.find(product => product.id === productId); // Usar productId en la comparación
             // console.log(...category);
-            
-            db.Category.findByPk(product.categoryId)
-                .then(category => { 
-                   //return res.send(category)
-                    return res.render('detalleDeProducto',{
-                        producto: product,
-                        toThousand,
-                        ...category.dataValues
-                    });
+            db.Product.findAll({
+                where : { categoryId : product.categoryId},
+                order : [['createdAt','DESC']]
+            })
+            .then(relatedProducts => {
+
+                db.Category.findByPk(product.categoryId)
+                    .then(category => { 
+                       //return res.send(category)
+                        return res.render('detalleDeProducto',{
+                            producto: product,
+                            toThousand,
+                            category,
+                            relatedProducts
+                        });
+            })
 
                 })
                 
