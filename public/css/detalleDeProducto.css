@@ -277,7 +277,8 @@ border:5px solid #fff;
 }
 
 .imgRelatedProduct {
-        height:150px;
+        width:fit-content;
+        height:100px;
         margin:5px;
         justify-content:center;
 }
