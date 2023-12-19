@@ -31,22 +31,19 @@ module.exports = {
 
 
         const categories = db.Category.findAll();
-        const response = await fetch('http://localhost:3000/api/products',{
+        const users = db.User.findAll({
+            include:['role']
+        });
+
+        const {page,limit} =req.query
+        if(page && limit){
+            const response = await fetch(`http://localhost:3000/api/products?page=${page}&limit=${limit}`,{
             method: "GET",
             headers: {
                 "Content-Type": 'application/json'
             }
         })
         const {ok, data, meta} = await response.json()
-      
-        // const products = db.Product.findAndCountAll({
-        //     limit: req.query.limit,
-        //     offset: req.skyp
-        // });
-        const users = db.User.findAll({
-            include:['role']
-        });
-
         Promise.all([categories, users])
             .then(([categories, users]) => {
                 const {currentPage, pagesCount, pages} = meta;
@@ -63,6 +60,37 @@ module.exports = {
                 })
             })
             .catch(error => console.log(error))
+        } else{
+            const response = await fetch('http://localhost:3000/api/products',{
+                method: "GET",
+                headers: {
+                    "Content-Type": 'application/json'
+                }
+            })
+            const {ok, data, meta} = await response.json()
+            Promise.all([categories, users])
+            .then(([categories, users]) => {
+                const {currentPage, pagesCount, pages} = meta;
+                console.log(pages)
+                return res.render('admin',{
+                    products:data,
+                    pages: paginate.getArrayPages(req)(pagesCount,pagesCount,currentPage),
+                    paginate,
+                    currentPage,
+                    pagesCount,
+                    category: categories,
+                    users,
+                    moment 
+                })
+            })
+            .catch(error => console.log(error))
+        }
+        // return res.send(data);
+        // const products = db.Product.findAndCountAll({
+        //     limit: req.query.limit,
+        //     offset: req.skyp
+        // });
+        
 
         
     },

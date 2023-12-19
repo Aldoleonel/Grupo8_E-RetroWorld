@@ -3,8 +3,18 @@ import { TableItem } from "../components/TableItem";
 import { useEffect, useState } from "react";
 import { Loading } from "../components/loading";
 
-export const ListMovies = () => {
+export const ListProductPage = () => {
   const [products, setProducts] = useState([]);
+  const [formValues, setFormValues] = useState({
+      id: null,
+      title:"",
+      price:"",
+      discount:"",
+      categoryId:"",
+      sectionId:"",
+      price:"",
+      price:""
+  })
   const [loading, setLoading] = useState(true);
   const [pagination, setPagination] = useState();
 
@@ -14,7 +24,6 @@ export const ListMovies = () => {
 
       const response = await fetch(`http://localhost:3000${endopoint}`);
       const result = await response.json();
-      // console.log(result);
       
       setLoading(false);
       setProducts(result.data);
@@ -73,6 +82,7 @@ export const ListMovies = () => {
               <th>Discount</th>
               <th>category</th>
               <th>Stock</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody>

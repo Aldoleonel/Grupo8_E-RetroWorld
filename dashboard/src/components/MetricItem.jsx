@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const ContentRowItem = ({title, color, icon, value}) => {
+export const MetricItem = ({title, color, icon, value}) => {
   return (
     <div className="col-md-4 mb-4">
       <div className={`card border-left-${color} shadow h-100 py-2`}>
@@ -22,13 +22,13 @@ export const ContentRowItem = ({title, color, icon, value}) => {
   );
 };
 
-ContentRowItem.propTypes = {
+MetricItem.propTypes = {
   title : PropTypes.string,
   color : PropTypes.string,
   icon : PropTypes.string,
   value : PropTypes.number
 }
 
-ContentRowItem.defaultProps = {
+MetricItem.defaultProps = {
   color : 'danger'
 }

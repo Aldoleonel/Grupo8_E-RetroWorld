@@ -1,6 +1,6 @@
-import { ContentRowItem } from "./contentRowItem";
+import { MetricItem } from "./MetricItem";
 
-export const ContentRowMovies = () => {
+export const Metrics = () => {
 
     const items = [
         {
@@ -29,7 +29,7 @@ export const ContentRowMovies = () => {
   return (
     <div className="row">
             {items.map(({id, title, value, color, icon}) => (
-                <ContentRowItem key={id} title={title} value = {value} color = {color} icon={icon} />
+                <MetricItem key={id} title={title} value = {value} color = {color} icon={icon} />
             ))}
       
     </div>
