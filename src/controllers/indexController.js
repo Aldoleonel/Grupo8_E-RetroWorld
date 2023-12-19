@@ -49,7 +49,7 @@ module.exports = {
                 const {currentPage, pagesCount, pages} = meta;
                 console.log(pages)
                 return res.render('admin',{
-                    products,
+                    products:data,
                     //pages: paginate.getArrayPages(req)(pagesCount,pagesCount,currentPage),
                     
                     //currentPage,
