@@ -14,11 +14,12 @@
         <div class='card__content'>
             <% if (discount) { %>
                 <div class="d-flex justify-content-center">
-                <h5 class='card__precio'> % <%= discount %></h5>
+                <h5 class='card__precio'>$ <%= toThousand((price).toFixed(0)) %> % <%= discount %> OFF</h5>
                 </div>
-            <% } %>
+            <% }else{ %>
             <h3 class='card__precio'>$<%= toThousand((price).toFixed(0)) %>
             </h3>
+            <% } %>
         </div>
         <a onclick="addItemToCart(1,'<%=id%>')" class='card__link'>Agregar al carrito</a>
     </div>

@@ -31,32 +31,32 @@ module.exports = {
 
 
         const categories = db.Category.findAll();
-        const response = await fetch('http://localhost:3000/api/products',{
-            method: "GET",
-            headers: {
-                "Content-Type": 'application/json'
-            }
-        })
-        const {ok, data, meta} = await response.json()
+    //    const response = await fetch('http://localhost:3000/api/products',{
+    //         method: "GET",
+    //         headers: {
+    //             "Content-Type": 'application/json'
+    //         }
+    //     })
+        //const {ok, data, meta} = await response.json()
       
-        // const products = db.Product.findAndCountAll({
-        //     limit: req.query.limit,
-        //     offset: req.skyp
-        // });
+        const products = db.Product.findAll({
+            //limit: req.query.limit,
+           // offset: req.skyp
+        });
         const users = db.User.findAll({
             include:['role']
         });
 
-        Promise.all([categories, users])
-            .then(([categories, users]) => {
-                const {currentPage, pagesCount, pages} = meta;
-                console.log(pages)
+        Promise.all([categories, users,products])
+            .then(([categories, users,products]) => {
+                //const {currentPage, pagesCount, pages} = meta;
+               // console.log(pages)
                 return res.render('admin',{
-                    products:data,
-                    pages: paginate.getArrayPages(req)(pagesCount,pagesCount,currentPage),
-                    paginate,
-                    currentPage,
-                    pagesCount,
+                    products,
+                    //pages: paginate.getArrayPages(req)(pagesCount,pagesCount,currentPage),
+                    
+                    //currentPage,
+                    
                     category: categories,
                     users,
                     moment 

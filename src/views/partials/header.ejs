@@ -17,7 +17,7 @@
             <a href="/users/login"><i class="fa-solid fa-right-to-bracket"></i><span>Login</span></a>
             <a href="/users/register"><i class="fa-solid fa-user-plus"></i><span>Registrarse</span></a>
           <% } %>
-          <% if (locals.userLogin && userLogin.roleId == 1) { %>
+          <% if (locals.userLogin && userLogin.roleId == 1 || locals.userLogin && userLogin.roleId == 2) { %>
             <a href="#" id="btn-cart" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <i class="fa-solid fa-cart-shopping"></i><span>Mi Carrito</span></a> 
               <span id="show-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" hidden>

@@ -61,6 +61,8 @@
                                 <a href="#"><i class="fa-solid fa-angle-down"></i></a>
                             </div>
                             <button type="button">comprar</button>
+                            <a onclick="addItemToCart(1,'<%= productId %>')" class='card__link'>Agregar al carrito</a>
+
                         </div>
                     </div>
                     <div class="detalleProducto__container--box-description">
@@ -139,5 +141,6 @@
             </main>
             <%- include('partials/footer') %>
     </body>
+    <script src="/js/carrito.js"></script>
 
 </html>
