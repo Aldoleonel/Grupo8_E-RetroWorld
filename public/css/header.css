@@ -14,7 +14,7 @@
 .header__links{
         display:none;
     }
-.showLinks{ 
+    .showLinks{ 
         margin-top: 5px;
         display:block;
         display: flex;
@@ -22,16 +22,22 @@
         align-items: center;
         border:1px solid #fff;
         border-radius: 10px;
-        background:transparent;
+        background-image:url(../img/LogoFondo.png);
+    background-position-x:46%;
+    background-position-y:160%;
+    background-color:rgba(00,00,00,0.5);
+    backdrop-filter:blur(15px);
+
         box-shadow: 0 0 10px #fff,inset 0 0 10px #fff;
         >p{
         width:100%;
         text-align: center;    
         margin-top: 15px;
-        border:1px solid #202324;
+        border:1px solid white;
         border-radius: 10px;
-        background:#9430bf;
-        box-shadow: 0 0 10px #fff,inset 0 0 10px #202324;
+        background: rgba(150,105,200,0.3);
+            backdrop-filter:blur(px);
+        box-shadow: 0 0 2px #fff,inset 0 0 3px blueviolet;
         }
 }
 
