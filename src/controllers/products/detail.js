@@ -22,7 +22,8 @@ module.exports = (req, res) => {
                             producto: product,
                             toThousand,
                             category,
-                            relatedProducts
+                            relatedProducts,
+                            productId: req.params.id
                         });
             })
 

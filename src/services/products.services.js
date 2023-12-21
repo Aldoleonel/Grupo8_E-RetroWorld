@@ -9,12 +9,18 @@ const getAllProducts = async(limit, offset) => {
             attributes : {
                 exclude : ['createdAt','updatedAt','categoryId']
             },
-            limit,
-            offset,
             include : [
             {
                 association :'category',
                 attributes : ['name']
+            },
+            {
+                association: 'type',
+                attributes:['name']
+            },
+            {
+                association: 'section',
+                attributes:['name']
             }
             ] 
             

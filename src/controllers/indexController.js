@@ -50,10 +50,10 @@ module.exports = {
                 console.log(pages)
                 return res.render('admin',{
                     products:data,
-                    pages: paginate.getArrayPages(req)(pagesCount,pagesCount,currentPage),
-                    paginate,
-                    currentPage,
-                    pagesCount,
+                    //pages: paginate.getArrayPages(req)(pagesCount,pagesCount,currentPage),
+                    
+                    //currentPage,
+                    
                     category: categories,
                     users,
                     moment 
@@ -70,6 +70,7 @@ module.exports = {
             const {ok, data, meta} = await response.json()
             Promise.all([categories, users])
             .then(([categories, users]) => {
+                return res.send(data);
                 const {currentPage, pagesCount, pages} = meta;
                 console.log(pages)
                 return res.render('admin',{

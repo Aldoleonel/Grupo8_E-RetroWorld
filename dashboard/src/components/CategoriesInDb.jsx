@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const GenresInDb = () => {
+export const CategoriesInDb = () => {
 
   const [categories, setCategories] = useState([]);
 

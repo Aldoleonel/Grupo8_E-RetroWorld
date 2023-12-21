@@ -108,32 +108,7 @@
 </div>
 <div class="d-flex justify-content-end align-items-center">
     <div class="d-flex justify-content-center align-items-center mb-2 gap-5">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination mb-0">
-                <% if (paginate.hasPreviuosPages || paginate.hasNextPages(pagesCount)) { %>
-                    <% if (paginate.hasPreviuosPages) { %>
-                        <li class="page-item">
-                            <a class="page-link" href="<%= paginate.href(true).prev %>" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                    <% } %>
-                    <% if (pages) { %>
-                        <% pages.forEach(page => { %>
-                            <li class="page-item"><a href="<%= page.url %>" class="page-link <%= page.number === currentPage && 'active ' %>" ><%= page.number %></a></li>
-                        <% }) %>
-                    <% } %>
-                    <% if (paginate.hasNextPages(pagesCount)) { %>
-                        <li class="page-item">
-                            <a class="page-link" href="<%= paginate.href() %>" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    <% } %>
-                <% } %>
-              
-            </ul>
-          </nav>
+        
         <a href="/products/add" class="btn  bg-primary-subtle">Crear Producto</a>
     </div>
 </div>
