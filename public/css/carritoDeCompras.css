@@ -1,3 +1,206 @@
+#modalCarrito{
+    background-color:rgba(97,6,245,0.8);
+    border-color:transparent;
+    box-shadow:0px 0px 10px white,
+                0px 0px 10px #C50DDE,
+                0px 0px 10px #2407F5;
+    animation:changeColor 5s linear infinite ;
+    animation-direction: alternate;
+}
+
+@keyframes changeColor {
+    0%{
+        background-color:rgba(115, 7, 243, 0.5);
+    }
+    25%{
+        background-color:rgba(7, 32, 243, 0.5);
+    }
+    50%{
+        background-color:rgba(115, 7, 243, 0.5);
+    }
+    75%{
+        background-color:rgba(7, 32, 243, 0.5);
+    }
+    100%{
+        background-color:rgba(170, 9, 245, 0.5);
+    }
+}
+
+
+
+#headerModalCarrito{
+    background-color:rgba(141, 53, 246,0.5);
+    color:white;
+    text-shadow:0px 0px 10px white,
+        0px 0px 5px white,
+        0px 0px 50px silver
+}
+.cartBodyModal{
+    background-color:blue;
+    box-shadow:0px 0px 10px white;
+    
+}
+#cartBodyModal{
+    background-color:black;
+    box-shadow:0px 0px 10px white;
+    
+}
+
+#cartBodyTable{
+    background-color:rgba(120,26,231,0.5);
+    backdrop-filter:blur(15px);
+    box-shadow:0px 0px 10px white;
+    color:white;
+    text-shadow:0px 0px 10px white;
+    text-align: center;
+            
+}
+#cartBodyTable1{
+    background-color:rgba(120,26,231,0.5);
+    backdrop-filter:blur(15px);
+    box-shadow:0px 0px 10px white;
+    color:white;
+    text-shadow:0px 0px 10px white;
+    text-align: center;
+            
+}
+#cartBodyTable2{
+    background-color:rgba(120,26,231,0.5);
+    backdrop-filter:blur(15px);
+    box-shadow:0px 0px 10px white;
+    color:white;
+    text-shadow:0px 0px 10px white;
+    text-align: center;
+            
+}
+#cartBodyTable3{
+    background-color:rgba(120,26,231,0.5);
+    backdrop-filter:blur(15px);
+    box-shadow:0px 0px 10px white;
+    color:white;
+    text-shadow:0px 0px 10px white;
+    text-align: center;
+            
+}
+#cartBodyTable4{
+    background-color:rgba(120,26,231,0.5);
+    backdrop-filter:blur(15px);
+    box-shadow:0px 0px 10px white;
+    color:white;
+    text-shadow:0px 0px 10px white;
+    text-align: center;
+            
+}
+#cartBodyTable img{
+    height:50px;
+}
+
+#cartBodyHead{
+    background-color:#710AEC;
+    color:white;
+    text-shadow:0px 0px 10px white,
+                0px 0px 50px white;
+    box-shadow:inset 0px 0px 10px 1px black;
+   
+}
+
+.modalTotal{ 
+    color:white;
+    text-shadow:0px 0px 10px white,
+                0px 0px 15px blue;
+    padding-top:10px;
+    
+}
+
+#xButton{
+    height:8px;
+    width:8px;
+    border:1px solid transparent;
+    border-radius:15px;
+    background-color:transparent;
+    box-shadow: 0px 0px 10px white;
+    animation:butonX 0.5s linear infinite;
+    animation-direction:alternate;
+    }
+@keyframes butonX{
+    0%{
+        background-color:rgba(255,255,255,0.5);
+        box-shadow:0px 0px 10px 5px red;
+    }
+    
+    50%{
+        background-color:rgba(255,255,255,0.5);
+        box-shadow:inset 0px 0px 15px white;
+    }
+    100%{
+        background-color:rgba(255,255,255,0.5);
+        box-shadow:0px 0px 10px 2px red;
+    }
+}
+
+
+#minusButton{
+    background-color:transparent;
+    border-radius: 10px 2px;
+    box-shadow: 0px 0px 13px red;
+}
+
+#minusButton:active{
+    background-color:rgba(255,00,00,0.5);
+    
+}
+
+#plusButton{
+    background-color:transparent;
+    border-radius: 2px 10px;
+    box-shadow: 0px 0px 10px blue;
+}
+
+#plusButton:active{
+    background-color:rgba(00,00,255,0.5);
+    
+}
+
+#countItems{
+    justify-content:center;
+}
+
+#inputQuantity{
+    border-radius:10px;
+    border:2px inset blueviolet;
+    text-align:center;
+     box-shadow: inset 2px -1px 10px 3px blueviolet;
+    
+}
+
+.trashCart{
+    background-color:transparent ;
+    box-shadow: inset 0px 0px 50px 10px rgba(250, 2, 25,0.5);
+}
+
+#continueButton{
+    background-color:transparent;
+    box-shadow: inset 0px 0px 50px 10px rgba(176, 3, 251,0.5);
+}
+
+#finishButton{
+    background-color:transparent;
+    box-shadow: inset 0px 0px 50px 10px rgba(00, 00, 255,0.5);
+}
+
+.trashCart:hover{
+     background-color:red ;
+    
+}
+#continueButton:hover{
+     background-color:blueviolet;
+}
+#finishButton:hover{
+     background-color:blue;
+    
+}
+
+
 .carrito__box-complete {
     margin: 0;
     padding: 0;

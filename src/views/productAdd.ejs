@@ -3,11 +3,19 @@
 
 <%- include('partials/head',{title:"Crear Producto"}) %>
 
-<body>
+<body class="bodyRegister">
     <%- include('partials/header',{title:"Crear Producto"}) %>
     <main class="form__main">
         <!-- REGISTRO -->
+        
         <section class="form__registro">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
+              <li class="breadcrumb-item active" style="color: silver;" aria-current="page">Agregar Producto</li>
+            </ol>
+          </nav>
             <div class="form-box2">
                 <h2>Agregar Producto</h2>
                 <div class="d-flex flex-column">
@@ -112,14 +120,12 @@
                         <button type="submit">Crear producto</button>
                     </div>
                 </form>
-                <div class="form-link">
-                    <a class="form__link" href="#">¿Deseas editar un producto? click aqui</a>
-                </div>
+                
             </div>
         </section>
     </main>
     
-        <%- include('partials/footer')%>
+      
         <script src="/js/productAddValidation.js"></script>
         <script src="/js/productAddImg.js"></script>
         

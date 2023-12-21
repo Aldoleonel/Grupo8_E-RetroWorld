@@ -59,20 +59,20 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
+    <div class="modal-content" id="modalCarrito">
+      <div class="modal-header" id="headerModalCarrito">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de Compras</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button id="xButton" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div  class="modal-body">
-        <div id="cart-body">
+        <div id="cart-body" class="modalBodyCart">
           
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar comprando</button>
-        <button type="button"id="btn-clearCart" onclick="clearCart()" class="btn btn-danger">Vaciar carrito</button>
-        <button type="button" class="btn btn-primary">Finalizar compra</button>
+        <button id="continueButton" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar comprando</button>
+        <button type="button" id="btn-clearCart" onclick="clearCart()" class="btn btn-danger trashCart">Vaciar carrito</button>
+        <button id="finishButton" type="button" class="btn btn-primary">Finalizar compra</button>
       </div>
     </div>
   </div>
