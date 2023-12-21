@@ -145,12 +145,13 @@
 .form-box button, a.cancel {
     padding: 10px 20px;
     background-color: transparent;
-    color: blueviolet;
-    border: none;
+    color: white;
+    text-shadow: 0px 0px 15px silver,0px 0px 20px silver;
+    
     border-radius: 5px;
     cursor: pointer;
     border: 1px solid blueviolet;
-   
+    box-shadow: inset 0px 0px 15px blueviolet;
     width: 100%;
     transition: all 1s ease;
 
