@@ -4,10 +4,11 @@ const {existsSync,unlinkSync} = require('fs');
 
 module.exports = (req, res) => {
     let errors=validationResult(req)
-    
+    console.log(req.body);
     if (errors.isEmpty()) {
 
-        const {firstName,lastName,birthdate,genreId,phone, image} = req.body
+        const {firstName,province,city,lastName,birthdate,genreId,phone, image} = req.body
+        console.log(req.body);
 
         db.User.findByPk(req.session.userLogin.id)
             .then(user => {
@@ -15,6 +16,8 @@ module.exports = (req, res) => {
                     {
                         firstName: firstName.trim(),
                         lastName: lastName.trim(),
+                        province: province,
+                        city: city,
                         birthdate,
                         genreId,
                         phone,
