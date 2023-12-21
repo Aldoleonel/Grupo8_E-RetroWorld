@@ -11,6 +11,6 @@ module.exports = {
     update: require('./products/update'),
     products: require('./products/products'),
     consoles : require('./products/consoles'),
-    accessories : require('./products/accessories')
+    accessories : require('./products/accessories'),
     
 }
