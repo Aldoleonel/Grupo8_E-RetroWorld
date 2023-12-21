@@ -33,18 +33,18 @@ const showProductInCart = (products, total) => {
     products.forEach(({ id, image, name, price, quantity, discount }) => {
       console.log(id, 'NNNNNNNNNNNNNNNNNNNNNNNNNNNNNN');
       cartTable.innerHTML += `
-        <tr>
-          <th scope="row"><a href="/products/detail/${id}"><img src="/img/products/${image}" alt="" width=100/></a></th>
-          <td>${name}</td>
-          <td>${(price - price * discount /100) * quantity}</td>
-          <td>
-            <div class="d-flex gap-2">
-              <button class="btn btn-sm btn-danger ${quantity === 1 && 'disabled'}" onclick="removeItemToCart(${id})"><i class="fa-solid fa-minus"></i></button>
-              <input type="text" value="${quantity}" style="width:30px"/>
-              <button class="btn btn-sm btn-success" onclick="addItemToCart(1,${id})"><i class="fa-solid fa-plus"></i></button>
+        <tr class="bodyCartProduct">
+          <th id="cartBodyTable" scope="row"><a href="/products/detail/${id}"><img src="/img/products/${image}" alt="" width=100/></a></th>
+          <td id="cartBodyTable1">${name}</td>
+          <td id="cartBodyTable2" >${(price - price * discount /100) * quantity}</td>
+          <td id="cartBodyTable3" >
+            <div id="countItems" class="d-flex gap-2">
+              <button id="minusButton" class="btn btn-sm btn-danger ${quantity === 1 && 'disabled'}" onclick="removeItemToCart(${id})"><i class="fa-solid fa-minus"></i></button>
+              <input id="inputQuantity" type="text" value="${quantity}" style="width:30px"/>
+              <button id="plusButton" class="btn btn-sm btn-success" onclick="addItemToCart(1,${id})"><i class="fa-solid fa-plus"></i></button>
             </div>
           </td>
-          <td>
+          <td id="cartBodyTable">
             <h3 style="cursor:pointer" onclick="deleteItemToCart(${id})" class="text-danger"><i class="fa fa-trash"></i></h3>
           </td>
         </tr>
@@ -208,14 +208,14 @@ window.onload = function () {
         if (ok) {
           if (products.length) {
             $("cart-body").innerHTML = `
-            <table class="table">
+            <table class="table" id="cartBodyModal">
                 <thead>
-                    <tr>
-                    <th scope="col">Imagen</th>
-                    <th scope="col">Product</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col"></th>
+                    <tr id="cartBodyHead" class="cartBodyModal">
+                    <th id="cartBodyHead" scope="col">Imagen</th>
+                    <th id="cartBodyHead" scope="col">Precio</th>
+                    <th id="cartBodyHead" scope="col">Product</th>
+                    <th id="cartBodyHead" scope="col">Cantidad</th>
+                    <th id="cartBodyHead" scope="col"></th>
                     </tr>
                 </thead>
                 <tbody id="cart-table">
@@ -223,7 +223,7 @@ window.onload = function () {
                 </tbody>
                 <caption>
                     <div class="d-flex justify-content-end">
-                        <h5>Total: $<span id="show-total">${total}</span></h5> 
+                        <h5 class="modalTotal">Total: $<span id="show-total">${total}</span></h5> 
                     </div>
                  </caption>
             </table>`;

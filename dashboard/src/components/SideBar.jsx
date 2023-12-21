@@ -46,8 +46,8 @@ export const SideBar = () => {
 			</li>
 
 			
-			<li className={`nav-item ${pathname == '/actors' &&  'active'} `}>
-				<Link className="nav-link" to="/">
+			<li className={`nav-item ${pathname == '/users' &&  'active'} `}>
+				<Link className="nav-link" to="/users">
 					<i className="fas fa-fw fa-users"></i>
 					<span>Usuarios</span>
 				</Link>

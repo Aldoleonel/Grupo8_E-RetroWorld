@@ -1,29 +1,28 @@
-import PropTypes from 'prop-types'
-// import { propTypes } from 'react-bootstrap/esm/Image';
+import PropTypes from "prop-types";
 
-export const TableItem = ({name, price, discount, category, stock}) => {
+export const TableItem = ({
+  product: { id, name, price, discount, category, section },
+  handleEditForm,
+  handleDeleteProduct,
+}) => {
   return (
     <tr>
       <td>{name}</td>
-      <td>${price}</td>
+      <td>{price}</td>
       <td>{discount}</td>
+      <td> {category.name}</td>
+      <td>{section.name}</td>
       <td>
-        {
-          category?.name
-        }
-      </td>
-      <td>{stock}</td>
-      <td>
-      <div className="d-flex">
+        <div className="d-flex">
           <button
             className="btn btn-sm btn-outline-success mr-3"
-            // onClick={() => handleEditForm(id)}
+            onClick={() => handleEditForm(id)}
           >
             <i className="fas fa-pencil-alt"></i>
           </button>
           <button
             className="btn btn-sm btn-outline-danger"
-            // onClick={() => handleDeleteProduct(id)}
+            onClick={() => handleDeleteProduct(id)}
           >
             <i className="fas fa-trash-alt"></i>
           </button>
@@ -34,12 +33,7 @@ export const TableItem = ({name, price, discount, category, stock}) => {
 };
 
 TableItem.propTypes = {
-    name: PropTypes.string,
-    price: PropTypes.number,
-    discount: PropTypes.number,
-    category: PropTypes.object,
-    stock: PropTypes.number,
-}
-TableItem.defaultProps = {
-    category : ['sin categoria asignado']
-}
+  product: PropTypes.object,
+  handleEditForm: PropTypes.func,
+  handleDeleteProduct: PropTypes.func,
+};
