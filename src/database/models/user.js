@@ -26,6 +26,10 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     birthdate: DataTypes.DATE,
     phone: DataTypes.STRING,
+    active:{
+      type: DataTypes.TINYINT,
+      defaultValue: true
+    },
     image: {
       type : DataTypes.STRING,
       allowNull: true

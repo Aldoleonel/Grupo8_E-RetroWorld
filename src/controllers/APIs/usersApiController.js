@@ -1,7 +1,7 @@
-const { checkEmail, changeRole, getUsers } = require("../../services/users.services")
+const { checkEmail, getUsers, changeUser } = require("../../services/users.services")
 
 module.exports = {
-    getusers: async(req,res) =>{
+    getUsers: async(req,res) =>{
         try {
             const users = await getUsers();
             return res.status(200).json({
@@ -31,11 +31,11 @@ module.exports = {
             })
         }
     },
-    changeRole: async(req, res) => {
+    changeUser: async(req, res) => {
         try {
-            const {roleId} = req.body;
+            const userUpdate = req.body;
             console.log(req.body, '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
-            const user = await changeRole(req.params.id, roleId);
+            const user = await changeUser(req.params.id, userUpdate);
             return res.status(200).json({
                 ok : true,
                 message : 'role actualizado con éxito',
