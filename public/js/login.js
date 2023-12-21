@@ -10,10 +10,10 @@ window.onload = function () {
                 F('msgError-email-text').innerHTML = "El email es obligatorio";
                 this.classList.add("is-invalid");
                 break;
-            case !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}F/.test(this.value) :
-                F('msgError-email-text').innerHTML = "El email es inválido";
-                this.classList.add("is-invalid");
-                break            
+             case !/^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/.test(this.value):
+                F('msgError-email-text').innerHTML = 'El email es invalido'
+                this.classList.add('is-invalid')
+                break;      
             default:
                 F('msgError-email-text').innerHTML = null;
                 this.classList.remove("is-invalid");

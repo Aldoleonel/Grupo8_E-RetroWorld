@@ -242,3 +242,13 @@ window.onload = function () {
       }
     });
 };
+let contador = 0;
+
+function actualizarContador() {
+  document.getElementById('contador').innerText = contador;
+}
+
+function incrementar() {
+  contador++;
+  addItemToCart(producto.name);
+}

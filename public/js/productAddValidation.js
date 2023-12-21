@@ -71,10 +71,11 @@ window.onload = function () {
                 F('msgError-price').innerHTML = "El precio del producto es obligatorio";
                 this.classList.add("is-invalid");
                 break
-            case !/^[1-9]\d*(\.\d+)?F/.test(this.value):
-            F('msgError-price').innerHTML = "Solo números positivos";
-            this.classList.add("is-invalid");
-                break
+                case !/^[0-9]+(\.[0-9]+)?$/.test(this.value):
+                    F('msgError-price').innerHTML = "Solo se permiten números positivos";
+                    this.classList.add("is-invalid");
+                    break;
+                
             default:
                 F('msgError-price').innerHTML = null;
                 this.classList.remove("is-invalid");
@@ -101,10 +102,10 @@ window.onload = function () {
     });
     F('image').addEventListener("change",function(e) {
         switch (true) {
-            case !(/.(gif|jpeg|jpg|png)F/i.test(this.value)):
-                F('msgError-image').innerHTML = "Error, los formatos de imagenes aceptados son (gif | jpeg | jpg | png)";
-                    this.classList.add("is-invalid");
-                break;
+            case !(/\.(gif|jpeg|jpg|png)$/i.test(this.value)):
+    F('msgError-image').innerHTML = "Error, los formatos de imágenes aceptados son (gif | jpeg | jpg | png)";
+    this.classList.add("is-invalid");
+    break;
             
         default:
                 F('msgError-image').innerHTML = null;
@@ -141,7 +142,7 @@ const msgErrors = []
                 elementsForm[i].classList.add('is-invalid')
                 F('msgError-empty').innerHTML = "<h5>Hay errores en la carga de datos del producto</h5>"
                 error = true
-                msgErrors.push(`El campo F{elementsForm[i].name} no puede quedar vacio`)
+                msgErrors.push(`El campo ${elementsForm[i].name} no puede quedar vacio`)
             }
           
          }
