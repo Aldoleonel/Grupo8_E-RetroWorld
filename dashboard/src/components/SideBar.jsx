@@ -39,9 +39,10 @@ export const SideBar = () => {
 			</li>
 
 			
-			<li className={`nav-item ${pathname == '/movies' &&  'active'} `}>
-				<Link className="nav-link" to="/movies">
-					<i className="fas fa-fw fa-film"></i>
+			<li className={`nav-item ${pathname == '/products' &&  'active'} `}>
+				<Link className="nav-link" to="/products">
+				<i className="fa solid fa-gamepad"></i>
+				
 					<span>Products</span></Link>
 			</li>
 

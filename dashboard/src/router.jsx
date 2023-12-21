@@ -18,7 +18,7 @@ export const router =  createBrowserRouter([
                 loader: loaderAdminHome
             },
             {
-                path: '/movies',
+                path: '/products',
                 element: <ListProductPage/>
             },
             {
