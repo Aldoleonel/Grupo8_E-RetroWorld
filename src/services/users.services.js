@@ -30,12 +30,15 @@ const checkEmail = async(email)=>{
     
 }
 
-const changeRole = async(id, roleId) => {
+const changeUser = async(id, {firstName,lastName,roleId,active}) => {
     try {
         console.log('lelgué hasta acá')
         const user = await db.User.update(
             {
-                roleId: roleId
+                firstName,
+                lastName, 
+                roleId,
+                active
             },
             {
                 where: {
@@ -58,5 +61,5 @@ const changeRole = async(id, roleId) => {
 module.exports ={
     getUsers,
     checkEmail,
-    changeRole
+    changeUser
 }
