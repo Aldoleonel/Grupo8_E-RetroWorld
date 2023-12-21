@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./layouts";
-import { Home } from "./pages/HomeAdminPage";
+import { HomeAdminPage } from "./pages/HomeAdminPage";
 import { ListProductPage } from "./pages/ListProductPage";
+import {loader as loaderAdminHome} from "./pages/HomeAdminPage/loader"
 
 
 
@@ -12,7 +13,8 @@ export const router =  createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Home/>
+                element: <HomeAdminPage/>,
+                loader: loaderAdminHome
             },
             {
                 path: '/movies',

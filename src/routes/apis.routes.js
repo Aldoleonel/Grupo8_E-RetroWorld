@@ -1,5 +1,5 @@
 const express = require('express');
-const { checkEmail, changeRole } = require('../controllers/APIs/usersApiController');
+const { checkEmail, changeRole, getusers } = require('../controllers/APIs/usersApiController');
 const { listProducts, showProduct, createProduct, updateProduct, deleteProduct } = require('../controllers/APIs/productsApiController');
 const { getCart, addItemToCart, removeItemToCart, deleteItemToCart, clearCart } = require('../controllers/APIs/cartApisController');
 const { totalProductInDB } = require('../controllers/APIs/productApisController');
@@ -17,7 +17,7 @@ const router = express.Router();
                 /*USUARIOS*/ 
 
 router
-
+    .get('/users', getusers)
     .get('/check-email',  checkEmail)
     .get('/users/:id', changeRole)
     .put('/changeRole/:id', changeRole)

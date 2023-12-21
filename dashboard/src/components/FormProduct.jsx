@@ -12,13 +12,18 @@ export const FormProduct = ({
 }) => {
   const [categories, setCategories] = useState([]);
   const [sections, setSections] = useState([]);
+  const [types, setTypes] = useState([]);
 
   const getData = async () => {
     const categories = await UseFetch("categories");
     const sections = await UseFetch("sections");
-
+    const types = await UseFetch("types");
+    console.log(categories);
+    console.log(sections);
     setCategories([...categories.data]);
     setSections([...sections.data]);
+    setTypes([...types.data]);
+
   };
 
   useEffect(() => {
@@ -36,10 +41,11 @@ export const FormProduct = ({
     event.preventDefault();
     if (
       [
-        formValues.title,
+        formValues.name,
         formValues.price,
         formValues.categoryId,
         formValues.sectionId,
+        formValues.typeId,
         formValues.description,
       ].includes("")
     ) {
@@ -65,7 +71,7 @@ export const FormProduct = ({
 
     setFormValues({
       id: null,
-      title: "",
+      name: "",
       price: "",
       discount: "",
       categoryId: "",
@@ -74,16 +80,28 @@ export const FormProduct = ({
     });
   };
 
+  const  handleResetForm = ()=>{
+    setFormValues({
+      id: null,
+      name: "",
+      price: "",
+      discount: "",
+      categoryId: "",
+      sectionId: "",
+      description: "",
+    });
+  }
+
   return (
     <Form className="row" onSubmit={handleSubmitForm}>
-      <Form.Group className="mb-3 col-12">
+      <Form.Group className="mb-3 col-12 col-md-6">
         <Form.Label>Titulo</Form.Label>
         <Form.Control
           type="text"
           placeholder="Título del producto..."
-          name="title"
+          name="name"
           onChange={handleInputChange}
-          value={formValues.title}
+          value={formValues.name}
         />
       </Form.Group>
       <Form.Group className="mb-3 col-12 col-md-6">
@@ -115,7 +133,7 @@ export const FormProduct = ({
           <option hidden defaultValue>
             Selecciona...
           </option>
-          {sections.map((section, index) =>
+          {sections.map(({section}, index) =>
             section.id == formValues.sectionId ? (
               <option key={index + section.name} selected value={section.id}>
                 {section.name}
@@ -139,7 +157,7 @@ export const FormProduct = ({
           <option defaultValue hidden>
             Selecciona...
           </option>
-          {categories.map((category, index) =>
+          {categories.map(({category}, index) =>
             category.id == formValues.categoryId ? (
               <option selected key={index + category.name} value={category.id}>
                 {category.name}
@@ -147,6 +165,29 @@ export const FormProduct = ({
             ) : (
               <option key={index + category.name} value={category.id}>
                 {category.name}
+              </option>
+            )
+          )}
+        </Form.Select>
+      </Form.Group>
+      <Form.Group className="mb-3 col-12 col-md-6">
+        <Form.Label>Type</Form.Label>
+        <Form.Select
+          className="form-control"
+          name="typeId"
+          onChange={handleInputChange}
+        >
+          <option defaultValue hidden>
+            Selecciona...
+          </option>
+          {types.map(({type}, index) =>
+            type.id == formValues.typeId ? (
+              <option selected key={index + type.name} value={type.id}>
+                {type.name}
+              </option>
+            ) : (
+              <option key={index + type.name} value={type.id}>
+                {type.name}
               </option>
             )
           )}
@@ -165,7 +206,7 @@ export const FormProduct = ({
       </Form.Group>
       <Form.Group className="mb-3 col-12">
         <div className="d-flex justify-content-around">
-          <Button variant="outline-secondary">Cancelar</Button>
+          <Button onClick={handleResetForm} variant="outline-secondary" >Cancelar</Button>
           <Button type="submit" variant="outline-primary">
             Guardar
           </Button>

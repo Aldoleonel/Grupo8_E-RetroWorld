@@ -1,104 +1,141 @@
-import { Card, Table } from "react-bootstrap";
+/* eslint-disable no-unused-vars */
+import { Card, CardTitle, Col, Row, Table } from "react-bootstrap";
 import { TableItem } from "../components/TableItem";
 import { useEffect, useState } from "react";
-import { Loading } from "../components/loading";
+import { deleteProduct } from "../services/product.services";
+import { UseFetch } from "../hooks/UseFetch";
+import { FormProduct } from "../components/FormProduct";
+import ReactPaginate from "react-paginate"
 
 export const ListProductPage = () => {
   const [products, setProducts] = useState([]);
+
   const [formValues, setFormValues] = useState({
       id: null,
-      title:"",
+      name:"",
       price:"",
       discount:"",
       categoryId:"",
       sectionId:"",
-      price:"",
-      price:""
+      typeId:"",
+      state:"",
+      image:"",
+      description:""
   })
-  const [loading, setLoading] = useState(true);
-  const [pagination, setPagination] = useState();
+  const [itemsPerPage, setItemsPerPage] = useState(6);
 
-  const getProducts = async (endopoint = '/api/products') => {
-    try {
-      setLoading(true)
+  const handleEditForm = (idProduct) => {
 
-      const response = await fetch(`http://localhost:3000${endopoint}`);
-      const result = await response.json();
-      
-      setLoading(false);
-      setProducts(result.data);
-      setPagination(result.meta);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  
-  useEffect(() => {
-    getProducts();
-    // console.log(result);
-  }, []);
+    const {id, name, price, discount, categoryId, sectionId, description, typeId, state, image} = products.find(product => product.id === idProduct)
 
-  const handlePagination = async(endopoint) => {
-    getProducts(endopoint);
+    setFormValues({
+      id,
+      name,
+      price,
+      discount,
+      categoryId,
+      sectionId,
+      typeId,
+      state,
+      image,
+      description
+    })
   }
 
-  return loading ? (
-    <Loading />
-  ) : (
-    <Card className="shadow mb-5">
-      <Card.Body striped bordered hover>
-        <div className="d-flex justify-content-end">
-          <nav aria-label="Page navigation example">
-            <ul className="pagination">
-              <li className="page-item">
-                <a className="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              {
-                pagination.pages.map(paginate => (
-                  <li key={paginate.number} className={`page-item ${paginate.number === pagination.currentPage && 'active'}`}>
-                    <a className="page-link" href="#" onClick={()=> handlePagination(paginate.url)}>
-                      {paginate.number}
-                    </a>
-                  </li>
-                ))
-              }
-              
+  const handleDeleteProduct = async (id) => {
+    const {msg} = await deleteProduct(id);
+    console.log(msg);
+    const productsFiltered = products.filter(product => product.id !== id);
+    setProducts([...productsFiltered])
+  }
 
-              <li className="page-item">
-                <a className="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <Table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Price</th>
-              <th>Discount</th>
-              <th>category</th>
-              <th>Stock</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            {products.map(({ id, name, price, discount, category, stock }) => (
-              <TableItem
-                key={id}
-                name={name}
-                price={price}
-                discount={discount}
-                category={category}
-                stock={stock}
-              />
-            ))}
-          </tbody>
-        </Table>
-      </Card.Body>
-    </Card>
-  );
+  const getData = async () => {
+    const { data } = await UseFetch("products");
+
+    setProducts(data);
+  };
+
+  useEffect(() => {
+    getData();
+    
+  }, []);
+// paginate setting
+ 
+  const [itemOffset, setItemOffset] = useState(0);
+
+  const endOffset = itemOffset + itemsPerPage;
+  const currentItems = products.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(products.length / itemsPerPage);
+
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % products.length;
+ 
+    setItemOffset(newOffset);
+  }
+  // console.log(currentItems);
+// ---------------------------------------------------------------------------------------------
+  
+
+
+  return (
+    <Row>
+      <Col sm={12} lg={4}>
+      <Card className="mb-3">
+          <Card.Header>
+            <CardTitle>{"Agregar"} producto</CardTitle>
+          </Card.Header>
+          <Card.Body>
+            <FormProduct products={products} setProducts={setProducts} formValues={formValues} setFormValues={setFormValues}/>
+          </Card.Body>
+        </Card>
+      </Col>
+      <Col sm={12} lg={8}>
+        <Card className="shadow mb-5">
+        <Card.Header className="d-flex justify-content-between">
+            {/* <FormSearch /> */}
+            <ReactPaginate 
+            pageCount={pageCount}
+            breakLabel="..."
+            nextLabel=">"
+            previousLabel="<"
+            pageRangeDisplayed={4}
+            onPageChange={handlePageClick}
+            breakClassName="page-item"
+            breakLinkClassName="page-link"
+            marginPagesDisplayed={2}
+            containerClassName="pagination justify-content-center cursorPage"
+            pageClassName="page-item"
+            pageLinkClassName="page-link"
+            previousClassName="page-item"
+            previousLinkClassName="page-link"
+            nextClassName="page-item"
+            nextLinkClassName="page-link"
+            activeClassName="active"
+      
+          />
+          </Card.Header>
+          <Card.Body>
+            <Table striped borderless responsive>
+              <thead>
+                <tr>
+                  <th>Título</th>
+                  <th>name</th>
+                  <th>Descuento</th>
+                  <th>Categoría</th>
+                  <th>Sección</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                {currentItems.map((product, index) => (
+                  <TableItem key={product.name + index} product={product} handleEditForm={handleEditForm} handleDeleteProduct={handleDeleteProduct}/>
+                ))}
+              </tbody>
+            </Table>
+          </Card.Body>
+        </Card>
+      </Col>
+    </Row>
+    
+  )
 };

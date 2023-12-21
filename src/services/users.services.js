@@ -1,5 +1,17 @@
 const db = require('../database/models')
 
+const getUsers = async() => {
+    try {
+        const users = await db.User.findAll();
+        return users;
+    } catch (error) {
+        throw {
+            status: error.status || 500,
+            message : error.message || 'Error en el servicio de usuario'
+        };
+    }
+}
+
 const checkEmail = async(email)=>{
     // const email = email;
     try {
@@ -44,6 +56,7 @@ const changeRole = async(id, roleId) => {
 
 
 module.exports ={
+    getUsers,
     checkEmail,
     changeRole
 }
