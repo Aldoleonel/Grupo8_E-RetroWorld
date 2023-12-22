@@ -30,10 +30,33 @@
                             <a class="btn btn-sm btn-success"
                                 href="/categories/edit/<%= id %>"><i
                                     class="fas fa-edit"></i></a>
-                            <a class="btn btn-sm btn-danger"
-                                href="/categories/remove/<%= id %>"><i
-                                    class="fas fa-trash"></i></a>
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                    data-bs-target="#deleteCategory<%= id %>Toggle">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
                         </div>
+                        <div class="modal fade" id="deleteCategory<%= id %>Toggle" aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Cuidado!!</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Estás seguro que quieres eliminar la Categoría: <%= name %>?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form action="/categories/delete/<%= id %>?_method=DELETE" method="POST">
+                                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+                                            data-bs-toggle="modal">Eliminar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </td>
                 </tr>
                 <% }) %>
