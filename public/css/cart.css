@@ -186,6 +186,7 @@
     border-radius: 20px;
     width: 160px;
     transition: top var(--transitionDuration);
+    cursor: pointer;
 
     /* Position */
     position: absolute;

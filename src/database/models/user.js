@@ -26,22 +26,30 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     birthdate: DataTypes.DATE,
     phone: DataTypes.STRING,
-    active:{
+    active: {
       type: DataTypes.TINYINT,
       defaultValue: true
     },
     image: {
-      type : DataTypes.STRING,
+      type: DataTypes.STRING,
       allowNull: true
     },
-
+    
+    city: {
+      type: DataTypes.STRING, 
+      allowNull: true 
+    },
+    province: {
+      type: DataTypes.STRING, 
+      allowNull: true 
+    },
     roleId: {
       type: DataTypes.INTEGER,
-      defaultValue: 2, 
+      defaultValue: 2,
     },
     genreId: {
       type: DataTypes.INTEGER,
-      defaultValue: 1, 
+      defaultValue: 1,
     },
   }, {
     sequelize,

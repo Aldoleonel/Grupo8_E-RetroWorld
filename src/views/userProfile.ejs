@@ -68,18 +68,20 @@
                         </div>
                         <div class="form-input">
                             <label for="province">Provincia:</label>
-                            <select id="province" name="province">
-                                
+                            <select id="province" name="province" class="form-control <%= locals.errors && (errors.province && 'is-invalid') %>">
+                                <option value="<%= province %>"><%= province %></option>
+                                <!-- Aquí podrías agregar más opciones si son necesarias -->
                             </select>
                         </div>
-                        
                         
                         <div class="form-input">
                             <label for="city">Ciudad:</label>
-                            <select id="city" name="city">
-                                
+                            <select id="city" name="city" class="form-control <%= locals.errors && (errors.city && 'is-invalid') %>">
+                                <option value="<%= city %>"><%= city %></option>
+                                <!-- Aquí podrías agregar más opciones si son necesarias -->
                             </select>
                         </div>
+                        
                         <div class="form-input">
                             <label for="phone">Teléfono:</label>
                             <input type="text" id="phone"

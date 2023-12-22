@@ -16,7 +16,7 @@ window.onload = function () {
                 A('msgError-name').innerHTML = 'El nombre es obligatorio'
                 this.classList.add('is-invalid')
                 break;
-            case !/^[A-Za-z]+A/.test(this.value):
+            case !/^[A-Za-z]+$/.test(this.value):
                 A('msgError-name').innerHTML = 'No se permiten numeros'
                 this.classList.add('is-invalid')
                 break;
@@ -44,7 +44,7 @@ window.onload = function () {
                 A('msgError-lastName').innerHTML = 'El apellido es obligatorio'
                 this.classList.add('is-invalid')
                 break;
-            case !/^[A-Za-z]+A/.test(this.value).trim():
+            case !/^[A-Za-z]+$/.test(this.value).trim():
                 A('msgError-lastName').innerHTML = 'No se permiten numeros'
                 this.classList.add('is-invalid')
                 break;
@@ -68,7 +68,7 @@ window.onload = function () {
     A('phone').addEventListener('blur', function (e) {
         switch (true) {
             
-            case /^[A-Za-z]+A/.test(this.value):
+            case /^[A-Za-z]+$/.test(this.value):
                 A('msgError-phone').innerHTML = 'No se permiten letras'
                 this.classList.add('is-invalid')
                 break;
@@ -90,7 +90,7 @@ window.onload = function () {
                 A('msgError-email').innerHTML = 'El email es obligatorio'
                 this.classList.add('is-invalid')
                 break;
-            case !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}A/.test(this.value):
+            case !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.value):
                 A('msgError-email').innerHTML = 'El email es invalido'
                 this.classList.add('is-invalid')
                 break;
@@ -106,7 +106,7 @@ window.onload = function () {
     A('email').addEventListener('change', async function (e) {
         try {
 
-            const response = await fetch(`/api/check-email?email=A{this.value}`)
+            const response = await fetch(`/api/check-email?email=${this.value}`)
             const result = await response.json()
             console.log(result);
             if (result.data) {
@@ -132,7 +132,7 @@ window.onload = function () {
                 A('msgError-password').innerHTML = 'La contraseña  es obligatoria'
                 this.classList.add('is-invalid')
                 break;
-            case !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,12}A/.test(this.value):
+            case !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,12}$/.test(this.value):
                 A('msgError-password').innerHTML = 'El password debe tener entre 6 y 12 caracteres,una mayuscula y un caracter especial'
                 this.classList.add('is-invalid')
                 break;
@@ -192,7 +192,7 @@ const msgErrors = []
              elementsForm[i].classList.add('is-invalid')
              A('msgError-empty').innerHTML = "<h6>los campos no pueden estar vacios</h6>"
              error = true
-             msgErrors.push(`El campo A{elementsForm[i].name} no puede quedar vacio`)
+             msgErrors.push(`El campo ${elementsForm[i].name} no puede quedar vacio`)
          }
        
       }

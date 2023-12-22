@@ -1,40 +1,40 @@
-const $ = id => document.getElementById(id);
+const K = id => document.getElementById(id);
 
 window.onload = function(){
     console.log('vinculacion exitosa!!')
 
-    $('name').addEventListener('focus', function() {
-        $('msgError-name').innerHTML = null;
+    K('name').addEventListener('focus', function() {
+        K('msgError-name').innerHTML = null;
         this.classList.remove('is-invalid')
     })
 
-    $('name').addEventListener('blur', function(e) {
+    K('name').addEventListener('blur', function(e) {
         switch (true) {
             case !this.value.trim():
-                $('msgError-name').innerHTML = "El titulo es obligatorio";
+                K('msgError-name').innerHTML = "El titulo es obligatorio";
                 this.classList.add("is-invalid");
                 break;
             case !/^[A-Za-z]+$/.test(this.value) :
-                $('msgError-name').innerHTML = "Solo caracteres alfabéticos";
+                K('msgError-name').innerHTML = "Solo caracteres alfabéticos";
                 this.classList.add("is-invalid");
                 break
             case this.value.trim().length < 3 :
-                $('msgError-name').innerHTML = "Mínimo tres caracteres";
+                K('msgError-name').innerHTML = "Mínimo tres caracteres";
                 this.classList.add("is-invalid");
                 break
             default:
-                $('msgError-name').innerHTML = null;
+                K('msgError-name').innerHTML = null;
                 this.classList.remove("is-invalid");
                 this.classList.add("is-valid");
                 break;
         }
     });
 
-    $('categoryId').addEventListener('focus', function() {
-        $('msgError-category').innerHTML = null;
+    K('categoryId').addEventListener('focus', function() {
+        K('msgError-category').innerHTML = null;
         this.classList.remove('is-invalid')
     })
-    $('categoryId').addEventListener('blur', function(){
+    K('categoryId').addEventListener('blur', function(){
         if(!this.value.trim()){
             $('msgError-category').innerHTML = "El titulo es obligatorio";
             this.classList.add("is-invalid");
@@ -44,92 +44,92 @@ window.onload = function(){
             this.classList.add("is-valid");
         }
     })
-    $('sectionId').addEventListener('focus', function() {
-        $('msgError-section').innerHTML = null;
+    K('sectionId').addEventListener('focus', function() {
+        K('msgError-section').innerHTML = null;
         this.classList.remove('is-invalid')
     })
-    $('sectionId').addEventListener('blur', function(){
+    K('sectionId').addEventListener('blur', function(){
         if(!this.value.trim()){
-            $('msgError-section').innerHTML = "El titulo es obligatorio";
+            K('msgError-section').innerHTML = "El titulo es obligatorio";
             this.classList.add("is-invalid");
         } else{
-            $('msgError-section').innerHTML = null;
+            K('msgError-section').innerHTML = null;
             this.classList.remove("is-invalid");
             this.classList.add("is-valid");
         }
     })
 
-    $('typeId').addEventListener('focus', function() {
-        $('msgError-type').innerHTML = null;
+    K('typeId').addEventListener('focus', function() {
+        K('msgError-type').innerHTML = null;
         this.classList.remove('is-invalid')
     })
-    $('typeId').addEventListener('blur', function(){
+    K('typeId').addEventListener('blur', function(){
         if(!this.value.trim()){
-            $('msgError-type').innerHTML = "El titulo es obligatorio";
+            K('msgError-type').innerHTML = "El titulo es obligatorio";
             this.classList.add("is-invalid");
         } else{
-            $('msgError-type').innerHTML = null;
+            K('msgError-type').innerHTML = null;
             this.classList.remove("is-invalid");
             this.classList.add("is-valid");
         }
     })
 
-    $('precio').addEventListener('blur', function(e) {
+    K('precio').addEventListener('blur', function(e) {
         switch (true) {
             case !this.value.trim():
-                $('msgError-precio').innerHTML = "El precio es obligatorio";
+                K('msgError-precio').innerHTML = "El precio es obligatorio";
                 this.classList.add("is-invalid");
                 break;
             case this.value < 1 :
-                $('msgError-precio').innerHTML = "el precio tiene que ser positivo y mayor que 0";
+                K('msgError-precio').innerHTML = "el precio tiene que ser positivo y mayor que 0";
                 this.classList.add("is-invalid");
                 break
             default:
-                $('msgError-precio').innerHTML = null;
+                K('msgError-precio').innerHTML = null;
                 this.classList.remove("is-invalid");
                 this.classList.add("is-valid");
                 break;
         }
     });
 
-    $('promo').addEventListener('blur', function(e) {
+    K('promo').addEventListener('blur', function(e) {
         if (this.value < 0 || this.value > 100) {
-            $('msgError-promo').innerHTML = "El descuento debe estar en el rango de 0 a 100";
+            K('msgError-promo').innerHTML = "El descuento debe estar en el rango de 0 a 100";
             this.classList.add("is-invalid");
         } else {
-            $('msgError-promo').innerHTML = null;
+            K('msgError-promo').innerHTML = null;
                 this.classList.remove("is-invalid");
                 this.classList.add("is-valid");
         }
     });
     
-    $('description').addEventListener('blur', function(e) {
+    K('description').addEventListener('blur', function(e) {
         switch (true) {
             case !this.value.trim():
-                $('msgError-description').innerHTML = "La descripción es obligatorio";
+                K('msgError-description').innerHTML = "La descripción es obligatorio";
                 this.classList.add("is-invalid");
                 break;
             case this.value.trim().length < 10 || this.value.trim().length > 500 :
-                $('msgError-description').innerHTML = "La descripción debe tener entre 10 y 500 caracteres";
+                K('msgError-description').innerHTML = "La descripción debe tener entre 10 y 500 caracteres";
                 this.classList.add("is-invalid");
                 break
             default:
-                $('msgError-description').innerHTML = null;
+                K('msgError-description').innerHTML = null;
                 this.classList.remove("is-invalid");
                 this.classList.add("is-valid");
                 break;
         }
     });
 
-    $('image').addEventListener("change",function(e) {
+    K('image').addEventListener("change",function(e) {
         switch (true) {
             case !(/.(gif|jpeg|jpg|png)$/i.test(this.value)):
-                $('msgError-image').innerHTML = "Error, los formatos de imagenes aceptados son (gif | jpeg | jpg | png)";
+                K('msgError-image').innerHTML = "Error, los formatos de imagenes aceptados son (gif | jpeg | jpg | png)";
                     this.classList.add("is-invalid");
                 break;
             
         default:
-                $('msgError-image').innerHTML = null;
+                K('msgError-image').innerHTML = null;
                 this.classList.remove("is-invalid");
                 this.classList.add("is-valid");
                 break;
@@ -140,7 +140,7 @@ window.onload = function(){
 
 
 
-    $('formEdit').addEventListener('submit', function(e){
+    K('formEdit').addEventListener('submit', function(e){
         console.log('hola mundo')
         e.preventDefault();
 

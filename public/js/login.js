@@ -62,7 +62,7 @@ const msgErrors = []
              elementsForm[i].classList.add('is-invalid')
              F('msgError-empty').innerHTML = "<h6>Los campos no pueden estar vacios!!</h6>"
              error = true
-             msgErrors.push(`El campo F{elementsForm[i].name} no puede quedar vacio`)
+             msgErrors.push(`El campo ${elementsForm[i].name} no puede quedar vacio`)
          }
        
       }

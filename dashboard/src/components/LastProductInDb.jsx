@@ -10,12 +10,13 @@ export const LastProductInDb = () => {
 	const getData = async () => {
 		try {
 			const result = await UseFetch("products");
-			console.log(result);
+			
 			const pages = result.meta.pages;
 			const ultimatePages = pages[pages.length -1];
 			const {data} = await UseFetch(`products?page=${ultimatePages.number}&limit=8`)
 			const ultimateProduct = data[data.length -1]
 			setProduct(ultimateProduct);
+			console.log(ultimateProduct,"AAAAAAAAAAAAAAAAAAAAAA");
 		} catch (error) {
 			console.log(error);
 		}
