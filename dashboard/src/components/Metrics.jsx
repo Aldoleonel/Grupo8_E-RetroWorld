@@ -8,21 +8,22 @@ export const Metrics = () => {
             color : "primary",
             title : "Products in Data Base",
             value: 21,
-            icon: "fa-film"
-        },
+            icon: "fa-solid fa-gamepad"
+         }
+        ,
         {
             id: crypto.randomUUID(),
             color : "success",
-            title : "Total awards",
-            value: 71,
-            icon: "fa-award"
+            title : "Users",
+            value: 10,
+            icon: "fa-user"
         },
         {
             id: crypto.randomUUID(),
             color : "warning",
-            title : "Actors quantity",
-            value: 49,
-            icon: "fa-user"
+            title : "Categories",
+            value: 4,
+            icon: "fa-solid fa-list"
         }
     ] 
 
