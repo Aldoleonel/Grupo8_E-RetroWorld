@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head',{title:"Editar Categoría"}) %>
+
+<body class="bodyRegister">
+    <%- include('partials/header',{title:"Editar Categoría"}) %>
+    <main class="form__main">
+        <!-- REGISTRO -->
+        
+        <section class="form__registro">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item"><a href="/admin">Admin</a></li>
+              <li class="breadcrumb-item active" style="color: silver;" aria-current="page">Agregar Categoría</li>
+            </ol>
+          </nav>
+            <div class="form-box2">
+                <h2>Editar Categoría</h2>
+                <div class="d-flex flex-column">
+                  <img class="img-fluid rounded" id="imgMain" src="" alt="">
+                </div>
+                <form action="/categories/edit/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formAdd" class="form">
+                    <div class="form-input">
+                        <label for="name">Nombre:</label>
+                        <input class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>" type="text" id="name" placeholder="" name="name" value="<%= locals.errors? old.name && old.name : name  %>">
+                        
+                    </div>
+                    
+                    <div class="form-foto mb-4" >
+                        <label for="image" class="form-boton-foto" >Subir imagen de la Categoría</label>
+                        <input hidden type="file"  name="image" id="image">
+                      </div>
+                      
+                    <div class="col-12 col-md-6 mb-3">
+                           
+                        <small class="text-danger ms-2" id="msgError-empty" %>
+                          </small>
+                    </div>
+                    <div class="form-submit-button2">
+                        <button type="reset">Cancelar</button>
+                        <button type="submit">Editar Categoría</button>
+                    </div>
+                </form>
+                
+            </div>
+        </section>
+      </main>
+      
+      <!-- <script src="/js/productAddValidation.js"></script> -->
+      <script src="/js/productAddImg.js"></script>
+      
+        
+
+</body>
+
+</html>
